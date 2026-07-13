@@ -53,8 +53,10 @@
       Empty by default so the normal build is unaffected; set by the `nullaway` profile
       (activate with `-Pnullaway`, optionally override with `-Dnullaway.checks=...`). -->
     <nullaway.checks></nullaway.checks>
-    <!-- NullAway version used by the `nullaway` profile; override with `-Dnullaway.version=...`. -->
-    <nullaway.version>0.10.10</nullaway.version>
+    <!-- NullAway version used by the `nullaway` profile; override with `-Dnullaway.version=...`.
+      Must stay compatible with the error_prone_core version below, since NullAway reaches
+      into Error Prone's internal (non-API) classes. -->
+    <nullaway.version>0.13.7</nullaway.version>
   </properties>
 
   <!-- These attributes specify that the URLs should be inherited by the modules as is, to avoid constructing
