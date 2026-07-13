@@ -110,8 +110,8 @@ Caused by: java.lang.ClassNotFoundException: com.google.errorprone.predicates.ty
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.002 s
-[INFO] Finished at: 2026-07-13T19:26:37+06:00
+[INFO] Total time:  3.752 s
+[INFO] Finished at: 2026-07-13T19:33:19+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:compile (default-compile) on project gson: Compilation failure
 [ERROR] An unknown compilation problem occurred
