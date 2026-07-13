@@ -605,7 +605,11 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
-              <annotationProcessorPaths>
+              <!-- combine.children="append": without it, Maven pairs this single <path>
+                positionally against pluginManagement's single <path> (error_prone_core)
+                and merges them field-by-field, silently discarding error_prone_core
+                instead of keeping both processors. -->
+              <annotationProcessorPaths combine.children="append">
                 <path>
                   <groupId>com.uber.nullaway</groupId>
                   <artifactId>nullaway</artifactId>
