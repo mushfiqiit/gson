@@ -1,0 +1,1566 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/JsonArray.java:60: error: [argument] incompatible argument for parameter initialCapacity of ArrayList constructor.
+    elements = new ArrayList<>(capacity);
+                               ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/JsonArray.java:151: error: [argument] incompatible argument for parameter index of ArrayList.set.
+    return elements.set(index, element == null ? JsonNull.INSTANCE : element);
+                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/JsonArray.java:179: error: [argument] incompatible argument for parameter index of ArrayList.remove.
+    return elements.remove(index);
+                           ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/JsonArray.java:232: error: [argument] incompatible argument for parameter index of ArrayList.get.
+    return elements.get(i);
+                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:90: error: [override.return] Incompatible return type.
+  public int size() {
+         ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in LinkedTreeMap<K extends Object, V extends Object>
+    int size(LinkedTreeMap<K extends Object, V extends Object> this)
+  cannot override method in AbstractMap<K extends Object, V extends Object>
+    @NonNegative int size(AbstractMap<K extends Object, V extends Object> this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:592: error: [override.return] Incompatible return type.
+    public int size() {
+           ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in LinkedTreeMap<K extends Object, V extends Object>.EntrySet
+    int size(LinkedTreeMap<K extends Object, V extends Object>.EntrySet this)
+  cannot override method in AbstractCollection<Entry<K extends Object, V extends Object>>
+    @NonNegative int size(AbstractCollection<Entry<K extends Object, V extends Object>> this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:633: error: [override.return] Incompatible return type.
+    public int size() {
+           ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in LinkedTreeMap<K extends Object, V extends Object>.KeySet
+    int size(LinkedTreeMap<K extends Object, V extends Object>.KeySet this)
+  cannot override method in AbstractCollection<K extends Object>
+    @NonNegative int size(AbstractCollection<K extends Object> this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:465: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathIndices[stackSize - 1] = 0;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:465: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1] = 0;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:485: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:485: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:524: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathNames[stackSize] = null; // Free the last path name so that it can be garbage collected!
+                ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:524: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathNames[stackSize] = null; // Free the last path name so that it can be garbage collected!
+                ^
+  found   : int
+  required: @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames") -- an integer less than this.pathNames's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:525: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:525: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:583: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    int peekStack = stack[stackSize - 1];
+                                    ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:583: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    int peekStack = stack[stackSize - 1];
+                                    ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:585: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      stack[stackSize - 1] = JsonScope.NONEMPTY_ARRAY;
+                      ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:585: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      stack[stackSize - 1] = JsonScope.NONEMPTY_ARRAY;
+                      ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:601: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      stack[stackSize - 1] = JsonScope.DANGLING_NAME;
+                      ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:601: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      stack[stackSize - 1] = JsonScope.DANGLING_NAME;
+                      ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:636: warning: [cast.unsafe] cast from "@LowerBoundUnknown int" to "@NonNegative char" cannot be statically verified
+          if (isLiteral((char) c)) {
+                        ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:644: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      stack[stackSize - 1] = JsonScope.NONEMPTY_OBJECT;
+                      ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:644: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      stack[stackSize - 1] = JsonScope.NONEMPTY_OBJECT;
+                      ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:652: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+          if ((pos < limit || fillBuffer(1)) && buffer[pos] == '>') {
+                                                       ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:652: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+          if ((pos < limit || fillBuffer(1)) && buffer[pos] == '>') {
+                                                       ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:663: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      stack[stackSize - 1] = JsonScope.NONEMPTY_DOCUMENT;
+                      ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:663: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      stack[stackSize - 1] = JsonScope.NONEMPTY_DOCUMENT;
+                      ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:723: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    if (!isLiteral(buffer[pos])) {
+                          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:723: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    if (!isLiteral(buffer[pos])) {
+                          ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:734: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    char c = buffer[pos];
+                    ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:734: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    char c = buffer[pos];
+                    ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:765: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      c = buffer[pos + i];
+                     ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:765: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      c = buffer[pos + i];
+                     ^
+  found   : @LTLengthOf(value="keyword", offset="-this.pos") int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:766: error: [argument] incompatible argument for parameter index of String.charAt.
+      boolean matched = c == keyword.charAt(i) || (allowsUpperCased && c == keywordUpper.charAt(i));
+                                                                                                ^
+  found   : @LTLengthOf(value="keyword", offset="0") int
+  required: @LTLengthOf("keywordUpper") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:772: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    if ((pos + length < limit || fillBuffer(length + 1)) && isLiteral(buffer[pos + length])) {
+                                                                                 ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:772: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    if ((pos + length < limit || fillBuffer(length + 1)) && isLiteral(buffer[pos + length])) {
+                                                                                 ^
+  found   : @LTLengthOf(value="keyword", offset="-this.pos - 1") int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:810: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      char c = buffer[p + i];
+                        ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:810: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      char c = buffer[p + i];
+                        ^
+  found   : int
+  required: @IndexFor("buffer") or @LTLengthOf("buffer") -- an integer less than buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:941: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    pathNames[stackSize - 1] = result;
+                        ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:941: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    pathNames[stackSize - 1] = result;
+                        ^
+  found   : int
+  required: @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames") -- an integer less than this.pathNames's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:969: error: [argument] incompatible argument for parameter offset of String constructor.
+      result = new String(buffer, pos, peekedNumberLength);
+                                  ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:969: error: [argument] incompatible argument for parameter offset of String constructor.
+      result = new String(buffer, pos, peekedNumberLength);
+                                  ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:969: error: [argument] incompatible argument for parameter count of String constructor.
+      result = new String(buffer, pos, peekedNumberLength);
+                                       ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:969: error: [argument] incompatible argument for parameter count of String constructor.
+      result = new String(buffer, pos, peekedNumberLength);
+                                       ^
+  found   : int
+  required: @LTLengthOf(value="this.buffer", offset="this.pos - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:975: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:975: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:991: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:991: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:995: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:995: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1013: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1013: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1037: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1037: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1042: error: [argument] incompatible argument for parameter offset of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1042: error: [argument] incompatible argument for parameter offset of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                        ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1042: error: [argument] incompatible argument for parameter count of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1042: error: [argument] incompatible argument for parameter count of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                             ^
+  found   : int
+  required: @LTLengthOf(value="this.buffer", offset="this.pos - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1067: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1067: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1088: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1088: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1093: error: [argument] incompatible argument for parameter offset of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1093: error: [argument] incompatible argument for parameter offset of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                        ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1093: error: [argument] incompatible argument for parameter count of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1093: error: [argument] incompatible argument for parameter count of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                             ^
+  found   : int
+  required: @LTLengthOf(value="this.buffer", offset="this.pos - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1105: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        pathIndices[stackSize - 1]++;
+                              ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1105: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        pathIndices[stackSize - 1]++;
+                              ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1130: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1130: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1151: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        int c = buffer[p++];
+                        ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1151: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+        int c = buffer[p++];
+                        ^
+  index type found: @IntRange(from=-2147483648, to=2147483646) int
+  array type found: char @ArrayLen(1024) []
+  required        : index of type @IndexFor("buffer") or @LTLengthOf("buffer"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1162: error: [argument] incompatible argument for parameter offset of String constructor.
+            return new String(buffer, start, len);
+                                      ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1162: error: [argument] incompatible argument for parameter offset of String constructor.
+            return new String(buffer, start, len);
+                                      ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1162: error: [argument] incompatible argument for parameter count of String constructor.
+            return new String(buffer, start, len);
+                                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1162: error: [argument] incompatible argument for parameter count of String constructor.
+            return new String(buffer, start, len);
+                                             ^
+  found   : int
+  required: @LTLengthOf(value="buffer", offset="start - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1164: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+            builder.append(buffer, start, len);
+                                   ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1164: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+            builder.append(buffer, start, len);
+                                   ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1164: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+            builder.append(buffer, start, len);
+                                          ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1164: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+            builder.append(buffer, start, len);
+                                          ^
+  found   : int
+  required: @LTLengthOf(value="buffer", offset="start - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1174: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+          builder.append(buffer, start, len);
+                                 ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1174: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+          builder.append(buffer, start, len);
+                                 ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1174: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+          builder.append(buffer, start, len);
+                                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1174: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+          builder.append(buffer, start, len);
+                                        ^
+  found   : int
+  required: @LTLengthOf(value="buffer", offset="start - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1189: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+      builder.append(buffer, start, p - start);
+                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1189: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+      builder.append(buffer, start, p - start);
+                             ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1189: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+      builder.append(buffer, start, p - start);
+                                      ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1189: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+      builder.append(buffer, start, p - start);
+                                      ^
+  found   : int
+  required: @LTLengthOf(value="buffer", offset="start - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1206: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        switch (buffer[pos + i]) {
+                           ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1206: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        switch (buffer[pos + i]) {
+                           ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1243: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+      builder.append(buffer, pos, i);
+                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1243: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+      builder.append(buffer, pos, i);
+                             ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1243: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+      builder.append(buffer, pos, i);
+                                  ^
+  found   : int
+  required: @LTLengthOf(value="this.buffer", offset="this.pos - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1252: error: [argument] incompatible argument for parameter offset of String constructor.
+        (builder == null) ? new String(buffer, pos, i) : builder.append(buffer, pos, i).toString();
+                                               ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1252: error: [argument] incompatible argument for parameter offset of String constructor.
+        (builder == null) ? new String(buffer, pos, i) : builder.append(buffer, pos, i).toString();
+                                               ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1252: error: [argument] incompatible argument for parameter count of String constructor.
+        (builder == null) ? new String(buffer, pos, i) : builder.append(buffer, pos, i).toString();
+                                                    ^
+  found   : int
+  required: @LTLengthOf(value="this.buffer", offset="this.pos - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1252: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+        (builder == null) ? new String(buffer, pos, i) : builder.append(buffer, pos, i).toString();
+                                                                                ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1252: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+        (builder == null) ? new String(buffer, pos, i) : builder.append(buffer, pos, i).toString();
+                                                                                ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1252: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+        (builder == null) ? new String(buffer, pos, i) : builder.append(buffer, pos, i).toString();
+                                                                                     ^
+  found   : int
+  required: @LTLengthOf(value="this.buffer", offset="this.pos - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1265: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        int c = buffer[p++];
+                        ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1265: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+        int c = buffer[p++];
+                        ^
+  index type found: @IntRange(from=-2147483648, to=2147483646) int
+  array type found: char @ArrayLen(1024) []
+  required        : index of type @IndexFor("buffer") or @LTLengthOf("buffer"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1289: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        switch (buffer[pos + i]) {
+                           ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1289: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        switch (buffer[pos + i]) {
+                           ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1339: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1339: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1344: error: [argument] incompatible argument for parameter offset of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1344: error: [argument] incompatible argument for parameter offset of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                        ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1344: error: [argument] incompatible argument for parameter count of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1344: error: [argument] incompatible argument for parameter count of String constructor.
+      peekedString = new String(buffer, pos, peekedNumberLength);
+                                             ^
+  found   : int
+  required: @LTLengthOf(value="this.buffer", offset="this.pos - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1356: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        pathIndices[stackSize - 1]++;
+                              ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1356: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        pathIndices[stackSize - 1]++;
+                              ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1381: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1381: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1394: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+    stack[0] = JsonScope.CLOSED;
+          ^
+  found   : int []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1441: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            pathNames[stackSize - 1] = null;
+                                ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1441: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            pathNames[stackSize - 1] = null;
+                                ^
+  found   : int
+  required: @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames") -- an integer less than this.pathNames's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1459: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            pathNames[stackSize - 1] = "<skipped>";
+                                ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1459: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            pathNames[stackSize - 1] = "<skipped>";
+                                ^
+  found   : int
+  required: @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames") -- an integer less than this.pathNames's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1466: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            pathNames[stackSize - 1] = "<skipped>";
+                                ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1466: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            pathNames[stackSize - 1] = "<skipped>";
+                                ^
+  found   : int
+  required: @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames") -- an integer less than this.pathNames's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1473: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            pathNames[stackSize - 1] = "<skipped>";
+                                ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1473: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            pathNames[stackSize - 1] = "<skipped>";
+                                ^
+  found   : int
+  required: @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames") -- an integer less than this.pathNames's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1489: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1489: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    pathIndices[stackSize - 1]++;
+                          ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1505: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    stack[stackSize++] = newTop;
+                   ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1505: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    stack[stackSize++] = newTop;
+                   ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1517: error: [argument] incompatible argument for parameter arg1 of System.arraycopy.
+      System.arraycopy(buffer, pos, buffer, 0, limit);
+                               ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1517: error: [argument] incompatible argument for parameter arg4 of System.arraycopy.
+      System.arraycopy(buffer, pos, buffer, 0, limit);
+                                               ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1517: error: [argument] incompatible argument for parameter arg4 of System.arraycopy.
+      System.arraycopy(buffer, pos, buffer, 0, limit);
+                                               ^
+  found   : int
+  required: @LTLengthOf(value={"buffer", "buffer"}, offset={"this.pos - 1", "0 - 1"}) int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1524: error: [argument] incompatible argument for parameter arg1 of Reader.read.
+    while ((total = in.read(buffer, limit, buffer.length - limit)) != -1) {
+                                    ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1524: error: [argument] incompatible argument for parameter arg1 of Reader.read.
+    while ((total = in.read(buffer, limit, buffer.length - limit)) != -1) {
+                                    ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1524: error: [argument] incompatible argument for parameter arg2 of Reader.read.
+    while ((total = in.read(buffer, limit, buffer.length - limit)) != -1) {
+                                                         ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1568: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      int c = buffer[p++];
+                      ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1568: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      int c = buffer[p++];
+                      ^
+  found   : int
+  required: @IndexFor("buffer") or @LTLengthOf("buffer") -- an integer less than buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1589: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        char peek = buffer[pos];
+                           ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1589: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        char peek = buffer[pos];
+                           ^
+  found   : int
+  required: @IndexFor("buffer") or @LTLengthOf("buffer") -- an integer less than buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1648: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      char c = buffer[pos++];
+                         ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1648: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      char c = buffer[pos++];
+                         ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1666: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      if (buffer[pos] == '\n') {
+                 ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1666: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      if (buffer[pos] == '\n') {
+                 ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1672: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        if (buffer[pos + c] != toFind.charAt(c)) {
+                       ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1672: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        if (buffer[pos + c] != toFind.charAt(c)) {
+                       ^
+  found   : @LTLengthOf(value="toFind", offset="-this.pos") int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1695: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      int scope = stack[i];
+                        ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.stack") or @LTLengthOf("this.stack"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1699: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+          int pathIndex = pathIndices[i];
+                                      ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1710: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+          if (pathNames[i] != null) {
+                        ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: String []
+  required        : index of type @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1711: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+            result.append(pathNames[i]);
+                                    ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: String []
+  required        : index of type @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1774: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    char escaped = buffer[pos++];
+                             ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1774: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    char escaped = buffer[pos++];
+                             ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1783: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+          char c = buffer[i];
+                          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1783: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+          char c = buffer[i];
+                          ^
+  index type found: @IntRange(from=-2147483648, to=2147483646) int
+  array type found: char @ArrayLen(1024) []
+  required        : index of type @IndexFor("this.buffer") or @LTLengthOf("this.buffer"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1792: error: [argument] incompatible argument for parameter offset of String constructor.
+            throw syntaxError("Malformed Unicode escape \\u" + new String(buffer, pos, 4));
+                                                                                  ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1792: error: [argument] incompatible argument for parameter offset of String constructor.
+            throw syntaxError("Malformed Unicode escape \\u" + new String(buffer, pos, 4));
+                                                                                  ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1792: error: [argument] incompatible argument for parameter count of String constructor.
+            throw syntaxError("Malformed Unicode escape \\u" + new String(buffer, pos, 4));
+                                                                                       ^
+  found   : @UpperBoundLiteral(4) int
+  required: @LTLengthOf(value="this.buffer", offset="this.pos - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1796: warning: [cast.unsafe] cast from "@LowerBoundUnknown int" to "@NonNegative char" cannot be statically verified
+        return (char) result;
+               ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1870: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    if (buf[p] != ')'
+            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1870: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    if (buf[p] != ')'
+            ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1871: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        || buf[p + 1] != ']'
+                 ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1871: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        || buf[p + 1] != ']'
+                 ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1872: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        || buf[p + 2] != '}'
+                 ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1872: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        || buf[p + 2] != '}'
+                 ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1873: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        || buf[p + 3] != '\''
+                 ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1873: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        || buf[p + 3] != '\''
+                 ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1874: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        || buf[p + 4] != '\n') {
+                 ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:1874: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        || buf[p + 4] != '\n') {
+                 ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:476: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    stack[stackSize++] = newTop;
+                   ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:476: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    stack[stackSize++] = newTop;
+                   ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:484: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    return stack[stackSize - 1];
+                           ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:484: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    return stack[stackSize - 1];
+                           ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:489: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    stack[stackSize - 1] = topOfStack;
+                    ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:489: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    stack[stackSize - 1] = topOfStack;
+                    ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:723: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+    if (size > 1 || (size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT)) {
+                                             ^
+  found   : int []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:752: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        replacement = replacements[c];
+                                   ^
+  found   : char
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:752: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+        replacement = replacements[c];
+                                   ^
+  index type found: @IntRange(from=-2147483648, to=127) char
+  array type found: String []
+  required        : index of type @IndexFor("replacements") or @LTLengthOf("replacements"), or array of type @MinLen(128)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:764: error: [argument] incompatible argument for parameter len of Writer.write.
+        out.write(value, last, i - last);
+                                 ^
+  found   : @LTLengthOf(value={"value", "value"}, offset={"0", "last"}) int
+  required: @LTLengthOf(value="value", offset="last - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/reflect/TypeToken.java:100: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+        Type typeArgument = GsonTypes.canonicalize(parameterized.getActualTypeArguments()[0]);
+                                                                                          ^
+  found   : Type []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/reflect/TypeToken.java:268: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        TypeVariable<?> var = tParams[i];
+                                      ^
+  found   : @LTLengthOf(value={"ptype.getActualTypeArguments()", "tArgs"}, offset={"0", "0"}) int
+  required: @IndexFor("tParams") or @LTLengthOf("tParams") -- an integer less than tParams's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/reflect/TypeToken.java:303: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        if (!matches(fromArgs[i], toArgs[i], typeVarMap)) {
+                                         ^
+  found   : @LTLengthOf(value={"from.getActualTypeArguments()", "fromArgs"}, offset={"0", "0"}) int
+  required: @IndexFor("toArgs") or @LTLengthOf("toArgs") -- an integer less than toArgs's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LazilyParsedNumber.java:45: error: [override.return] Incompatible return type.
+  public int intValue() {
+         ^
+  found   : int
+  required: @PolyValue int
+  Consequence: method in LazilyParsedNumber
+    int intValue(LazilyParsedNumber this)
+  cannot override method in Number
+    @PolyValue int intValue(@PolyValue Number this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LazilyParsedNumber.java:58: error: [override.return] Incompatible return type.
+  public long longValue() {
+         ^
+  found   : long
+  required: @PolyValue long
+  Consequence: method in LazilyParsedNumber
+    long longValue(LazilyParsedNumber this)
+  cannot override method in Number
+    @PolyValue long longValue(@PolyValue Number this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LazilyParsedNumber.java:67: error: [override.return] Incompatible return type.
+  public float floatValue() {
+         ^
+  found   : float
+  required: @PolyValue float
+  Consequence: method in LazilyParsedNumber
+    float floatValue(LazilyParsedNumber this)
+  cannot override method in Number
+    @PolyValue float floatValue(@PolyValue Number this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LazilyParsedNumber.java:72: error: [override.return] Incompatible return type.
+  public double doubleValue() {
+         ^
+  found   : double
+  required: @PolyValue double
+  Consequence: method in LazilyParsedNumber
+    double doubleValue(LazilyParsedNumber this)
+  cannot override method in Number
+    @PolyValue double doubleValue(@PolyValue Number this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:245: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+          return rawType.getGenericInterfaces()[i];
+                                                ^
+  found   : @LTLengthOf(value={"interfaces", "rawType.getInterfaces()"}, offset={"0", "0"}) int
+  required: @IndexFor("rawType.getGenericInterfaces()") or @LTLengthOf("rawType.getGenericInterfaces()") -- an integer less than rawType.getGenericInterfaces()'s length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:247: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+          return getGenericSupertype(rawType.getGenericInterfaces()[i], interfaces[i], supertype);
+                                                                    ^
+  found   : @LTLengthOf(value={"interfaces", "rawType.getInterfaces()"}, offset={"0", "0"}) int
+  required: @IndexFor("rawType.getGenericInterfaces()") or @LTLengthOf("rawType.getGenericInterfaces()") -- an integer less than rawType.getGenericInterfaces()'s length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:313: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+      return ((ParameterizedType) collectionType).getActualTypeArguments()[0];
+                                                                           ^
+  found   : Type []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:462: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      return ((ParameterizedType) declaredBy).getActualTypeArguments()[index];
+                                                                       ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:462: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      return ((ParameterizedType) declaredBy).getActualTypeArguments()[index];
+                                                                       ^
+  found   : int
+  required: @IndexFor("(ParameterizedType)declaredBy.getActualTypeArguments()") or @LTLengthOf("(ParameterizedType)declaredBy.getActualTypeArguments()") -- an integer less than (ParameterizedType)declaredBy.getActualTypeArguments()'s length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:573: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          .append(typeToString(typeArguments[0]));
+                                             ^
+  found   : Type []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:648: error: [override.return] Incompatible return type.
+    public Type[] getUpperBounds() {
+               ^
+  found   : Type []
+  required: Type @ArrayLenRange(from=1) []
+  Consequence: method in WildcardTypeImpl
+    Type [] getUpperBounds(WildcardTypeImpl this)
+  cannot override method in WildcardType
+    Type @ArrayLenRange(from=1) [] getUpperBounds(WildcardType this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java:42: error: [argument] incompatible argument for parameter index of ArrayList.get.
+    return delegate.get(index);
+                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java:46: error: [override.return] Incompatible return type.
+  public int size() {
+         ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in NonNullElementWrapperList<E extends Object>
+    int size(NonNullElementWrapperList<E extends Object> this)
+  cannot override method in AbstractCollection<E extends Object>
+    @NonNegative int size(AbstractCollection<E extends Object> this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java:59: error: [argument] incompatible argument for parameter index of ArrayList.set.
+    return delegate.set(index, nonNull(element));
+                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java:64: error: [argument] incompatible argument for parameter index of ArrayList.add.
+    delegate.add(index, nonNull(element));
+                 ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java:69: error: [argument] incompatible argument for parameter index of ArrayList.remove.
+    return delegate.remove(index);
+                           ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:182: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          Type elementType = ((ParameterizedType) type).getActualTypeArguments()[0];
+                                                                                 ^
+  found   : Type []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:200: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          Type elementType = ((ParameterizedType) type).getActualTypeArguments()[0];
+                                                                                 ^
+  found   : Type []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/FieldNamingPolicy.java:204: error: [argument] incompatible argument for parameter beginIndex of String.substring.
+          return uppercased + s.substring(1);
+                                          ^
+  found   : @UpperBoundLiteral(1) int
+  required: @LTEqLengthOf("s") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:90: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+      appendable.append(currentWrite, offset, offset + length);
+                                      ^
+  found   : int
+  required: @LessThan("offset + length + 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:90: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+      appendable.append(currentWrite, offset, offset + length);
+                                      ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:90: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+      appendable.append(currentWrite, offset, offset + length);
+                                      ^
+  found   : int
+  required: @LTEqLengthOf("this.currentWrite") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:90: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+      appendable.append(currentWrite, offset, offset + length);
+                                                     ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:90: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+      appendable.append(currentWrite, offset, offset + length);
+                                                     ^
+  found   : int
+  required: @LTEqLengthOf("this.currentWrite") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:119: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+      appendable.append(str, off, off + len);
+                             ^
+  found   : int
+  required: @LessThan("off + len + 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:119: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+      appendable.append(str, off, off + len);
+                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:119: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+      appendable.append(str, off, off + len);
+                             ^
+  found   : int
+  required: @LTEqLengthOf("str") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:119: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+      appendable.append(str, off, off + len);
+                                      ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:119: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+      appendable.append(str, off, off + len);
+                                      ^
+  found   : int
+  required: @LTEqLengthOf("str") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:130: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+      appendable.append(csq, start, end);
+                             ^
+  found   : int
+  required: @LessThan("end + 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:130: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+      appendable.append(csq, start, end);
+                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:130: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+      appendable.append(csq, start, end);
+                             ^
+  found   : int
+  required: @LTEqLengthOf("csq") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:130: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+      appendable.append(csq, start, end);
+                                    ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:130: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+      appendable.append(csq, start, end);
+                                    ^
+  found   : int
+  required: @LTEqLengthOf("csq") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:145: error: [override.return] Incompatible return type.
+      public int length() {
+             ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in CurrentWrite
+    int length(CurrentWrite this)
+  cannot override method in CharSequence
+    @NonNegative int length(CharSequence this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:145: error: [override.return] Incompatible return type.
+      public int length() {
+             ^
+  found   : int
+  required: @LTEqLengthOf("this") int
+  Consequence: method in CurrentWrite
+    int length(CurrentWrite this)
+  cannot override method in CharSequence
+    @LTEqLengthOf("this") int length(CharSequence this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:151: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        return chars[i];
+                     ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:151: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        return chars[i];
+                     ^
+  found   : int
+  required: @IndexFor("this.chars") or @LTLengthOf("this.chars") -- an integer less than this.chars's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:156: error: [argument] incompatible argument for parameter offset of String constructor.
+        return new String(chars, start, end - start);
+                                 ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:156: error: [argument] incompatible argument for parameter offset of String constructor.
+        return new String(chars, start, end - start);
+                                 ^
+  found   : int
+  required: @LTEqLengthOf("this.chars") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:156: error: [argument] incompatible argument for parameter count of String constructor.
+        return new String(chars, start, end - start);
+                                            ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:156: error: [argument] incompatible argument for parameter count of String constructor.
+        return new String(chars, start, end - start);
+                                            ^
+  found   : int
+  required: @LTLengthOf(value="this.chars", offset="start - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:161: error: [override.return] Incompatible return type.
+      public String toString() {
+             ^
+  found   : String
+  required: @SameLen("this") String
+  Consequence: method in CurrentWrite
+    String toString(CurrentWrite this)
+  cannot override method in CharSequence
+    @SameLen("this") String toString(CharSequence this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:73: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+          fields[constantCount++] = f;
+                              ^
+  found   : int
+  required: @IndexFor("fields") or @LTLengthOf("fields") -- an integer less than fields's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:82: error: [argument] incompatible argument for parameter initialCapacity of HashMap constructor.
+      nameToConstant = new HashMap<>(hashMapCapacity);
+                                     ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:83: error: [argument] incompatible argument for parameter initialCapacity of HashMap constructor.
+      stringToConstant = new HashMap<>(hashMapCapacity);
+                                       ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:85: error: [argument] incompatible argument for parameter initialCapacity of HashMap constructor.
+      constantToName = new HashMap<>(hashMapCapacity);
+                                     ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java:235: error: [argument] incompatible argument for parameter index of String.charAt.
+      char timezoneIndicator = date.charAt(offset);
+                                           ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java:241: error: [argument] incompatible argument for parameter beginIndex of String.substring.
+        String timezoneOffset = date.substring(offset);
+                                               ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java:293: error: [argument] incompatible argument for parameter index of ParsePosition.setIndex.
+      pos.setIndex(offset);
+                   ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java:320: error: [argument] incompatible argument for parameter index of String.charAt.
+    return (offset < value.length()) && (value.charAt(offset) == expected);
+                                                      ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java:379: error: [argument] incompatible argument for parameter index of String.charAt.
+      char c = string.charAt(i);
+                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java:135: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+    Type keyType = keyAndValueTypes[0];
+                                    ^
+  found   : Type []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java:136: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+    Type valueType = keyAndValueTypes[1];
+                                      ^
+  found   : Type []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java:265: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        target[index] = fieldValue;
+               ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java:265: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        target[index] = fieldValue;
+               ^
+  found   : int
+  required: @IndexFor("target") or @LTLengthOf("target") -- an integer less than target's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:544: error: [argument] incompatible argument for parameter index of String.charAt.
+          return str.charAt(0);
+                            ^
+  found   : @UpperBoundLiteral(0) int
+  required: @LTLengthOf("str") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:837: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+          values[index] = in.nextLong();
+                 ^
+  found   : int
+  required: @IndexFor("values") or @LTLengthOf("values") -- an integer less than values's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:856: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+        out.value(values[i]);
+                         ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: long []
+  required        : index of type @IndexFor("values") or @LTLengthOf("values"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:869: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+              toIntExact(values[0]),
+                                ^
+  found   : long []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:870: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+              toIntExact(values[1]),
+                                ^
+  found   : long []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:871: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 2 could be larger than the array's bound
+              toIntExact(values[2]),
+                                ^
+  found   : long []
+  required: @MinLen(3) -- an array guaranteed to have at least 3 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:872: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 3 could be larger than the array's bound
+              toIntExact(values[3]),
+                                ^
+  found   : long []
+  required: @MinLen(4) -- an array guaranteed to have at least 4 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:873: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 4 could be larger than the array's bound
+              toIntExact(values[4]),
+                                ^
+  found   : long []
+  required: @MinLen(5) -- an array guaranteed to have at least 5 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:874: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 5 could be larger than the array's bound
+              toIntExact(values[5]));
+                                ^
+  found   : long []
+  required: @MinLen(6) -- an array guaranteed to have at least 6 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java:85: error: [argument] incompatible argument for parameter arg1 of Array.set.
+        Array.set(array, i, list.get(i));
+                         ^
+  found   : int
+  required: @LTLengthOf("array") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:43: error: [override.return] Incompatible return type.
+        public int read(char[] buffer, int offset, int count) {
+               ^
+  found   : int
+  required: @GTENegativeOne int
+  Consequence: method in <anonymous com.google.gson.internal.bind.JsonTreeReader$1>
+    int read(<anonymous com.google.gson.internal.bind.JsonTreeReader$1> this, char [] p0, int p1, int p2)
+  cannot override method in Reader
+    @GTENegativeOne int read(Reader this, char [] p0, @NonNegative int p1, @NonNegative int p2) throws IOException
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:43: error: [override.return] Incompatible return type.
+        public int read(char[] buffer, int offset, int count) {
+               ^
+  found   : int
+  required: @LTEqLengthOf("#1") int
+  Consequence: method in <anonymous com.google.gson.internal.bind.JsonTreeReader$1>
+    int read(<anonymous com.google.gson.internal.bind.JsonTreeReader$1> this, char [] p0, int p1, int p2)
+  cannot override method in Reader
+    @LTEqLengthOf("#1") int read(Reader this, char [] p0, @LTEqLengthOf("#1") int p1, @LTLengthOf(value="#1", offset="#2 - 1") int p2) throws IOException
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:86: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    pathIndices[stackSize - 1] = 0;
+                          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:86: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    pathIndices[stackSize - 1] = 0;
+                          ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:95: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:109: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    pathNames[stackSize - 1] = null; // Free the last path name so that it can be garbage collected
+                        ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:109: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    pathNames[stackSize - 1] = null; // Free the last path name so that it can be garbage collected
+                        ^
+  found   : int
+  required: @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames") -- an integer less than this.pathNames's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:113: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:133: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+      boolean isObject = stack[stackSize - 2] instanceof JsonObject;
+                                         ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:133: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+      boolean isObject = stack[stackSize - 2] instanceof JsonObject;
+                                         ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:171: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    return stack[stackSize - 1];
+                           ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:171: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    return stack[stackSize - 1];
+                           ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:176: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    Object result = stack[--stackSize];
+                          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:176: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    Object result = stack[--stackSize];
+                          ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:177: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    stack[stackSize] = null;
+          ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:177: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    stack[stackSize] = null;
+          ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:193: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    pathNames[stackSize - 1] = skipName ? "<skipped>" : result;
+                        ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:193: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    pathNames[stackSize - 1] = skipName ? "<skipped>" : result;
+                        ^
+  found   : int
+  required: @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames") -- an integer less than this.pathNames's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:212: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:222: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:232: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:249: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:264: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:279: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      pathIndices[stackSize - 1]++;
+                            ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:323: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+          pathIndices[stackSize - 1]++;
+                                ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:349: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+    stack[stackSize++] = newTop;
+                   ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:349: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+    stack[stackSize++] = newTop;
+                   ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:355: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      if (stack[i] instanceof JsonArray) {
+                ^
+  index type found: @IntRange(from=-2147483648, to=2147483646) int
+  array type found: Object []
+  required        : index of type @IndexFor("this.stack") or @LTLengthOf("this.stack"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:356: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+        if (++i < stackSize && stack[i] instanceof Iterator) {
+                                     ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: Object []
+  required        : index of type @IndexFor("this.stack") or @LTLengthOf("this.stack"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:357: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+          int pathIndex = pathIndices[i];
+                                      ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:366: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+      } else if (stack[i] instanceof JsonObject) {
+                       ^
+  index type found: @IntRange(from=-2147483648, to=2147483646) int
+  array type found: Object []
+  required        : index of type @IndexFor("this.stack") or @LTLengthOf("this.stack"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:367: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+        if (++i < stackSize && stack[i] instanceof Iterator) {
+                                     ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: Object []
+  required        : index of type @IndexFor("this.stack") or @LTLengthOf("this.stack"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:369: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+          if (pathNames[i] != null) {
+                        ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: String []
+  required        : index of type @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java:370: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+            result.append(pathNames[i]);
+                                    ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: String []
+  required        : index of type @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:55: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          return Duration.ofSeconds(values[0], values[1]);
+                                           ^
+  found   : long []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:55: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+          return Duration.ofSeconds(values[0], values[1]);
+                                                      ^
+  found   : long []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:69: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          return Instant.ofEpochSecond(values[0], values[1]);
+                                              ^
+  found   : long []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:69: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+          return Instant.ofEpochSecond(values[0], values[1]);
+                                                         ^
+  found   : long []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:83: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          return LocalDate.of(toIntExact(values[0]), toIntExact(values[1]), toIntExact(values[2]));
+                                                ^
+  found   : long []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:83: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+          return LocalDate.of(toIntExact(values[0]), toIntExact(values[1]), toIntExact(values[2]));
+                                                                       ^
+  found   : long []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:83: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 2 could be larger than the array's bound
+          return LocalDate.of(toIntExact(values[0]), toIntExact(values[1]), toIntExact(values[2]));
+                                                                                              ^
+  found   : long []
+  required: @MinLen(3) -- an array guaranteed to have at least 3 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:99: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+              toIntExact(values[0]),
+                                ^
+  found   : long []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:100: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+              toIntExact(values[1]),
+                                ^
+  found   : long []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:101: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 2 could be larger than the array's bound
+              toIntExact(values[2]),
+                                ^
+  found   : long []
+  required: @MinLen(3) -- an array guaranteed to have at least 3 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:102: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 3 could be larger than the array's bound
+              toIntExact(values[3]));
+                                ^
+  found   : long []
+  required: @MinLen(4) -- an array guaranteed to have at least 4 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:157: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          return MonthDay.of(toIntExact(values[0]), toIntExact(values[1]));
+                                               ^
+  found   : long []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:157: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+          return MonthDay.of(toIntExact(values[0]), toIntExact(values[1]));
+                                                                      ^
+  found   : long []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:252: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          return Period.of(toIntExact(values[0]), toIntExact(values[1]), toIntExact(values[2]));
+                                             ^
+  found   : long []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:252: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+          return Period.of(toIntExact(values[0]), toIntExact(values[1]), toIntExact(values[2]));
+                                                                    ^
+  found   : long []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:252: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 2 could be larger than the array's bound
+          return Period.of(toIntExact(values[0]), toIntExact(values[1]), toIntExact(values[2]));
+                                                                                           ^
+  found   : long []
+  required: @MinLen(3) -- an array guaranteed to have at least 3 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:265: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          return Year.of(toIntExact(values[0]));
+                                           ^
+  found   : long []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:278: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+          return YearMonth.of(toIntExact(values[0]), toIntExact(values[1]));
+                                                ^
+  found   : long []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java:278: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+          return YearMonth.of(toIntExact(values[0]), toIntExact(values[1]));
+                                                                       ^
+  found   : long []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+Note: /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+295 errors
+2 warnings
