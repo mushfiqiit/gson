@@ -599,7 +599,14 @@
     <profile>
       <id>nullaway</id>
       <properties>
-        <nullaway.checks>-Xep:NullAway:WARN -XepOpt:NullAway:AnnotatedPackages=com.google.gson</nullaway.checks>
+        <!-- JSpecifyMode=false: gson has no @NullMarked/@NullUnmarked annotations anywhere,
+          and NullAway's JSpecify mode (its default since ~0.11) refuses to analyze
+          anything until such annotations exist, instead only emitting a
+          RequireExplicitNullMarking advisory. Disable JSpecify mode so NullAway falls
+          back to its legacy AnnotatedPackages heuristic and actually analyzes
+          com.google.gson.* for real nullability issues. Also explicitly turn off
+          RequireExplicitNullMarking itself as a belt-and-suspenders measure. -->
+        <nullaway.checks>-Xep:NullAway:WARN -XepOpt:NullAway:AnnotatedPackages=com.google.gson -XepOpt:NullAway:JSpecifyMode=false -Xep:RequireExplicitNullMarking:OFF</nullaway.checks>
       </properties>
       <build>
         <plugins>
@@ -607,6 +614,10 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
+              <!-- Without this, failOnWarning (set repo-wide above) makes the plugin pass
+                -Werror to javac, so the build aborts at the very first NullAway warning
+                instead of running to completion and collecting all of them. -->
+              <failOnWarning>false</failOnWarning>
               <!-- combine.children="append": without it, Maven pairs this single <path>
                 positionally against pluginManagement's single <path> (error_prone_core)
                 and merges them field-by-field, silently discarding error_prone_core
