@@ -1,0 +1,165 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: nestingLimit, pathIndices, pathNames, stack, stackSize
+
+# com/google/gson/stream/JsonReader.java
+    298:   {
+    299:     stack[stackSize++] = JsonScope.EMPTY_DOCUMENT;
+    300:   }
+  ---
+    438:     }
+    439:     this.nestingLimit = limit;
+    440:   }
+  ---
+    448:   public final int getNestingLimit() {
+    449:     return nestingLimit;
+    450:   }
+  ---
+    464:       push(JsonScope.EMPTY_ARRAY);
+    465:       pathIndices[stackSize - 1] = 0;
+    466:       peeked = PEEKED_NONE;
+  ---
+    483:     if (p == PEEKED_END_ARRAY) {
+    484:       stackSize--;
+    485:       pathIndices[stackSize - 1]++;
+    486:       peeked = PEEKED_NONE;
+  ---
+    522:     if (p == PEEKED_END_OBJECT) {
+    523:       stackSize--;
+    524:       pathNames[stackSize] = null; // Free the last path name so that it can be garbage collected!
+    525:       pathIndices[stackSize - 1]++;
+    526:       peeked = PEEKED_NONE;
+  ---
+    582:   int doPeek() throws IOException {
+    583:     int peekStack = stack[stackSize - 1];
+    584:     if (peekStack == JsonScope.EMPTY_ARRAY) {
+    585:       stack[stackSize - 1] = JsonScope.NONEMPTY_ARRAY;
+    586:     } else if (peekStack == JsonScope.NONEMPTY_ARRAY) {
+  ---
+    600:     } else if (peekStack == JsonScope.EMPTY_OBJECT || peekStack == JsonScope.NONEMPTY_OBJECT) {
+    601:       stack[stackSize - 1] = JsonScope.DANGLING_NAME;
+    602:       // Look for a comma before the next element.
+  ---
+    643:     } else if (peekStack == JsonScope.DANGLING_NAME) {
+    644:       stack[stackSize - 1] = JsonScope.NONEMPTY_OBJECT;
+    645:       // Look for a colon before the value.
+  ---
+    662:       }
+    663:       stack[stackSize - 1] = JsonScope.NONEMPTY_DOCUMENT;
+    664:     } else if (peekStack == JsonScope.NONEMPTY_DOCUMENT) {
+  ---
+    940:     peeked = PEEKED_NONE;
+    941:     pathNames[stackSize - 1] = result;
+    942:     return result;
+  ---
+    974:     peeked = PEEKED_NONE;
+    975:     pathIndices[stackSize - 1]++;
+    976:     return result;
+  ---
+    990:       peeked = PEEKED_NONE;
+    991:       pathIndices[stackSize - 1]++;
+    992:       return true;
+  ---
+    994:       peeked = PEEKED_NONE;
+    995:       pathIndices[stackSize - 1]++;
+    996:       return false;
+  ---
+   1012:       peeked = PEEKED_NONE;
+   1013:       pathIndices[stackSize - 1]++;
+   1014:     } else {
+  ---
+   1036:       peeked = PEEKED_NONE;
+   1037:       pathIndices[stackSize - 1]++;
+   1038:       return (double) peekedLong;
+  ---
+   1066:     peeked = PEEKED_NONE;
+   1067:     pathIndices[stackSize - 1]++;
+   1068:     return result;
+  ---
+   1087:       peeked = PEEKED_NONE;
+   1088:       pathIndices[stackSize - 1]++;
+   1089:       return peekedLong;
+  ---
+   1104:         peeked = PEEKED_NONE;
+   1105:         pathIndices[stackSize - 1]++;
+   1106:         return result;
+  ---
+   1129:     peeked = PEEKED_NONE;
+   1130:     pathIndices[stackSize - 1]++;
+   1131:     return result;
+  ---
+   1338:       peeked = PEEKED_NONE;
+   1339:       pathIndices[stackSize - 1]++;
+   1340:       return result;
+  ---
+   1355:         peeked = PEEKED_NONE;
+   1356:         pathIndices[stackSize - 1]++;
+   1357:         return result;
+  ---
+   1380:     peeked = PEEKED_NONE;
+   1381:     pathIndices[stackSize - 1]++;
+   1382:     return result;
+  ---
+   1393:     peeked = PEEKED_NONE;
+   1394:     stack[0] = JsonScope.CLOSED;
+   1395:     stackSize = 1;
+   1396:     in.close();
+  ---
+   1432:         case PEEKED_END_ARRAY:
+   1433:           stackSize--;
+   1434:           count--;
+  ---
+   1440:             // Free the last path name so that it can be garbage collected
+   1441:             pathNames[stackSize - 1] = null;
+   1442:           }
+   1443:           stackSize--;
+   1444:           count--;
+  ---
+   1458:           if (count == 0) {
+   1459:             pathNames[stackSize - 1] = "<skipped>";
+   1460:           }
+  ---
+   1465:           if (count == 0) {
+   1466:             pathNames[stackSize - 1] = "<skipped>";
+   1467:           }
+  ---
+   1472:           if (count == 0) {
+   1473:             pathNames[stackSize - 1] = "<skipped>";
+   1474:           }
+  ---
+   1488: 
+   1489:     pathIndices[stackSize - 1]++;
+   1490:   }
+  ---
+   1493:     // - 1 because stack contains as first element either EMPTY_DOCUMENT or NONEMPTY_DOCUMENT
+   1494:     if (stackSize - 1 >= nestingLimit) {
+   1495:       throw new MalformedJsonException(
+   1496:           "Nesting limit " + nestingLimit + " reached" + locationString());
+   1497:     }
+   1498: 
+   1499:     if (stackSize == stack.length) {
+   1500:       int newLength = stackSize * 2;
+   1501:       stack = Arrays.copyOf(stack, newLength);
+   1502:       pathIndices = Arrays.copyOf(pathIndices, newLength);
+   1503:       pathNames = Arrays.copyOf(pathNames, newLength);
+   1504:     }
+   1505:     stack[stackSize++] = newTop;
+   1506:   }
+  ---
+   1693:     StringBuilder result = new StringBuilder().append('$');
+   1694:     for (int i = 0; i < stackSize; i++) {
+   1695:       int scope = stack[i];
+   1696:       switch (scope) {
+  ---
+   1698:         case JsonScope.NONEMPTY_ARRAY:
+   1699:           int pathIndex = pathIndices[i];
+   1700:           // If index is last path element it points to next array element; have to decrement
+   1701:           if (usePreviousPath && pathIndex > 0 && i == stackSize - 1) {
+   1702:             pathIndex--;
+  ---
+   1709:           result.append('.');
+   1710:           if (pathNames[i] != null) {
+   1711:             result.append(pathNames[i]);
+   1712:           }
+  ---

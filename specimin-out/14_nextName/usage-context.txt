@@ -1,0 +1,432 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: PEEKED_DOUBLE_QUOTED_NAME, PEEKED_NONE, PEEKED_SINGLE_QUOTED_NAME, PEEKED_UNQUOTED_NAME, pathNames, peeked, stackSize
+
+# com/google/gson/stream/JsonReader.java
+    298:   {
+    299:     stack[stackSize++] = JsonScope.EMPTY_DOCUMENT;
+    300:   }
+  ---
+    458:   public void beginArray() throws IOException {
+    459:     int p = peeked;
+    460:     if (p == PEEKED_NONE) {
+    461:       p = doPeek();
+  ---
+    464:       push(JsonScope.EMPTY_ARRAY);
+    465:       pathIndices[stackSize - 1] = 0;
+    466:       peeked = PEEKED_NONE;
+    467:     } else {
+  ---
+    478:   public void endArray() throws IOException {
+    479:     int p = peeked;
+    480:     if (p == PEEKED_NONE) {
+    481:       p = doPeek();
+  ---
+    483:     if (p == PEEKED_END_ARRAY) {
+    484:       stackSize--;
+    485:       pathIndices[stackSize - 1]++;
+    486:       peeked = PEEKED_NONE;
+    487:     } else {
+  ---
+    498:   public void beginObject() throws IOException {
+    499:     int p = peeked;
+    500:     if (p == PEEKED_NONE) {
+    501:       p = doPeek();
+  ---
+    504:       push(JsonScope.EMPTY_OBJECT);
+    505:       peeked = PEEKED_NONE;
+    506:     } else {
+  ---
+    517:   public void endObject() throws IOException {
+    518:     int p = peeked;
+    519:     if (p == PEEKED_NONE) {
+    520:       p = doPeek();
+  ---
+    522:     if (p == PEEKED_END_OBJECT) {
+    523:       stackSize--;
+    524:       pathNames[stackSize] = null; // Free the last path name so that it can be garbage collected!
+    525:       pathIndices[stackSize - 1]++;
+    526:       peeked = PEEKED_NONE;
+    527:     } else {
+  ---
+    533:   public boolean hasNext() throws IOException {
+    534:     int p = peeked;
+    535:     if (p == PEEKED_NONE) {
+    536:       p = doPeek();
+  ---
+    542:   public JsonToken peek() throws IOException {
+    543:     int p = peeked;
+    544:     if (p == PEEKED_NONE) {
+    545:       p = doPeek();
+  ---
+    556:         return JsonToken.END_ARRAY;
+    557:       case PEEKED_SINGLE_QUOTED_NAME:
+    558:       case PEEKED_DOUBLE_QUOTED_NAME:
+    559:       case PEEKED_UNQUOTED_NAME:
+    560:         return JsonToken.NAME;
+  ---
+    582:   int doPeek() throws IOException {
+    583:     int peekStack = stack[stackSize - 1];
+    584:     if (peekStack == JsonScope.EMPTY_ARRAY) {
+    585:       stack[stackSize - 1] = JsonScope.NONEMPTY_ARRAY;
+    586:     } else if (peekStack == JsonScope.NONEMPTY_ARRAY) {
+  ---
+    590:         case ']':
+    591:           peeked = PEEKED_END_ARRAY;
+    592:           return peeked;
+    593:         case ';':
+  ---
+    600:     } else if (peekStack == JsonScope.EMPTY_OBJECT || peekStack == JsonScope.NONEMPTY_OBJECT) {
+    601:       stack[stackSize - 1] = JsonScope.DANGLING_NAME;
+    602:       // Look for a comma before the next element.
+  ---
+    606:           case '}':
+    607:             peeked = PEEKED_END_OBJECT;
+    608:             return peeked;
+    609:           case ';':
+  ---
+    619:         case '"':
+    620:           peeked = PEEKED_DOUBLE_QUOTED_NAME;
+    621:           return peeked;
+    622:         case '\'':
+    623:           checkLenient();
+    624:           peeked = PEEKED_SINGLE_QUOTED_NAME;
+    625:           return peeked;
+    626:         case '}':
+    627:           if (peekStack != JsonScope.NONEMPTY_OBJECT) {
+    628:             peeked = PEEKED_END_OBJECT;
+    629:             return peeked;
+    630:           } else {
+  ---
+    636:           if (isLiteral((char) c)) {
+    637:             peeked = PEEKED_UNQUOTED_NAME;
+    638:             return peeked;
+    639:           } else {
+  ---
+    643:     } else if (peekStack == JsonScope.DANGLING_NAME) {
+    644:       stack[stackSize - 1] = JsonScope.NONEMPTY_OBJECT;
+    645:       // Look for a colon before the value.
+  ---
+    662:       }
+    663:       stack[stackSize - 1] = JsonScope.NONEMPTY_DOCUMENT;
+    664:     } else if (peekStack == JsonScope.NONEMPTY_DOCUMENT) {
+  ---
+    666:       if (c == -1) {
+    667:         peeked = PEEKED_EOF;
+    668:         return peeked;
+    669:       } else {
+  ---
+    680:         if (peekStack == JsonScope.EMPTY_ARRAY) {
+    681:           peeked = PEEKED_END_ARRAY;
+    682:           return peeked;
+    683:         }
+  ---
+    690:           pos--;
+    691:           peeked = PEEKED_NULL;
+    692:           return peeked;
+    693:         } else {
+  ---
+    697:         checkLenient();
+    698:         peeked = PEEKED_SINGLE_QUOTED;
+    699:         return peeked;
+    700:       case '"':
+    701:         peeked = PEEKED_DOUBLE_QUOTED;
+    702:         return peeked;
+    703:       case '[':
+    704:         peeked = PEEKED_BEGIN_ARRAY;
+    705:         return peeked;
+    706:       case '{':
+    707:         peeked = PEEKED_BEGIN_OBJECT;
+    708:         return peeked;
+    709:       default:
+  ---
+    713:     int result = peekKeyword();
+    714:     if (result != PEEKED_NONE) {
+    715:       return result;
+  ---
+    718:     result = peekNumber();
+    719:     if (result != PEEKED_NONE) {
+    720:       return result;
+  ---
+    727:     checkLenient();
+    728:     peeked = PEEKED_UNQUOTED;
+    729:     return peeked;
+    730:   }
+  ---
+    752:     } else {
+    753:       return PEEKED_NONE;
+    754:     }
+  ---
+    762:       if (pos + i >= limit && !fillBuffer(i + 1)) {
+    763:         return PEEKED_NONE;
+    764:       }
+  ---
+    767:       if (!matched) {
+    768:         return PEEKED_NONE;
+    769:       }
+  ---
+    772:     if ((pos + length < limit || fillBuffer(length + 1)) && isLiteral(buffer[pos + length])) {
+    773:       return PEEKED_NONE; // Don't match trues, falsey or nullsoft!
+    774:     }
+  ---
+    777:     pos += length;
+    778:     peeked = peeking;
+    779:     return peeked;
+    780:   }
+  ---
+    800:           // and let the application handle this as an unquoted literal.
+    801:           return PEEKED_NONE;
+    802:         }
+  ---
+    820:           }
+    821:           return PEEKED_NONE;
+    822: 
+  ---
+    827:           }
+    828:           return PEEKED_NONE;
+    829: 
+  ---
+    835:           }
+    836:           return PEEKED_NONE;
+    837: 
+  ---
+    842:           }
+    843:           return PEEKED_NONE;
+    844: 
+  ---
+    849:             }
+    850:             return PEEKED_NONE;
+    851:           }
+  ---
+    856:             if (fitsInLong && value == 0) {
+    857:               return PEEKED_NONE; // Leading '0' prefix is not allowed (since it could be octal).
+    858:             }
+  ---
+    880:       pos += i;
+    881:       peeked = PEEKED_LONG;
+    882:       return peeked;
+    883:     } else if (last == NUMBER_CHAR_DIGIT
+  ---
+    886:       peekedNumberLength = i;
+    887:       peeked = PEEKED_NUMBER;
+    888:       return peeked;
+    889:     } else {
+    890:       return PEEKED_NONE;
+    891:     }
+  ---
+    925:   public String nextName() throws IOException {
+    926:     int p = peeked;
+    927:     if (p == PEEKED_NONE) {
+    928:       p = doPeek();
+  ---
+    930:     String result;
+    931:     if (p == PEEKED_UNQUOTED_NAME) {
+    932:       result = nextUnquotedValue();
+    933:     } else if (p == PEEKED_SINGLE_QUOTED_NAME) {
+    934:       result = nextQuotedValue('\'');
+    935:     } else if (p == PEEKED_DOUBLE_QUOTED_NAME) {
+    936:       result = nextQuotedValue('"');
+  ---
+    939:     }
+    940:     peeked = PEEKED_NONE;
+    941:     pathNames[stackSize - 1] = result;
+    942:     return result;
+  ---
+    951:   public String nextString() throws IOException {
+    952:     int p = peeked;
+    953:     if (p == PEEKED_NONE) {
+    954:       p = doPeek();
+  ---
+    973:     }
+    974:     peeked = PEEKED_NONE;
+    975:     pathIndices[stackSize - 1]++;
+    976:     return result;
+  ---
+    984:   public boolean nextBoolean() throws IOException {
+    985:     int p = peeked;
+    986:     if (p == PEEKED_NONE) {
+    987:       p = doPeek();
+  ---
+    989:     if (p == PEEKED_TRUE) {
+    990:       peeked = PEEKED_NONE;
+    991:       pathIndices[stackSize - 1]++;
+    992:       return true;
+    993:     } else if (p == PEEKED_FALSE) {
+    994:       peeked = PEEKED_NONE;
+    995:       pathIndices[stackSize - 1]++;
+    996:       return false;
+  ---
+   1006:   public void nextNull() throws IOException {
+   1007:     int p = peeked;
+   1008:     if (p == PEEKED_NONE) {
+   1009:       p = doPeek();
+  ---
+   1011:     if (p == PEEKED_NULL) {
+   1012:       peeked = PEEKED_NONE;
+   1013:       pathIndices[stackSize - 1]++;
+   1014:     } else {
+  ---
+   1029:   public double nextDouble() throws IOException {
+   1030:     int p = peeked;
+   1031:     if (p == PEEKED_NONE) {
+   1032:       p = doPeek();
+  ---
+   1035:     if (p == PEEKED_LONG) {
+   1036:       peeked = PEEKED_NONE;
+   1037:       pathIndices[stackSize - 1]++;
+   1038:       return (double) peekedLong;
+  ---
+   1051: 
+   1052:     peeked = PEEKED_BUFFERED;
+   1053:     double result;
+  ---
+   1065:     peekedString = null;
+   1066:     peeked = PEEKED_NONE;
+   1067:     pathIndices[stackSize - 1]++;
+   1068:     return result;
+  ---
+   1080:   public long nextLong() throws IOException {
+   1081:     int p = peeked;
+   1082:     if (p == PEEKED_NONE) {
+   1083:       p = doPeek();
+  ---
+   1086:     if (p == PEEKED_LONG) {
+   1087:       peeked = PEEKED_NONE;
+   1088:       pathIndices[stackSize - 1]++;
+   1089:       return peekedLong;
+  ---
+   1103:         long result = Long.parseLong(peekedString);
+   1104:         peeked = PEEKED_NONE;
+   1105:         pathIndices[stackSize - 1]++;
+   1106:         return result;
+  ---
+   1113: 
+   1114:     peeked = PEEKED_BUFFERED;
+   1115:     double asDouble;
+  ---
+   1128:     peekedString = null;
+   1129:     peeked = PEEKED_NONE;
+   1130:     pathIndices[stackSize - 1]++;
+   1131:     return result;
+  ---
+   1326:   public int nextInt() throws IOException {
+   1327:     int p = peeked;
+   1328:     if (p == PEEKED_NONE) {
+   1329:       p = doPeek();
+  ---
+   1337:       }
+   1338:       peeked = PEEKED_NONE;
+   1339:       pathIndices[stackSize - 1]++;
+   1340:       return result;
+  ---
+   1354:         result = Integer.parseInt(peekedString);
+   1355:         peeked = PEEKED_NONE;
+   1356:         pathIndices[stackSize - 1]++;
+   1357:         return result;
+  ---
+   1364: 
+   1365:     peeked = PEEKED_BUFFERED;
+   1366:     double asDouble;
+  ---
+   1379:     peekedString = null;
+   1380:     peeked = PEEKED_NONE;
+   1381:     pathIndices[stackSize - 1]++;
+   1382:     return result;
+  ---
+   1392:   public void close() throws IOException {
+   1393:     peeked = PEEKED_NONE;
+   1394:     stack[0] = JsonScope.CLOSED;
+   1395:     stackSize = 1;
+   1396:     in.close();
+  ---
+   1417:     do {
+   1418:       int p = peeked;
+   1419:       if (p == PEEKED_NONE) {
+   1420:         p = doPeek();
+  ---
+   1432:         case PEEKED_END_ARRAY:
+   1433:           stackSize--;
+   1434:           count--;
+  ---
+   1440:             // Free the last path name so that it can be garbage collected
+   1441:             pathNames[stackSize - 1] = null;
+   1442:           }
+   1443:           stackSize--;
+   1444:           count--;
+  ---
+   1454:           break;
+   1455:         case PEEKED_UNQUOTED_NAME:
+   1456:           skipUnquotedValue();
+  ---
+   1458:           if (count == 0) {
+   1459:             pathNames[stackSize - 1] = "<skipped>";
+   1460:           }
+   1461:           break;
+   1462:         case PEEKED_SINGLE_QUOTED_NAME:
+   1463:           skipQuotedValue('\'');
+  ---
+   1465:           if (count == 0) {
+   1466:             pathNames[stackSize - 1] = "<skipped>";
+   1467:           }
+   1468:           break;
+   1469:         case PEEKED_DOUBLE_QUOTED_NAME:
+   1470:           skipQuotedValue('"');
+  ---
+   1472:           if (count == 0) {
+   1473:             pathNames[stackSize - 1] = "<skipped>";
+   1474:           }
+  ---
+   1485:       }
+   1486:       peeked = PEEKED_NONE;
+   1487:     } while (count > 0);
+   1488: 
+   1489:     pathIndices[stackSize - 1]++;
+   1490:   }
+  ---
+   1493:     // - 1 because stack contains as first element either EMPTY_DOCUMENT or NONEMPTY_DOCUMENT
+   1494:     if (stackSize - 1 >= nestingLimit) {
+   1495:       throw new MalformedJsonException(
+  ---
+   1498: 
+   1499:     if (stackSize == stack.length) {
+   1500:       int newLength = stackSize * 2;
+   1501:       stack = Arrays.copyOf(stack, newLength);
+   1502:       pathIndices = Arrays.copyOf(pathIndices, newLength);
+   1503:       pathNames = Arrays.copyOf(pathNames, newLength);
+   1504:     }
+   1505:     stack[stackSize++] = newTop;
+   1506:   }
+  ---
+   1693:     StringBuilder result = new StringBuilder().append('$');
+   1694:     for (int i = 0; i < stackSize; i++) {
+   1695:       int scope = stack[i];
+  ---
+   1700:           // If index is last path element it points to next array element; have to decrement
+   1701:           if (usePreviousPath && pathIndex > 0 && i == stackSize - 1) {
+   1702:             pathIndex--;
+  ---
+   1709:           result.append('.');
+   1710:           if (pathNames[i] != null) {
+   1711:             result.append(pathNames[i]);
+   1712:           }
+  ---
+   1844:   private IllegalStateException unexpectedTokenError(String expected) throws IOException {
+   1845:     JsonToken peeked = peek();
+   1846:     String troubleshootingId =
+   1847:         peeked == JsonToken.NULL ? "adapter-not-null-safe" : "unexpected-json-structure";
+   1848:     return new IllegalStateException(
+  ---
+   1898:             }
+   1899:             int p = reader.peeked;
+   1900:             if (p == PEEKED_NONE) {
+   1901:               p = reader.doPeek();
+   1902:             }
+   1903:             if (p == PEEKED_DOUBLE_QUOTED_NAME) {
+   1904:               reader.peeked = PEEKED_DOUBLE_QUOTED;
+   1905:             } else if (p == PEEKED_SINGLE_QUOTED_NAME) {
+   1906:               reader.peeked = PEEKED_SINGLE_QUOTED;
+   1907:             } else if (p == PEEKED_UNQUOTED_NAME) {
+   1908:               reader.peeked = PEEKED_UNQUOTED;
+   1909:             } else {
+  ---

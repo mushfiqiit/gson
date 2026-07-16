@@ -1,0 +1,47 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: appendable, currentWrite
+
+# com/google/gson/internal/Streams.java
+     72: 
+     73:   public static Writer writerForAppendable(Appendable appendable) {
+     74:     return appendable instanceof Writer ? (Writer) appendable : new AppendableWriter(appendable);
+     75:   }
+  ---
+     81: 
+     82:     AppendableWriter(Appendable appendable) {
+     83:       this.appendable = appendable;
+     84:     }
+  ---
+     88:     public void write(char[] chars, int offset, int length) throws IOException {
+     89:       currentWrite.setChars(chars);
+     90:       appendable.append(currentWrite, offset, offset + length);
+     91:     }
+  ---
+     94:     public void flush() throws IOException {
+     95:       if (appendable instanceof Flushable) {
+     96:         ((Flushable) appendable).flush();
+     97:       }
+  ---
+    101:     public void close() throws IOException {
+    102:       if (appendable instanceof Closeable) {
+    103:         ((Closeable) appendable).close();
+    104:       }
+  ---
+    111:     public void write(int i) throws IOException {
+    112:       appendable.append((char) i);
+    113:     }
+  ---
+    118:       Objects.requireNonNull(str);
+    119:       appendable.append(str, off, off + len);
+    120:     }
+  ---
+    123:     public Writer append(CharSequence csq) throws IOException {
+    124:       appendable.append(csq);
+    125:       return this;
+  ---
+    129:     public Writer append(CharSequence csq, int start, int end) throws IOException {
+    130:       appendable.append(csq, start, end);
+    131:       return this;
+  ---

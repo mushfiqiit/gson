@@ -1,0 +1,23 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: fields
+
+# com/google/gson/internal/bind/TypeAdapters.java
+    816: 
+    817:     IntegerFieldsTypeAdapter(String... fields) {
+    818:       this.fields = Arrays.asList(fields);
+    819:     }
+  ---
+    831:       in.beginObject();
+    832:       long[] values = new long[fields.size()];
+    833:       while (in.peek() != JsonToken.END_OBJECT) {
+    834:         String name = in.nextName();
+    835:         int index = fields.indexOf(name);
+    836:         if (index >= 0) {
+  ---
+    853:       long[] values = integerValues(value);
+    854:       for (int i = 0; i < fields.size(); i++) {
+    855:         out.name(fields.get(i));
+    856:         out.value(values[i]);
+  ---

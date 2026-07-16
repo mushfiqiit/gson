@@ -1,0 +1,36 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: upperBound
+
+# com/google/gson/internal/GsonTypes.java
+    428:         } else if (originalUpperBound.length == 1) {
+    429:           Type upperBound =
+    430:               resolve(context, contextRawType, originalUpperBound[0], visitedTypeVariables);
+    431:           if (upperBound != originalUpperBound[0]) {
+    432:             toResolve = subtypeOf(upperBound);
+    433:             break;
+  ---
+    636:         this.lowerBound = canonicalize(lowerBounds[0]);
+    637:         this.upperBound = Object.class;
+    638: 
+  ---
+    642:         this.lowerBound = null;
+    643:         this.upperBound = canonicalize(upperBounds[0]);
+    644:       }
+  ---
+    648:     public Type[] getUpperBounds() {
+    649:       return new Type[] {upperBound};
+    650:     }
+  ---
+    664:       // this equals Arrays.hashCode(getLowerBounds()) ^ Arrays.hashCode(getUpperBounds());
+    665:       return (lowerBound != null ? 31 + lowerBound.hashCode() : 1) ^ (31 + upperBound.hashCode());
+    666:     }
+  ---
+    671:         return "? super " + typeToString(lowerBound);
+    672:       } else if (upperBound == Object.class) {
+    673:         return "?";
+    674:       } else {
+    675:         return "? extends " + typeToString(upperBound);
+    676:       }
+  ---

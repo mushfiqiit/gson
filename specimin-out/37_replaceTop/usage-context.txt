@@ -1,0 +1,44 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: stack, stackSize
+
+# com/google/gson/stream/JsonWriter.java
+    463: 
+    464:     stackSize--;
+    465:     if (context == nonempty) {
+  ---
+    472:   private void push(int newTop) {
+    473:     if (stackSize == stack.length) {
+    474:       stack = Arrays.copyOf(stack, stackSize * 2);
+    475:     }
+    476:     stack[stackSize++] = newTop;
+    477:   }
+  ---
+    480:   private int peek() {
+    481:     if (stackSize == 0) {
+    482:       throw new IllegalStateException("JsonWriter is closed.");
+    483:     }
+    484:     return stack[stackSize - 1];
+    485:   }
+  ---
+    488:   private void replaceTop(int topOfStack) {
+    489:     stack[stackSize - 1] = topOfStack;
+    490:   }
+  ---
+    706:   public void flush() throws IOException {
+    707:     if (stackSize == 0) {
+    708:       throw new IllegalStateException("JsonWriter is closed.");
+  ---
+    721: 
+    722:     int size = stackSize;
+    723:     if (size > 1 || (size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT)) {
+    724:       throw new IOException("Incomplete document");
+    725:     }
+    726:     stackSize = 0;
+    727:   }
+  ---
+    780:     out.write(formattingStyle.getNewline());
+    781:     for (int i = 1, size = stackSize; i < size; i++) {
+    782:       out.write(formattingStyle.getIndent());
+  ---

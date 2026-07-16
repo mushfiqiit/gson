@@ -1,0 +1,111 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: pathIndices, pathNames, stackSize
+
+# com/google/gson/internal/bind/JsonTreeReader.java
+     85:     push(array.iterator());
+     86:     pathIndices[stackSize - 1] = 0;
+     87:   }
+  ---
+     93:     popStack(); // array
+     94:     if (stackSize > 0) {
+     95:       pathIndices[stackSize - 1]++;
+     96:     }
+  ---
+    108:     expect(JsonToken.END_OBJECT);
+    109:     pathNames[stackSize - 1] = null; // Free the last path name so that it can be garbage collected
+    110:     popStack(); // empty iterator
+    111:     popStack(); // object
+    112:     if (stackSize > 0) {
+    113:       pathIndices[stackSize - 1]++;
+    114:     }
+  ---
+    126:   public JsonToken peek() throws IOException {
+    127:     if (stackSize == 0) {
+    128:       return JsonToken.END_DOCUMENT;
+  ---
+    132:     if (o instanceof Iterator) {
+    133:       boolean isObject = stack[stackSize - 2] instanceof JsonObject;
+    134:       Iterator<?> iterator = (Iterator<?>) o;
+  ---
+    170:   private Object peekStack() {
+    171:     return stack[stackSize - 1];
+    172:   }
+  ---
+    175:   private Object popStack() {
+    176:     Object result = stack[--stackSize];
+    177:     stack[stackSize] = null;
+    178:     return result;
+  ---
+    192:     String result = (String) entry.getKey();
+    193:     pathNames[stackSize - 1] = skipName ? "<skipped>" : result;
+    194:     push(entry.getValue());
+  ---
+    210:     String result = ((JsonPrimitive) popStack()).getAsString();
+    211:     if (stackSize > 0) {
+    212:       pathIndices[stackSize - 1]++;
+    213:     }
+  ---
+    220:     boolean result = ((JsonPrimitive) popStack()).getAsBoolean();
+    221:     if (stackSize > 0) {
+    222:       pathIndices[stackSize - 1]++;
+    223:     }
+  ---
+    230:     popStack();
+    231:     if (stackSize > 0) {
+    232:       pathIndices[stackSize - 1]++;
+    233:     }
+  ---
+    247:     popStack();
+    248:     if (stackSize > 0) {
+    249:       pathIndices[stackSize - 1]++;
+    250:     }
+  ---
+    262:     popStack();
+    263:     if (stackSize > 0) {
+    264:       pathIndices[stackSize - 1]++;
+    265:     }
+  ---
+    277:     popStack();
+    278:     if (stackSize > 0) {
+    279:       pathIndices[stackSize - 1]++;
+    280:     }
+  ---
+    299:     stack = new Object[] {SENTINEL_CLOSED};
+    300:     stackSize = 1;
+    301:   }
+  ---
+    321:         popStack();
+    322:         if (stackSize > 0) {
+    323:           pathIndices[stackSize - 1]++;
+    324:         }
+  ---
+    342:   private void push(Object newTop) {
+    343:     if (stackSize == stack.length) {
+    344:       int newLength = stackSize * 2;
+    345:       stack = Arrays.copyOf(stack, newLength);
+    346:       pathIndices = Arrays.copyOf(pathIndices, newLength);
+    347:       pathNames = Arrays.copyOf(pathNames, newLength);
+    348:     }
+    349:     stack[stackSize++] = newTop;
+    350:   }
+  ---
+    353:     StringBuilder result = new StringBuilder().append('$');
+    354:     for (int i = 0; i < stackSize; i++) {
+    355:       if (stack[i] instanceof JsonArray) {
+    356:         if (++i < stackSize && stack[i] instanceof Iterator) {
+    357:           int pathIndex = pathIndices[i];
+    358:           // If index is last path element it points to next array element; have to decrement
+  ---
+    360:           // `- 2` covers case where peek() already pushed next element onto stack
+    361:           if (usePreviousPath && pathIndex > 0 && (i == stackSize - 1 || i == stackSize - 2)) {
+    362:             pathIndex--;
+  ---
+    366:       } else if (stack[i] instanceof JsonObject) {
+    367:         if (++i < stackSize && stack[i] instanceof Iterator) {
+    368:           result.append('.');
+    369:           if (pathNames[i] != null) {
+    370:             result.append(pathNames[i]);
+    371:           }
+  ---

@@ -1,0 +1,46 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: value
+
+# com/google/gson/internal/LazilyParsedNumber.java
+     35:    */
+     36:   public LazilyParsedNumber(String value) {
+     37:     this.value = value;
+     38:   }
+  ---
+     40:   private BigDecimal asBigDecimal() {
+     41:     return NumberLimits.parseBigDecimal(value);
+     42:   }
+  ---
+     46:     try {
+     47:       return Integer.parseInt(value);
+     48:     } catch (NumberFormatException e) {
+     49:       try {
+     50:         return (int) Long.parseLong(value);
+     51:       } catch (NumberFormatException nfe) {
+  ---
+     59:     try {
+     60:       return Long.parseLong(value);
+     61:     } catch (NumberFormatException e) {
+  ---
+     67:   public float floatValue() {
+     68:     return Float.parseFloat(value);
+     69:   }
+  ---
+     72:   public double doubleValue() {
+     73:     return Double.parseDouble(value);
+     74:   }
+  ---
+     77:   public String toString() {
+     78:     return value;
+     79:   }
+  ---
+     96:   public int hashCode() {
+     97:     return value.hashCode();
+     98:   }
+  ---
+    106:       LazilyParsedNumber other = (LazilyParsedNumber) obj;
+    107:       return value.equals(other.value);
+    108:     }
+  ---

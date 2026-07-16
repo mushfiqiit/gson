@@ -1,0 +1,123 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: HTML_SAFE_REPLACEMENT_CHARS, REPLACEMENT_CHARS, htmlSafe, out
+
+# com/google/gson/stream/JsonWriter.java
+    181:   static {
+    182:     REPLACEMENT_CHARS = new String[128];
+    183:     for (int i = 0; i <= 0x1f; i++) {
+    184:       REPLACEMENT_CHARS[i] = String.format("\\u%04x", i);
+    185:     }
+    186:     REPLACEMENT_CHARS['"'] = "\\\"";
+    187:     REPLACEMENT_CHARS['\\'] = "\\\\";
+    188:     REPLACEMENT_CHARS['\t'] = "\\t";
+    189:     REPLACEMENT_CHARS['\b'] = "\\b";
+    190:     REPLACEMENT_CHARS['\n'] = "\\n";
+    191:     REPLACEMENT_CHARS['\r'] = "\\r";
+    192:     REPLACEMENT_CHARS['\f'] = "\\f";
+    193:     HTML_SAFE_REPLACEMENT_CHARS = REPLACEMENT_CHARS.clone();
+    194:     HTML_SAFE_REPLACEMENT_CHARS['<'] = "\\u003c";
+    195:     HTML_SAFE_REPLACEMENT_CHARS['>'] = "\\u003e";
+    196:     HTML_SAFE_REPLACEMENT_CHARS['&'] = "\\u0026";
+    197:     HTML_SAFE_REPLACEMENT_CHARS['='] = "\\u003d";
+    198:     HTML_SAFE_REPLACEMENT_CHARS['\''] = "\\u0027";
+    199:   }
+  ---
+    230:    */
+    231:   public JsonWriter(Writer out) {
+    232:     this.out = Objects.requireNonNull(out, "out == null");
+    233:     setFormattingStyle(FormattingStyle.COMPACT);
+  ---
+    366:    */
+    367:   public final void setHtmlSafe(boolean htmlSafe) {
+    368:     this.htmlSafe = htmlSafe;
+    369:   }
+  ---
+    376:   public final boolean isHtmlSafe() {
+    377:     return htmlSafe;
+    378:   }
+  ---
+    448:     push(empty);
+    449:     out.write(openBracket);
+    450:     return this;
+  ---
+    467:     }
+    468:     out.write(closeBracket);
+    469:     return this;
+  ---
+    545:     beforeValue();
+    546:     out.write(value ? "true" : "false");
+    547:     return this;
+  ---
+    562:     beforeValue();
+    563:     out.write(value ? "true" : "false");
+    564:     return this;
+  ---
+    583:     beforeValue();
+    584:     out.append(Float.toString(value));
+    585:     return this;
+  ---
+    603:     beforeValue();
+    604:     out.append(Double.toString(value));
+    605:     return this;
+  ---
+    616:     beforeValue();
+    617:     out.write(Long.toString(value));
+    618:     return this;
+  ---
+    656:     beforeValue();
+    657:     out.append(string);
+    658:     return this;
+  ---
+    676:     beforeValue();
+    677:     out.write("null");
+    678:     return this;
+  ---
+    697:     beforeValue();
+    698:     out.append(value);
+    699:     return this;
+  ---
+    709:     }
+    710:     out.flush();
+    711:   }
+  ---
+    719:   public void close() throws IOException {
+    720:     out.close();
+    721: 
+  ---
+    743:   private void string(String value) throws IOException {
+    744:     String[] replacements = htmlSafe ? HTML_SAFE_REPLACEMENT_CHARS : REPLACEMENT_CHARS;
+    745:     out.write('\"');
+    746:     int last = 0;
+  ---
+    763:       if (last < i) {
+    764:         out.write(value, last, i - last);
+    765:       }
+    766:       out.write(replacement);
+    767:       last = i + 1;
+  ---
+    769:     if (last < length) {
+    770:       out.write(value, last, length - last);
+    771:     }
+    772:     out.write('\"');
+    773:   }
+  ---
+    779: 
+    780:     out.write(formattingStyle.getNewline());
+    781:     for (int i = 1, size = stackSize; i < size; i++) {
+    782:       out.write(formattingStyle.getIndent());
+    783:     }
+  ---
+    792:     if (context == NONEMPTY_OBJECT) { // first in object
+    793:       out.write(formattedComma);
+    794:     } else if (context != EMPTY_OBJECT) { // not in an object!
+  ---
+    822:       case NONEMPTY_ARRAY: // another in array
+    823:         out.append(formattedComma);
+    824:         newline();
+  ---
+    827:       case DANGLING_NAME: // value for name
+    828:         out.append(formattedColon);
+    829:         replaceTop(NONEMPTY_OBJECT);
+  ---

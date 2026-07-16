@@ -1,0 +1,124 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: NONEMPTY_DOCUMENT, out, stack, stackSize
+
+# com/google/gson/stream/JsonWriter.java
+    230:    */
+    231:   public JsonWriter(Writer out) {
+    232:     this.out = Objects.requireNonNull(out, "out == null");
+    233:     setFormattingStyle(FormattingStyle.COMPACT);
+  ---
+    448:     push(empty);
+    449:     out.write(openBracket);
+    450:     return this;
+  ---
+    463: 
+    464:     stackSize--;
+    465:     if (context == nonempty) {
+  ---
+    467:     }
+    468:     out.write(closeBracket);
+    469:     return this;
+  ---
+    472:   private void push(int newTop) {
+    473:     if (stackSize == stack.length) {
+    474:       stack = Arrays.copyOf(stack, stackSize * 2);
+    475:     }
+    476:     stack[stackSize++] = newTop;
+    477:   }
+  ---
+    480:   private int peek() {
+    481:     if (stackSize == 0) {
+    482:       throw new IllegalStateException("JsonWriter is closed.");
+    483:     }
+    484:     return stack[stackSize - 1];
+    485:   }
+  ---
+    488:   private void replaceTop(int topOfStack) {
+    489:     stack[stackSize - 1] = topOfStack;
+    490:   }
+  ---
+    545:     beforeValue();
+    546:     out.write(value ? "true" : "false");
+    547:     return this;
+  ---
+    562:     beforeValue();
+    563:     out.write(value ? "true" : "false");
+    564:     return this;
+  ---
+    583:     beforeValue();
+    584:     out.append(Float.toString(value));
+    585:     return this;
+  ---
+    603:     beforeValue();
+    604:     out.append(Double.toString(value));
+    605:     return this;
+  ---
+    616:     beforeValue();
+    617:     out.write(Long.toString(value));
+    618:     return this;
+  ---
+    656:     beforeValue();
+    657:     out.append(string);
+    658:     return this;
+  ---
+    676:     beforeValue();
+    677:     out.write("null");
+    678:     return this;
+  ---
+    697:     beforeValue();
+    698:     out.append(value);
+    699:     return this;
+  ---
+    706:   public void flush() throws IOException {
+    707:     if (stackSize == 0) {
+    708:       throw new IllegalStateException("JsonWriter is closed.");
+    709:     }
+    710:     out.flush();
+    711:   }
+  ---
+    719:   public void close() throws IOException {
+    720:     out.close();
+    721: 
+    722:     int size = stackSize;
+    723:     if (size > 1 || (size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT)) {
+    724:       throw new IOException("Incomplete document");
+    725:     }
+    726:     stackSize = 0;
+    727:   }
+  ---
+    744:     String[] replacements = htmlSafe ? HTML_SAFE_REPLACEMENT_CHARS : REPLACEMENT_CHARS;
+    745:     out.write('\"');
+    746:     int last = 0;
+  ---
+    763:       if (last < i) {
+    764:         out.write(value, last, i - last);
+    765:       }
+    766:       out.write(replacement);
+    767:       last = i + 1;
+  ---
+    769:     if (last < length) {
+    770:       out.write(value, last, length - last);
+    771:     }
+    772:     out.write('\"');
+    773:   }
+  ---
+    779: 
+    780:     out.write(formattingStyle.getNewline());
+    781:     for (int i = 1, size = stackSize; i < size; i++) {
+    782:       out.write(formattingStyle.getIndent());
+    783:     }
+  ---
+    792:     if (context == NONEMPTY_OBJECT) { // first in object
+    793:       out.write(formattedComma);
+    794:     } else if (context != EMPTY_OBJECT) { // not in an object!
+  ---
+    822:       case NONEMPTY_ARRAY: // another in array
+    823:         out.append(formattedComma);
+    824:         newline();
+  ---
+    827:       case DANGLING_NAME: // value for name
+    828:         out.append(formattedColon);
+    829:         replaceTop(NONEMPTY_OBJECT);
+  ---

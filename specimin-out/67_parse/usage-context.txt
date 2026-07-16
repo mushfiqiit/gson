@@ -1,0 +1,22 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: TIMEZONE_UTC
+
+# com/google/gson/internal/bind/util/ISO8601Utils.java
+     68:   public static String format(Date date) {
+     69:     return format(date, false, TIMEZONE_UTC);
+     70:   }
+  ---
+     79:   public static String format(Date date, boolean millis) {
+     80:     return format(date, millis, TIMEZONE_UTC);
+     81:   }
+  ---
+    237:       if (timezoneIndicator == 'Z') {
+    238:         timezone = TIMEZONE_UTC;
+    239:         offset += 1;
+  ---
+    249:         if (timezoneOffset.equals("+0000") || timezoneOffset.equals("+00:00")) {
+    250:           timezone = TIMEZONE_UTC;
+    251:         } else {
+  ---

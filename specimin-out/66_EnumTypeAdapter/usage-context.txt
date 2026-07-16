@@ -1,0 +1,32 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: FACTORY, constantToName, nameToConstant, stringToConstant
+
+# com/google/gson/internal/bind/EnumTypeAdapter.java
+     81:       int hashMapCapacity = calculateHashMapCapacity(constantCount);
+     82:       nameToConstant = new HashMap<>(hashMapCapacity);
+     83:       stringToConstant = new HashMap<>(hashMapCapacity);
+     84:       // Don't use `EnumMap` here; that can break when using ProGuard or R8
+     85:       constantToName = new HashMap<>(hashMapCapacity);
+     86: 
+  ---
+     98:           for (String alternate : annotation.alternate()) {
+     99:             nameToConstant.put(alternate, constant);
+    100:           }
+    101:         }
+    102:         nameToConstant.put(name, constant);
+    103:         stringToConstant.put(toStringVal, constant);
+    104:         constantToName.put(constant, name);
+    105:       }
+  ---
+    119:     String key = in.nextString();
+    120:     T constant = nameToConstant.get(key);
+    121:     // Note: If none of the approaches find the constant, this returns null
+    122:     return (constant == null) ? stringToConstant.get(key) : constant;
+    123:   }
+  ---
+    126:   public void write(JsonWriter out, T value) throws IOException {
+    127:     out.value(value == null ? null : constantToName.get(value));
+    128:   }
+  ---

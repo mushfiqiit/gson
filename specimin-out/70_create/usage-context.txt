@@ -1,0 +1,15 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: constructorConstructor
+
+# com/google/gson/internal/bind/MapTypeAdapterFactory.java
+    119:   public MapTypeAdapterFactory(
+    120:       ConstructorConstructor constructorConstructor, boolean complexMapKeySerialization) {
+    121:     this.constructorConstructor = constructorConstructor;
+    122:     this.complexMapKeySerialization = complexMapKeySerialization;
+  ---
+    145:     boolean allowUnsafe = false;
+    146:     ObjectConstructor<T> constructor = constructorConstructor.get(typeToken, allowUnsafe);
+    147: 
+  ---

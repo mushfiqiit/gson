@@ -1,0 +1,33 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: size
+
+# com/google/gson/internal/LinkedTreeMap.java
+     89:   @Override
+     90:   public int size() {
+     91:     return size;
+     92:   }
+  ---
+    122:     root = null;
+    123:     size = 0;
+    124:     modCount++;
+  ---
+    196:     }
+    197:     size++;
+    198:     modCount++;
+  ---
+    289:     rebalance(originalParent, false);
+    290:     size--;
+    291:     modCount++;
+  ---
+    591:     @Override
+    592:     public int size() {
+    593:       return size;
+    594:     }
+  ---
+    632:     @Override
+    633:     public int size() {
+    634:       return size;
+    635:     }
+  ---

@@ -1,0 +1,91 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: rawType, typeArguments
+
+# com/google/gson/internal/GsonTypes.java
+     56:   public static ParameterizedType newParameterizedTypeWithOwner(
+     57:       Type ownerType, Class<?> rawType, Type... typeArguments) {
+     58:     return new ParameterizedTypeImpl(ownerType, rawType, typeArguments);
+     59:   }
+  ---
+    137:       // see https://bugs.openjdk.org/browse/JDK-8250659
+    138:       Type rawType = parameterizedType.getRawType();
+    139:       return (Class<?>) rawType;
+    140: 
+  ---
+    234:    */
+    235:   private static Type getGenericSupertype(Type context, Class<?> rawType, Class<?> supertype) {
+    236:     if (supertype == rawType) {
+    237:       return context;
+  ---
+    241:     if (supertype.isInterface()) {
+    242:       Class<?>[] interfaces = rawType.getInterfaces();
+    243:       for (int i = 0, length = interfaces.length; i < length; i++) {
+    244:         if (interfaces[i] == supertype) {
+    245:           return rawType.getGenericInterfaces()[i];
+    246:         } else if (supertype.isAssignableFrom(interfaces[i])) {
+    247:           return getGenericSupertype(rawType.getGenericInterfaces()[i], interfaces[i], supertype);
+    248:         }
+  ---
+    252:     // check our supertypes
+    253:     if (!rawType.isInterface()) {
+    254:       while (rawType != Object.class) {
+    255:         Class<?> rawSupertype = rawType.getSuperclass();
+    256:         if (rawSupertype == supertype) {
+    257:           return rawType.getGenericSuperclass();
+    258:         } else if (supertype.isAssignableFrom(rawSupertype)) {
+    259:           return getGenericSupertype(rawType.getGenericSuperclass(), rawSupertype, supertype);
+    260:         }
+    261:         rawType = rawSupertype;
+    262:       }
+  ---
+    498:    */
+    499:   public static boolean requiresOwnerType(Type rawType) {
+    500:     if (rawType instanceof Class<?>) {
+    501:       Class<?> rawTypeAsClass = (Class<?>) rawType;
+    502:       return !Modifier.isStatic(rawTypeAsClass.getModifiers())
+  ---
+    514: 
+    515:     ParameterizedTypeImpl(Type ownerType, Class<?> rawType, Type... typeArguments) {
+    516:       requireNonNull(rawType);
+    517: 
+    518:       if (ownerType == null && requiresOwnerType(rawType)) {
+    519:         throw new IllegalArgumentException("Must specify owner type for " + rawType);
+    520:       }
+  ---
+    522:       this.ownerType = ownerType == null ? null : canonicalize(ownerType);
+    523:       this.rawType = canonicalize(rawType);
+    524:       this.typeArguments = typeArguments.clone();
+    525:       for (int t = 0, length = this.typeArguments.length; t < length; t++) {
+    526:         requireNonNull(this.typeArguments[t]);
+    527:         checkNotPrimitive(this.typeArguments[t]);
+    528:         this.typeArguments[t] = canonicalize(this.typeArguments[t]);
+    529:       }
+  ---
+    533:     public Type[] getActualTypeArguments() {
+    534:       return typeArguments.clone();
+    535:     }
+  ---
+    538:     public Type getRawType() {
+    539:       return rawType;
+    540:     }
+  ---
+    558:     public int hashCode() {
+    559:       return Arrays.hashCode(typeArguments) ^ rawType.hashCode() ^ hashCodeOrZero(ownerType);
+    560:     }
+  ---
+    563:     public String toString() {
+    564:       int length = typeArguments.length;
+    565:       if (length == 0) {
+    566:         return typeToString(rawType);
+    567:       }
+  ---
+    570:       stringBuilder
+    571:           .append(typeToString(rawType))
+    572:           .append("<")
+    573:           .append(typeToString(typeArguments[0]));
+    574:       for (int i = 1; i < length; i++) {
+    575:         stringBuilder.append(", ").append(typeToString(typeArguments[i]));
+    576:       }
+  ---

@@ -1,0 +1,686 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: MIN_INCOMPLETE_INTEGER, NUMBER_CHAR_DECIMAL, NUMBER_CHAR_DIGIT, NUMBER_CHAR_EXP_DIGIT, NUMBER_CHAR_EXP_E, NUMBER_CHAR_EXP_SIGN, NUMBER_CHAR_FRACTION_DIGIT, NUMBER_CHAR_NONE, NUMBER_CHAR_SIGN, PEEKED_LONG, PEEKED_NONE, PEEKED_NUMBER, buffer, limit, peeked, peekedLong, peekedNumberLength, pos
+
+# com/google/gson/stream/JsonReader.java
+    434:    */
+    435:   public final void setNestingLimit(int limit) {
+    436:     if (limit < 0) {
+    437:       throw new IllegalArgumentException("Invalid nesting limit: " + limit);
+    438:     }
+    439:     this.nestingLimit = limit;
+    440:   }
+  ---
+    458:   public void beginArray() throws IOException {
+    459:     int p = peeked;
+    460:     if (p == PEEKED_NONE) {
+    461:       p = doPeek();
+  ---
+    465:       pathIndices[stackSize - 1] = 0;
+    466:       peeked = PEEKED_NONE;
+    467:     } else {
+  ---
+    478:   public void endArray() throws IOException {
+    479:     int p = peeked;
+    480:     if (p == PEEKED_NONE) {
+    481:       p = doPeek();
+  ---
+    485:       pathIndices[stackSize - 1]++;
+    486:       peeked = PEEKED_NONE;
+    487:     } else {
+  ---
+    498:   public void beginObject() throws IOException {
+    499:     int p = peeked;
+    500:     if (p == PEEKED_NONE) {
+    501:       p = doPeek();
+  ---
+    504:       push(JsonScope.EMPTY_OBJECT);
+    505:       peeked = PEEKED_NONE;
+    506:     } else {
+  ---
+    517:   public void endObject() throws IOException {
+    518:     int p = peeked;
+    519:     if (p == PEEKED_NONE) {
+    520:       p = doPeek();
+  ---
+    525:       pathIndices[stackSize - 1]++;
+    526:       peeked = PEEKED_NONE;
+    527:     } else {
+  ---
+    533:   public boolean hasNext() throws IOException {
+    534:     int p = peeked;
+    535:     if (p == PEEKED_NONE) {
+    536:       p = doPeek();
+  ---
+    542:   public JsonToken peek() throws IOException {
+    543:     int p = peeked;
+    544:     if (p == PEEKED_NONE) {
+    545:       p = doPeek();
+  ---
+    570:         return JsonToken.STRING;
+    571:       case PEEKED_LONG:
+    572:       case PEEKED_NUMBER:
+    573:         return JsonToken.NUMBER;
+  ---
+    590:         case ']':
+    591:           peeked = PEEKED_END_ARRAY;
+    592:           return peeked;
+    593:         case ';':
+  ---
+    606:           case '}':
+    607:             peeked = PEEKED_END_OBJECT;
+    608:             return peeked;
+    609:           case ';':
+  ---
+    619:         case '"':
+    620:           peeked = PEEKED_DOUBLE_QUOTED_NAME;
+    621:           return peeked;
+    622:         case '\'':
+    623:           checkLenient();
+    624:           peeked = PEEKED_SINGLE_QUOTED_NAME;
+    625:           return peeked;
+    626:         case '}':
+    627:           if (peekStack != JsonScope.NONEMPTY_OBJECT) {
+    628:             peeked = PEEKED_END_OBJECT;
+    629:             return peeked;
+    630:           } else {
+  ---
+    634:           checkLenient();
+    635:           pos--; // Don't consume the first character in an unquoted string.
+    636:           if (isLiteral((char) c)) {
+    637:             peeked = PEEKED_UNQUOTED_NAME;
+    638:             return peeked;
+    639:           } else {
+  ---
+    651:           checkLenient();
+    652:           if ((pos < limit || fillBuffer(1)) && buffer[pos] == '>') {
+    653:             pos++;
+    654:           }
+  ---
+    666:       if (c == -1) {
+    667:         peeked = PEEKED_EOF;
+    668:         return peeked;
+    669:       } else {
+    670:         checkLenient();
+    671:         pos--;
+    672:       }
+  ---
+    680:         if (peekStack == JsonScope.EMPTY_ARRAY) {
+    681:           peeked = PEEKED_END_ARRAY;
+    682:           return peeked;
+    683:         }
+  ---
+    689:           checkLenient();
+    690:           pos--;
+    691:           peeked = PEEKED_NULL;
+    692:           return peeked;
+    693:         } else {
+  ---
+    697:         checkLenient();
+    698:         peeked = PEEKED_SINGLE_QUOTED;
+    699:         return peeked;
+    700:       case '"':
+    701:         peeked = PEEKED_DOUBLE_QUOTED;
+    702:         return peeked;
+    703:       case '[':
+    704:         peeked = PEEKED_BEGIN_ARRAY;
+    705:         return peeked;
+    706:       case '{':
+    707:         peeked = PEEKED_BEGIN_OBJECT;
+    708:         return peeked;
+    709:       default:
+    710:         pos--; // Don't consume the first character in a literal value.
+    711:     }
+  ---
+    713:     int result = peekKeyword();
+    714:     if (result != PEEKED_NONE) {
+    715:       return result;
+  ---
+    718:     result = peekNumber();
+    719:     if (result != PEEKED_NONE) {
+    720:       return result;
+  ---
+    722: 
+    723:     if (!isLiteral(buffer[pos])) {
+    724:       throw syntaxError("Expected value");
+  ---
+    727:     checkLenient();
+    728:     peeked = PEEKED_UNQUOTED;
+    729:     return peeked;
+    730:   }
+  ---
+    733:     // Figure out which keyword we're matching against by its first character.
+    734:     char c = buffer[pos];
+    735:     String keyword;
+  ---
+    752:     } else {
+    753:       return PEEKED_NONE;
+    754:     }
+  ---
+    761:     for (int i = 0; i < length; i++) {
+    762:       if (pos + i >= limit && !fillBuffer(i + 1)) {
+    763:         return PEEKED_NONE;
+    764:       }
+    765:       c = buffer[pos + i];
+    766:       boolean matched = c == keyword.charAt(i) || (allowsUpperCased && c == keywordUpper.charAt(i));
+    767:       if (!matched) {
+    768:         return PEEKED_NONE;
+    769:       }
+  ---
+    771: 
+    772:     if ((pos + length < limit || fillBuffer(length + 1)) && isLiteral(buffer[pos + length])) {
+    773:       return PEEKED_NONE; // Don't match trues, falsey or nullsoft!
+    774:     }
+  ---
+    776:     // We've found the keyword followed either by EOF or by a non-literal character.
+    777:     pos += length;
+    778:     peeked = peeking;
+    779:     return peeked;
+    780:   }
+  ---
+    783:     // Like nextNonWhitespace, this uses locals 'p' and 'l' to save inner-loop field access.
+    784:     char[] buffer = this.buffer;
+    785:     int p = pos;
+    786:     int l = limit;
+    787: 
+  ---
+    790:     boolean fitsInLong = true;
+    791:     int last = NUMBER_CHAR_NONE;
+    792: 
+  ---
+    797:       if (p + i == l) {
+    798:         if (i == buffer.length) {
+    799:           // Though this looks like a well-formed number, it's too long to continue reading. Give up
+    800:           // and let the application handle this as an unquoted literal.
+    801:           return PEEKED_NONE;
+    802:         }
+  ---
+    805:         }
+    806:         p = pos;
+    807:         l = limit;
+    808:       }
+    809: 
+    810:       char c = buffer[p + i];
+    811:       switch (c) {
+    812:         case '-':
+    813:           if (last == NUMBER_CHAR_NONE) {
+    814:             negative = true;
+    815:             last = NUMBER_CHAR_SIGN;
+    816:             continue;
+    817:           } else if (last == NUMBER_CHAR_EXP_E) {
+    818:             last = NUMBER_CHAR_EXP_SIGN;
+    819:             continue;
+    820:           }
+    821:           return PEEKED_NONE;
+    822: 
+    823:         case '+':
+    824:           if (last == NUMBER_CHAR_EXP_E) {
+    825:             last = NUMBER_CHAR_EXP_SIGN;
+    826:             continue;
+    827:           }
+    828:           return PEEKED_NONE;
+    829: 
+  ---
+    831:         case 'E':
+    832:           if (last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT) {
+    833:             last = NUMBER_CHAR_EXP_E;
+    834:             continue;
+    835:           }
+    836:           return PEEKED_NONE;
+    837: 
+    838:         case '.':
+    839:           if (last == NUMBER_CHAR_DIGIT) {
+    840:             last = NUMBER_CHAR_DECIMAL;
+    841:             continue;
+    842:           }
+    843:           return PEEKED_NONE;
+    844: 
+  ---
+    849:             }
+    850:             return PEEKED_NONE;
+    851:           }
+    852:           if (last == NUMBER_CHAR_SIGN || last == NUMBER_CHAR_NONE) {
+    853:             value = -(c - '0');
+    854:             last = NUMBER_CHAR_DIGIT;
+    855:           } else if (last == NUMBER_CHAR_DIGIT) {
+    856:             if (fitsInLong && value == 0) {
+    857:               return PEEKED_NONE; // Leading '0' prefix is not allowed (since it could be octal).
+    858:             }
+  ---
+    860:             fitsInLong &=
+    861:                 value > MIN_INCOMPLETE_INTEGER
+    862:                     || (value == MIN_INCOMPLETE_INTEGER && newValue < value);
+    863:             value = newValue;
+    864:           } else if (last == NUMBER_CHAR_DECIMAL) {
+    865:             last = NUMBER_CHAR_FRACTION_DIGIT;
+    866:           } else if (last == NUMBER_CHAR_EXP_E || last == NUMBER_CHAR_EXP_SIGN) {
+    867:             last = NUMBER_CHAR_EXP_DIGIT;
+    868:           }
+  ---
+    874:     // Don't try to convert Long.MIN_VALUE to positive long; it would overflow MAX_VALUE
+    875:     if (last == NUMBER_CHAR_DIGIT
+    876:         && fitsInLong
+  ---
+    878:         && (value != 0 || !negative)) {
+    879:       peekedLong = negative ? value : -value;
+    880:       pos += i;
+    881:       peeked = PEEKED_LONG;
+    882:       return peeked;
+    883:     } else if (last == NUMBER_CHAR_DIGIT
+    884:         || last == NUMBER_CHAR_FRACTION_DIGIT
+    885:         || last == NUMBER_CHAR_EXP_DIGIT) {
+    886:       peekedNumberLength = i;
+    887:       peeked = PEEKED_NUMBER;
+    888:       return peeked;
+    889:     } else {
+    890:       return PEEKED_NONE;
+    891:     }
+  ---
+    925:   public String nextName() throws IOException {
+    926:     int p = peeked;
+    927:     if (p == PEEKED_NONE) {
+    928:       p = doPeek();
+  ---
+    939:     }
+    940:     peeked = PEEKED_NONE;
+    941:     pathNames[stackSize - 1] = result;
+  ---
+    951:   public String nextString() throws IOException {
+    952:     int p = peeked;
+    953:     if (p == PEEKED_NONE) {
+    954:       p = doPeek();
+  ---
+    965:       peekedString = null;
+    966:     } else if (p == PEEKED_LONG) {
+    967:       result = Long.toString(peekedLong);
+    968:     } else if (p == PEEKED_NUMBER) {
+    969:       result = new String(buffer, pos, peekedNumberLength);
+    970:       pos += peekedNumberLength;
+    971:     } else {
+  ---
+    973:     }
+    974:     peeked = PEEKED_NONE;
+    975:     pathIndices[stackSize - 1]++;
+  ---
+    984:   public boolean nextBoolean() throws IOException {
+    985:     int p = peeked;
+    986:     if (p == PEEKED_NONE) {
+    987:       p = doPeek();
+  ---
+    989:     if (p == PEEKED_TRUE) {
+    990:       peeked = PEEKED_NONE;
+    991:       pathIndices[stackSize - 1]++;
+  ---
+    993:     } else if (p == PEEKED_FALSE) {
+    994:       peeked = PEEKED_NONE;
+    995:       pathIndices[stackSize - 1]++;
+  ---
+   1006:   public void nextNull() throws IOException {
+   1007:     int p = peeked;
+   1008:     if (p == PEEKED_NONE) {
+   1009:       p = doPeek();
+  ---
+   1011:     if (p == PEEKED_NULL) {
+   1012:       peeked = PEEKED_NONE;
+   1013:       pathIndices[stackSize - 1]++;
+  ---
+   1029:   public double nextDouble() throws IOException {
+   1030:     int p = peeked;
+   1031:     if (p == PEEKED_NONE) {
+   1032:       p = doPeek();
+  ---
+   1034: 
+   1035:     if (p == PEEKED_LONG) {
+   1036:       peeked = PEEKED_NONE;
+   1037:       pathIndices[stackSize - 1]++;
+   1038:       return (double) peekedLong;
+   1039:     }
+   1040: 
+   1041:     if (p == PEEKED_NUMBER) {
+   1042:       peekedString = new String(buffer, pos, peekedNumberLength);
+   1043:       pos += peekedNumberLength;
+   1044:     } else if (p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED) {
+  ---
+   1051: 
+   1052:     peeked = PEEKED_BUFFERED;
+   1053:     double result;
+  ---
+   1065:     peekedString = null;
+   1066:     peeked = PEEKED_NONE;
+   1067:     pathIndices[stackSize - 1]++;
+  ---
+   1080:   public long nextLong() throws IOException {
+   1081:     int p = peeked;
+   1082:     if (p == PEEKED_NONE) {
+   1083:       p = doPeek();
+  ---
+   1085: 
+   1086:     if (p == PEEKED_LONG) {
+   1087:       peeked = PEEKED_NONE;
+   1088:       pathIndices[stackSize - 1]++;
+   1089:       return peekedLong;
+   1090:     }
+   1091: 
+   1092:     if (p == PEEKED_NUMBER) {
+   1093:       peekedString = new String(buffer, pos, peekedNumberLength);
+   1094:       pos += peekedNumberLength;
+   1095:     } else if (p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED) {
+  ---
+   1103:         long result = Long.parseLong(peekedString);
+   1104:         peeked = PEEKED_NONE;
+   1105:         pathIndices[stackSize - 1]++;
+  ---
+   1113: 
+   1114:     peeked = PEEKED_BUFFERED;
+   1115:     double asDouble;
+  ---
+   1128:     peekedString = null;
+   1129:     peeked = PEEKED_NONE;
+   1130:     pathIndices[stackSize - 1]++;
+  ---
+   1142:     // Like nextNonWhitespace, this uses locals 'p' and 'l' to save inner-loop field access.
+   1143:     char[] buffer = this.buffer;
+   1144:     StringBuilder builder = null;
+   1145:     while (true) {
+   1146:       int p = pos;
+   1147:       int l = limit;
+   1148:       /* the index of the first character not yet appended to the builder. */
+  ---
+   1150:       while (p < l) {
+   1151:         int c = buffer[p++];
+   1152: 
+  ---
+   1158:         } else if (c == quote) {
+   1159:           pos = p;
+   1160:           int len = p - start - 1;
+   1161:           if (builder == null) {
+   1162:             return new String(buffer, start, len);
+   1163:           } else {
+   1164:             builder.append(buffer, start, len);
+   1165:             return builder.toString();
+  ---
+   1167:         } else if (c == '\\') {
+   1168:           pos = p;
+   1169:           int len = p - start - 1;
+  ---
+   1173:           }
+   1174:           builder.append(buffer, start, len);
+   1175:           builder.append(readEscapeCharacter());
+   1176:           p = pos;
+   1177:           l = limit;
+   1178:           start = p;
+  ---
+   1188:       }
+   1189:       builder.append(buffer, start, p - start);
+   1190:       pos = p;
+   1191:       if (!fillBuffer(1)) {
+  ---
+   1204:     while (true) {
+   1205:       for (; pos + i < limit; i++) {
+   1206:         switch (buffer[pos + i]) {
+   1207:           case '/':
+  ---
+   1230:       // Attempt to load the entire literal into the buffer at once.
+   1231:       if (i < buffer.length) {
+   1232:         if (fillBuffer(i + 1)) {
+  ---
+   1242:       }
+   1243:       builder.append(buffer, pos, i);
+   1244:       pos += i;
+   1245:       i = 0;
+  ---
+   1251:     String result =
+   1252:         (builder == null) ? new String(buffer, pos, i) : builder.append(buffer, pos, i).toString();
+   1253:     pos += i;
+   1254:     return result;
+  ---
+   1258:     // Like nextNonWhitespace, this uses locals 'p' and 'l' to save inner-loop field access.
+   1259:     char[] buffer = this.buffer;
+   1260:     do {
+   1261:       int p = pos;
+   1262:       int l = limit;
+   1263:       /* the index of the first character not yet appended to the builder. */
+   1264:       while (p < l) {
+   1265:         int c = buffer[p++];
+   1266:         if (c == quote) {
+   1267:           pos = p;
+   1268:           return;
+   1269:         } else if (c == '\\') {
+   1270:           pos = p;
+   1271:           char unused = readEscapeCharacter();
+   1272:           p = pos;
+   1273:           l = limit;
+   1274:         } else if (c == '\n') {
+  ---
+   1278:       }
+   1279:       pos = p;
+   1280:     } while (fillBuffer(1));
+  ---
+   1287:       int i = 0;
+   1288:       for (; pos + i < limit; i++) {
+   1289:         switch (buffer[pos + i]) {
+   1290:           case '/':
+  ---
+   1306:           case '\n':
+   1307:             pos += i;
+   1308:             return;
+  ---
+   1312:       }
+   1313:       pos += i;
+   1314:     } while (fillBuffer(1));
+  ---
+   1326:   public int nextInt() throws IOException {
+   1327:     int p = peeked;
+   1328:     if (p == PEEKED_NONE) {
+   1329:       p = doPeek();
+  ---
+   1332:     int result;
+   1333:     if (p == PEEKED_LONG) {
+   1334:       result = (int) peekedLong;
+   1335:       if (peekedLong != result) { // Make sure no precision was lost casting to 'int'.
+   1336:         throw new NumberFormatException("Expected an int but was " + peekedLong + locationString());
+   1337:       }
+   1338:       peeked = PEEKED_NONE;
+   1339:       pathIndices[stackSize - 1]++;
+  ---
+   1342: 
+   1343:     if (p == PEEKED_NUMBER) {
+   1344:       peekedString = new String(buffer, pos, peekedNumberLength);
+   1345:       pos += peekedNumberLength;
+   1346:     } else if (p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED) {
+  ---
+   1354:         result = Integer.parseInt(peekedString);
+   1355:         peeked = PEEKED_NONE;
+   1356:         pathIndices[stackSize - 1]++;
+  ---
+   1364: 
+   1365:     peeked = PEEKED_BUFFERED;
+   1366:     double asDouble;
+  ---
+   1379:     peekedString = null;
+   1380:     peeked = PEEKED_NONE;
+   1381:     pathIndices[stackSize - 1]++;
+  ---
+   1392:   public void close() throws IOException {
+   1393:     peeked = PEEKED_NONE;
+   1394:     stack[0] = JsonScope.CLOSED;
+  ---
+   1417:     do {
+   1418:       int p = peeked;
+   1419:       if (p == PEEKED_NONE) {
+   1420:         p = doPeek();
+  ---
+   1475:           break;
+   1476:         case PEEKED_NUMBER:
+   1477:           pos += peekedNumberLength;
+   1478:           break;
+  ---
+   1485:       }
+   1486:       peeked = PEEKED_NONE;
+   1487:     } while (count > 0);
+  ---
+   1512:   private boolean fillBuffer(int minimum) throws IOException {
+   1513:     char[] buffer = this.buffer;
+   1514:     lineStart -= pos;
+   1515:     if (limit != pos) {
+   1516:       limit -= pos;
+   1517:       System.arraycopy(buffer, pos, buffer, 0, limit);
+   1518:     } else {
+   1519:       limit = 0;
+   1520:     }
+   1521: 
+   1522:     pos = 0;
+   1523:     int total;
+   1524:     while ((total = in.read(buffer, limit, buffer.length - limit)) != -1) {
+   1525:       limit += total;
+   1526: 
+   1527:       // if this is the first read, consume an optional byte order mark (BOM) if it exists
+   1528:       if (lineNumber == 0 && lineStart == 0 && limit > 0 && buffer[0] == '\ufeff') {
+   1529:         pos++;
+   1530:         lineStart++;
+  ---
+   1533: 
+   1534:       if (limit >= minimum) {
+   1535:         return true;
+  ---
+   1554:      */
+   1555:     char[] buffer = this.buffer;
+   1556:     int p = pos;
+   1557:     int l = limit;
+   1558:     while (true) {
+   1559:       if (p == l) {
+   1560:         pos = p;
+   1561:         if (!fillBuffer(1)) {
+  ---
+   1563:         }
+   1564:         p = pos;
+   1565:         l = limit;
+   1566:       }
+   1567: 
+   1568:       int c = buffer[p++];
+   1569:       if (c == '\n') {
+  ---
+   1577:       if (c == '/') {
+   1578:         pos = p;
+   1579:         if (p == l) {
+   1580:           pos--; // push back '/' so it's still in the buffer when this method returns
+   1581:           boolean charsLoaded = fillBuffer(2);
+   1582:           pos++; // consume the '/' again
+   1583:           if (!charsLoaded) {
+  ---
+   1588:         checkLenient();
+   1589:         char peek = buffer[pos];
+   1590:         switch (peek) {
+  ---
+   1592:             // skip a /* c-style comment */
+   1593:             pos++;
+   1594:             if (!skipTo("*/")) {
+  ---
+   1596:             }
+   1597:             p = pos + 2;
+   1598:             l = limit;
+   1599:             continue;
+  ---
+   1602:             // skip a // end-of-line comment
+   1603:             pos++;
+   1604:             skipToEndOfLine();
+   1605:             p = pos;
+   1606:             l = limit;
+   1607:             continue;
+  ---
+   1612:       } else if (c == '#') {
+   1613:         pos = p;
+   1614:         /*
+  ---
+   1620:         skipToEndOfLine();
+   1621:         p = pos;
+   1622:         l = limit;
+   1623:       } else {
+   1624:         pos = p;
+   1625:         return c;
+  ---
+   1646:   private void skipToEndOfLine() throws IOException {
+   1647:     while (pos < limit || fillBuffer(1)) {
+   1648:       char c = buffer[pos++];
+   1649:       if (c == '\n') {
+   1650:         lineNumber++;
+   1651:         lineStart = pos;
+   1652:         break;
+  ---
+   1664:     outer:
+   1665:     for (; pos + length <= limit || fillBuffer(length); pos++) {
+   1666:       if (buffer[pos] == '\n') {
+   1667:         lineNumber++;
+   1668:         lineStart = pos + 1;
+   1669:         continue;
+  ---
+   1671:       for (int c = 0; c < length; c++) {
+   1672:         if (buffer[pos + c] != toFind.charAt(c)) {
+   1673:           continue outer;
+  ---
+   1687:     int line = lineNumber + 1;
+   1688:     int column = pos - lineStart + 1;
+   1689:     return " at line " + line + " column " + column + " path " + getPath();
+  ---
+   1769:   private char readEscapeCharacter() throws IOException {
+   1770:     if (pos == limit && !fillBuffer(1)) {
+   1771:       throw syntaxError("Unterminated escape sequence");
+  ---
+   1773: 
+   1774:     char escaped = buffer[pos++];
+   1775:     switch (escaped) {
+   1776:       case 'u':
+   1777:         if (pos + 4 > limit && !fillBuffer(4)) {
+   1778:           throw syntaxError("Unterminated escape sequence");
+  ---
+   1781:         int result = 0;
+   1782:         for (int i = pos, end = i + 4; i < end; i++) {
+   1783:           char c = buffer[i];
+   1784:           result <<= 4;
+  ---
+   1791:           } else {
+   1792:             throw syntaxError("Malformed Unicode escape \\u" + new String(buffer, pos, 4));
+   1793:           }
+   1794:         }
+   1795:         pos += 4;
+   1796:         return (char) result;
+  ---
+   1817:         lineNumber++;
+   1818:         lineStart = pos;
+   1819:       // fall-through
+  ---
+   1844:   private IllegalStateException unexpectedTokenError(String expected) throws IOException {
+   1845:     JsonToken peeked = peek();
+   1846:     String troubleshootingId =
+   1847:         peeked == JsonToken.NULL ? "adapter-not-null-safe" : "unexpected-json-structure";
+   1848:     return new IllegalStateException(
+  ---
+   1861:     int unused = nextNonWhitespace(true);
+   1862:     pos--;
+   1863: 
+   1864:     if (pos + 5 > limit && !fillBuffer(5)) {
+   1865:       return;
+  ---
+   1867: 
+   1868:     int p = pos;
+   1869:     char[] buf = buffer;
+   1870:     if (buf[p] != ')'
+  ---
+   1878:     // we consumed a security token!
+   1879:     pos += 5;
+   1880:   }
+  ---
+   1898:             }
+   1899:             int p = reader.peeked;
+   1900:             if (p == PEEKED_NONE) {
+   1901:               p = reader.doPeek();
+  ---
+   1903:             if (p == PEEKED_DOUBLE_QUOTED_NAME) {
+   1904:               reader.peeked = PEEKED_DOUBLE_QUOTED;
+   1905:             } else if (p == PEEKED_SINGLE_QUOTED_NAME) {
+   1906:               reader.peeked = PEEKED_SINGLE_QUOTED;
+   1907:             } else if (p == PEEKED_UNQUOTED_NAME) {
+   1908:               reader.peeked = PEEKED_UNQUOTED;
+   1909:             } else {
+  ---

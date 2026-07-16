@@ -1,0 +1,100 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: INSTANCE, elements
+
+# com/google/gson/JsonArray.java
+     47:   public JsonArray() {
+     48:     elements = new ArrayList<>();
+     49:   }
+  ---
+     59:   public JsonArray(int capacity) {
+     60:     elements = new ArrayList<>(capacity);
+     61:   }
+  ---
+     69:   public JsonArray deepCopy() {
+     70:     if (!elements.isEmpty()) {
+     71:       JsonArray result = new JsonArray(elements.size());
+     72:       for (JsonElement element : elements) {
+     73:         result.add(element.deepCopy());
+  ---
+     86:   public void add(Boolean bool) {
+     87:     elements.add(bool == null ? JsonNull.INSTANCE : new JsonPrimitive(bool));
+     88:   }
+  ---
+     96:   public void add(Character character) {
+     97:     elements.add(character == null ? JsonNull.INSTANCE : new JsonPrimitive(character));
+     98:   }
+  ---
+    106:   public void add(Number number) {
+    107:     elements.add(number == null ? JsonNull.INSTANCE : new JsonPrimitive(number));
+    108:   }
+  ---
+    116:   public void add(String string) {
+    117:     elements.add(string == null ? JsonNull.INSTANCE : new JsonPrimitive(string));
+    118:   }
+  ---
+    128:     }
+    129:     elements.add(element);
+    130:   }
+  ---
+    137:   public void addAll(JsonArray array) {
+    138:     elements.addAll(array.elements);
+    139:   }
+  ---
+    150:   public JsonElement set(int index, JsonElement element) {
+    151:     return elements.set(index, element == null ? JsonNull.INSTANCE : element);
+    152:   }
+  ---
+    163:   public boolean remove(JsonElement element) {
+    164:     return elements.remove(element);
+    165:   }
+  ---
+    178:   public JsonElement remove(int index) {
+    179:     return elements.remove(index);
+    180:   }
+  ---
+    189:   public boolean contains(JsonElement element) {
+    190:     return elements.contains(element);
+    191:   }
+  ---
+    198:   public int size() {
+    199:     return elements.size();
+    200:   }
+  ---
+    208:   public boolean isEmpty() {
+    209:     return elements.isEmpty();
+    210:   }
+  ---
+    219:   public Iterator<JsonElement> iterator() {
+    220:     return elements.iterator();
+    221:   }
+  ---
+    231:   public JsonElement get(int i) {
+    232:     return elements.get(i);
+    233:   }
+  ---
+    235:   private JsonElement getAsSingleElement() {
+    236:     int size = elements.size();
+    237:     if (size == 1) {
+    238:       return elements.get(0);
+    239:     }
+  ---
+    415:   public List<JsonElement> asList() {
+    416:     return new NonNullElementWrapperList<>(elements);
+    417:   }
+  ---
+    424:   public boolean equals(Object o) {
+    425:     return (o == this) || (o instanceof JsonArray && ((JsonArray) o).elements.equals(elements));
+    426:   }
+  ---
+    433:   public int hashCode() {
+    434:     return elements.hashCode();
+    435:   }
+  ---
+
+# com/google/gson/JsonNull.java
+     50:   public JsonNull deepCopy() {
+     51:     return INSTANCE;
+     52:   }
+  ---

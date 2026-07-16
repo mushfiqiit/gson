@@ -1,0 +1,39 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: componentType, componentTypeAdapter
+
+# com/google/gson/internal/bind/ArrayTypeAdapter.java
+     44: 
+     45:           Type componentType = GsonTypes.getArrayComponentType(type);
+     46:           TypeAdapter<?> componentTypeAdapter = gson.getAdapter(TypeToken.get(componentType));
+     47: 
+  ---
+     49:           TypeAdapter<T> arrayAdapter =
+     50:               new ArrayTypeAdapter(gson, componentTypeAdapter, GsonTypes.getRawType(componentType));
+     51:           return arrayAdapter;
+  ---
+     58:   public ArrayTypeAdapter(
+     59:       Gson context, TypeAdapter<E> componentTypeAdapter, Class<E> componentType) {
+     60:     this.componentTypeAdapter =
+     61:         new TypeAdapterRuntimeTypeWrapper<>(context, componentTypeAdapter, componentType);
+     62:     this.componentType = componentType;
+     63:   }
+  ---
+     74:     while (in.hasNext()) {
+     75:       E instance = componentTypeAdapter.read(in);
+     76:       list.add(instance);
+  ---
+     81:     // Have to copy primitives one by one to primitive array
+     82:     if (componentType.isPrimitive()) {
+     83:       Object array = Array.newInstance(componentType, size);
+     84:       for (int i = 0; i < size; i++) {
+  ---
+     91:       @SuppressWarnings("unchecked")
+     92:       E[] array = (E[]) Array.newInstance(componentType, size);
+     93:       return list.toArray(array);
+  ---
+    107:       E value = (E) Array.get(array, i);
+    108:       componentTypeAdapter.write(out, value);
+    109:     }
+  ---

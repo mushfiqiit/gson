@@ -1,0 +1,171 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: constructorConstructor, field, fieldName, jsonAdapterFactory, serializedName
+
+# com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
+     67:   public ReflectiveTypeAdapterFactory(
+     68:       ConstructorConstructor constructorConstructor,
+     69:       FieldNamingStrategy fieldNamingPolicy,
+     70:       Excluder excluder,
+     71:       JsonAdapterAnnotationTypeAdapterFactory jsonAdapterFactory,
+     72:       List<ReflectionAccessFilter> reflectionFilters) {
+     73:     this.constructorConstructor = constructorConstructor;
+     74:     this.fieldNamingPolicy = fieldNamingPolicy;
+     75:     this.excluder = excluder;
+     76:     this.jsonAdapterFactory = jsonAdapterFactory;
+     77:     this.reflectionFilters = reflectionFilters;
+  ---
+     87: 
+     88:     String fieldName;
+     89:     List<String> alternates;
+  ---
+     91:     if (annotation == null) {
+     92:       fieldName = fieldNamingPolicy.translateName(f);
+     93:       alternates = fieldNamingPolicy.alternateNames(f);
+     94:     } else {
+     95:       fieldName = annotation.value();
+     96:       alternates = Arrays.asList(annotation.alternate());
+  ---
+     99:     if (alternates.isEmpty()) {
+    100:       return Collections.singletonList(fieldName);
+    101:     }
+  ---
+    103:     List<String> fieldNames = new ArrayList<>(alternates.size() + 1);
+    104:     fieldNames.add(fieldName);
+    105:     fieldNames.addAll(alternates);
+  ---
+    162: 
+    163:     ObjectConstructor<T> constructor = constructorConstructor.get(type, true);
+    164:     return new FieldReflectionAdapter<>(
+  ---
+    182:       Gson context,
+    183:       Field field,
+    184:       Method accessor,
+    185:       String serializedName,
+    186:       TypeToken<?> fieldType,
+  ---
+    191: 
+    192:     int modifiers = field.getModifiers();
+    193:     boolean isStaticFinalField = Modifier.isStatic(modifiers) && Modifier.isFinal(modifiers);
+    194: 
+    195:     JsonAdapter annotation = field.getAnnotation(JsonAdapter.class);
+    196:     TypeAdapter<?> mapped = null;
+  ---
+    199:       mapped =
+    200:           jsonAdapterFactory.getTypeAdapter(
+    201:               constructorConstructor, context, fieldType, annotation, false);
+    202:     }
+  ---
+    219:     }
+    220:     return new BoundField(serializedName, field) {
+    221:       @Override
+  ---
+    224:           if (accessor == null) {
+    225:             checkAccessible(source, field);
+    226:           } else {
+  ---
+    243:         } else {
+    244:           fieldValue = field.get(source);
+    245:         }
+  ---
+    249:         }
+    250:         writer.name(serializedName);
+    251:         writeTypeAdapter.write(writer, fieldValue);
+  ---
+    260:               "null is not allowed as value for record component '"
+    261:                   + fieldName
+    262:                   + "' of primitive type; at path "
+  ---
+    273:           if (blockInaccessible) {
+    274:             checkAccessible(target, field);
+    275:           } else if (isStaticFinalField) {
+  ---
+    278:             // Handle this here to avoid causing IllegalAccessException when calling `Field.set`
+    279:             String fieldDescription = ReflectionHelper.getAccessibleObjectDescription(field, false);
+    280:             throw new JsonIOException("Cannot set value of 'static final' " + fieldDescription);
+    281:           }
+    282:           field.set(target, fieldValue);
+    283:         }
+  ---
+    346: 
+    347:       for (Field field : fields) {
+    348:         boolean serialize = includeField(field, true);
+    349:         boolean deserialize = includeField(field, false);
+    350:         if (!serialize && !deserialize) {
+  ---
+    362:           // GsonBuilder.excludeFieldsWithModifiers can overwrite this.
+    363:           if (Modifier.isStatic(field.getModifiers())) {
+    364:             deserialize = false;
+    365:           } else {
+    366:             accessor = ReflectionHelper.getAccessor(raw, field);
+    367:             // If blockInaccessible, skip and perform access check later
+  ---
+    376:             if (accessor.getAnnotation(SerializedName.class) != null
+    377:                 && field.getAnnotation(SerializedName.class) == null) {
+    378:               String methodDescription =
+  ---
+    388:         if (!blockInaccessible && accessor == null) {
+    389:           ReflectionHelper.makeAccessible(field);
+    390:         }
+    391: 
+    392:         Type fieldType = GsonTypes.resolve(type.getType(), raw, field.getGenericType());
+    393:         List<String> fieldNames = getFieldNames(field);
+    394:         String serializedName = fieldNames.get(0);
+    395:         BoundField boundField =
+  ---
+    397:                 context,
+    398:                 field,
+    399:                 accessor,
+    400:                 serializedName,
+    401:                 TypeToken.get(fieldType),
+  ---
+    409:             if (replaced != null) {
+    410:               throw createDuplicateFieldException(originalRaw, name, replaced.field, field);
+    411:             }
+  ---
+    415:         if (serialize) {
+    416:           BoundField replaced = serializedFields.put(serializedName, boundField);
+    417:           if (replaced != null) {
+    418:             throw createDuplicateFieldException(originalRaw, serializedName, replaced.field, field);
+    419:           }
+  ---
+    436: 
+    437:     protected BoundField(String serializedName, Field field) {
+    438:       this.serializedName = serializedName;
+    439:       this.field = field;
+    440:       this.fieldName = field.getName();
+    441:     }
+  ---
+    512:           String name = in.nextName();
+    513:           BoundField field = deserializedFields.get(name);
+    514:           if (field == null) {
+    515:             in.skipValue();
+    516:           } else {
+    517:             readField(accumulator, in, field);
+    518:           }
+  ---
+    535:      */
+    536:     abstract void readField(A accumulator, JsonReader in, BoundField field)
+    537:         throws IllegalAccessException, IOException;
+  ---
+    556:     @Override
+    557:     void readField(T accumulator, JsonReader in, BoundField field)
+    558:         throws IllegalAccessException, IOException {
+    559:       field.readIntoField(in, accumulator);
+    560:     }
+  ---
+    623:     @Override
+    624:     void readField(Object[] accumulator, JsonReader in, BoundField field) throws IOException {
+    625:       // Obtain the component index from the name of the field backing it
+    626:       Integer componentIndex = componentIndices.get(field.fieldName);
+    627:       if (componentIndex == null) {
+  ---
+    631:                 + "' for field with name '"
+    632:                 + field.fieldName
+    633:                 + "', unable to determine which argument in the constructor the field corresponds"
+  ---
+    638:       }
+    639:       field.readIntoArray(in, componentIndex, accumulator);
+    640:     }
+  ---

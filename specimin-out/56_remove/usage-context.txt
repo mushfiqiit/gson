@@ -1,0 +1,75 @@
+The following are read-only excerpts from the ORIGINAL program showing how the
+relevant field(s) are used, guarded, and assigned outside this slice. Use them as
+evidence for nullability/type inference. Do NOT annotate or modify these excerpts.
+Fields of interest: delegate
+
+# com/google/gson/internal/NonNullElementWrapperList.java
+     35:   @SuppressWarnings("NonApiType")
+     36:   public NonNullElementWrapperList(ArrayList<E> delegate) {
+     37:     this.delegate = Objects.requireNonNull(delegate);
+     38:   }
+  ---
+     41:   public E get(int index) {
+     42:     return delegate.get(index);
+     43:   }
+  ---
+     46:   public int size() {
+     47:     return delegate.size();
+     48:   }
+  ---
+     58:   public E set(int index, E element) {
+     59:     return delegate.set(index, nonNull(element));
+     60:   }
+  ---
+     63:   public void add(int index, E element) {
+     64:     delegate.add(index, nonNull(element));
+     65:   }
+  ---
+     68:   public E remove(int index) {
+     69:     return delegate.remove(index);
+     70:   }
+  ---
+     75:   public void clear() {
+     76:     delegate.clear();
+     77:   }
+  ---
+     81:   public boolean remove(Object o) {
+     82:     return delegate.remove(o);
+     83:   }
+  ---
+     86:   public boolean removeAll(Collection<?> c) {
+     87:     return delegate.removeAll(c);
+     88:   }
+  ---
+     91:   public boolean retainAll(Collection<?> c) {
+     92:     return delegate.retainAll(c);
+     93:   }
+  ---
+     96:   public boolean contains(Object o) {
+     97:     return delegate.contains(o);
+     98:   }
+  ---
+    101:   public int indexOf(Object o) {
+    102:     return delegate.indexOf(o);
+    103:   }
+  ---
+    106:   public int lastIndexOf(Object o) {
+    107:     return delegate.lastIndexOf(o);
+    108:   }
+  ---
+    111:   public Object[] toArray() {
+    112:     return delegate.toArray();
+    113:   }
+  ---
+    116:   public <T> T[] toArray(T[] a) {
+    117:     return delegate.toArray(a);
+    118:   }
+  ---
+    121:   public boolean equals(Object o) {
+    122:     return delegate.equals(o);
+    123:   }
+  ---
+    126:   public int hashCode() {
+    127:     return delegate.hashCode();
+    128:   }
+  ---
