@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/69_indexOfNonDigit/com/google/gson/internal/bind/util/ISO8601Utils.java:8: error: [argument] incompatible argument for parameter index of String.charAt.
+            char c = string.charAt(i);
+                                   ^
+  found   : int
+  required: @NonNegative int
+1 error

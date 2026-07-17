@@ -1,0 +1,31 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/15_nextString/com/google/gson/stream/JsonReader.java:60: error: [argument] incompatible argument for parameter offset of String constructor.
+            result = new String(buffer, pos, peekedNumberLength);
+                                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/15_nextString/com/google/gson/stream/JsonReader.java:60: error: [argument] incompatible argument for parameter offset of String constructor.
+            result = new String(buffer, pos, peekedNumberLength);
+                                        ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/15_nextString/com/google/gson/stream/JsonReader.java:60: error: [argument] incompatible argument for parameter count of String constructor.
+            result = new String(buffer, pos, peekedNumberLength);
+                                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/15_nextString/com/google/gson/stream/JsonReader.java:60: error: [argument] incompatible argument for parameter count of String constructor.
+            result = new String(buffer, pos, peekedNumberLength);
+                                             ^
+  found   : int
+  required: @LTLengthOf(value="this.buffer", offset="this.pos - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/15_nextString/com/google/gson/stream/JsonReader.java:66: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        pathIndices[stackSize - 1]++;
+                              ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/15_nextString/com/google/gson/stream/JsonReader.java:66: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        pathIndices[stackSize - 1]++;
+                              ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+6 errors

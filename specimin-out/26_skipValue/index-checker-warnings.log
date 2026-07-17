@@ -1,0 +1,39 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:129: error: cannot find symbol
+    private void push(int newTop) throws MalformedJsonException {
+                                         ^
+  symbol:   class MalformedJsonException
+  location: class JsonReader
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:75: error: duplicate case label
+                case PEEKED_BEGIN_OBJECT:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:79: error: duplicate case label
+                case PEEKED_END_ARRAY:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:83: error: duplicate case label
+                case PEEKED_END_OBJECT:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:90: error: duplicate case label
+                case PEEKED_UNQUOTED:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:93: error: duplicate case label
+                case PEEKED_SINGLE_QUOTED:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:96: error: duplicate case label
+                case PEEKED_DOUBLE_QUOTED:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:99: error: duplicate case label
+                case PEEKED_UNQUOTED_NAME:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:105: error: duplicate case label
+                case PEEKED_SINGLE_QUOTED_NAME:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:111: error: duplicate case label
+                case PEEKED_DOUBLE_QUOTED_NAME:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:117: error: duplicate case label
+                case PEEKED_NUMBER:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/26_skipValue/com/google/gson/stream/JsonReader.java:120: error: duplicate case label
+                case PEEKED_EOF:
+                ^
+12 errors

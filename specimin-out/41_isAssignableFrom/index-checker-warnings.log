@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/41_isAssignableFrom/com/google/gson/reflect/TypeToken.java:29: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+                TypeVariable<?> var = tParams[i];
+                                              ^
+  found   : @LTLengthOf(value={"ptype.getActualTypeArguments()", "tArgs"}, offset={"0", "0"}) int
+  required: @IndexFor("tParams") or @LTLengthOf("tParams") -- an integer less than tParams's length
+1 error

@@ -1,0 +1,29 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/85_nextDouble/com/google/gson/internal/bind/JsonTreeReader.java:25: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [private]
+    private Object popStack() {
+                   ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/85_nextDouble/com/google/gson/internal/bind/JsonTreeReader.java:25: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [private]
+    private Object popStack() {
+                   ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/85_nextDouble/com/google/gson/internal/bind/JsonTreeReader.java:25: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [private]
+    private Object popStack() {
+                   ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/85_nextDouble/com/google/gson/internal/bind/JsonTreeReader.java:25: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [private]
+    private Object popStack() {
+                   ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/85_nextDouble/com/google/gson/internal/bind/JsonTreeReader.java:25: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [private]
+    private Object popStack() {
+                   ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/85_nextDouble/com/google/gson/internal/bind/JsonTreeReader.java:25: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [private]
+    private Object popStack() {
+                   ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/85_nextDouble/com/google/gson/internal/bind/JsonTreeReader.java:25: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [private]
+    private Object popStack() {
+                   ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/85_nextDouble/com/google/gson/internal/bind/JsonTreeReader.java:40: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+            pathIndices[stackSize - 1]++;
+                                  ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+1 error
+7 warnings

@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/58_upperCaseFirstLetter/com/google/gson/FieldNamingPolicy.java:16: error: [argument] incompatible argument for parameter beginIndex of String.substring.
+                    return uppercased + s.substring(1);
+                                                    ^
+  found   : @UpperBoundLiteral(1) int
+  required: @LTEqLengthOf("s") int
+1 error

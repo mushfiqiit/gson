@@ -1,0 +1,22 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/32_getPath/com/google/gson/stream/JsonReader.java:25: error: duplicate case label
+                case JsonScope.NONEMPTY_ARRAY:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/32_getPath/com/google/gson/stream/JsonReader.java:32: error: duplicate case label
+                case JsonScope.EMPTY_OBJECT:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/32_getPath/com/google/gson/stream/JsonReader.java:33: error: duplicate case label
+                case JsonScope.DANGLING_NAME:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/32_getPath/com/google/gson/stream/JsonReader.java:34: error: duplicate case label
+                case JsonScope.NONEMPTY_OBJECT:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/32_getPath/com/google/gson/stream/JsonReader.java:40: error: duplicate case label
+                case JsonScope.NONEMPTY_DOCUMENT:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/32_getPath/com/google/gson/stream/JsonReader.java:41: error: duplicate case label
+                case JsonScope.EMPTY_DOCUMENT:
+                ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/32_getPath/com/google/gson/stream/JsonReader.java:42: error: duplicate case label
+                case JsonScope.CLOSED:
+                ^
+7 errors

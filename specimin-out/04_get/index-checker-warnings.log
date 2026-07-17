@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/04_get/com/google/gson/JsonArray.java:15: error: [argument] incompatible argument for parameter index of ArrayList.get.
+        return elements.get(i);
+                            ^
+  found   : int
+  required: @NonNegative int
+1 error

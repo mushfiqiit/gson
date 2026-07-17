@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/01_JsonArray/com/google/gson/JsonArray.java:12: error: [argument] incompatible argument for parameter initialCapacity of ArrayList constructor.
+        elements = new ArrayList<>(capacity);
+                                   ^
+  found   : int
+  required: @NonNegative int
+1 error

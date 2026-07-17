@@ -1,0 +1,44 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/59_write/com/google/gson/internal/Streams.java:17: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+            appendable.append(currentWrite, offset, offset + length);
+                                            ^
+  found   : int
+  required: @LessThan("offset + length + 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/59_write/com/google/gson/internal/Streams.java:17: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+            appendable.append(currentWrite, offset, offset + length);
+                                            ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/59_write/com/google/gson/internal/Streams.java:17: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+            appendable.append(currentWrite, offset, offset + length);
+                                            ^
+  found   : int
+  required: @LTEqLengthOf("this.currentWrite") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/59_write/com/google/gson/internal/Streams.java:17: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+            appendable.append(currentWrite, offset, offset + length);
+                                                           ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/59_write/com/google/gson/internal/Streams.java:17: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+            appendable.append(currentWrite, offset, offset + length);
+                                                           ^
+  found   : int
+  required: @LTEqLengthOf("this.currentWrite") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/59_write/com/google/gson/internal/Streams.java:34: error: [override.return] Incompatible return type.
+            public int length() {
+                   ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in CurrentWrite
+    int length(CurrentWrite this)
+  cannot override method in CharSequence
+    @NonNegative int length(CharSequence this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/59_write/com/google/gson/internal/Streams.java:34: error: [override.return] Incompatible return type.
+            public int length() {
+                   ^
+  found   : int
+  required: @LTEqLengthOf("this") int
+  Consequence: method in CurrentWrite
+    int length(CurrentWrite this)
+  cannot override method in CharSequence
+    @LTEqLengthOf("this") int length(CharSequence this)
+7 errors

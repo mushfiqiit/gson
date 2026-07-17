@@ -1,0 +1,9 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/57_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:13: error: incompatible types: ObjectConstructor is not a functional interface
+            return () -> {
+                   ^
+    no abstract method found in interface ObjectConstructor
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/57_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:28: error: incompatible types: ObjectConstructor is not a functional interface
+            return () -> {
+                   ^
+    no abstract method found in interface ObjectConstructor
+2 errors

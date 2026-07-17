@@ -1,0 +1,26 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/60_write/com/google/gson/internal/Streams.java:28: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+            appendable.append(str, off, off + len);
+                                   ^
+  found   : int
+  required: @LessThan("off + len + 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/60_write/com/google/gson/internal/Streams.java:28: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+            appendable.append(str, off, off + len);
+                                   ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/60_write/com/google/gson/internal/Streams.java:28: error: [argument] incompatible argument for parameter arg1 of Appendable.append.
+            appendable.append(str, off, off + len);
+                                   ^
+  found   : int
+  required: @LTEqLengthOf("str") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/60_write/com/google/gson/internal/Streams.java:28: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+            appendable.append(str, off, off + len);
+                                            ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/60_write/com/google/gson/internal/Streams.java:28: error: [argument] incompatible argument for parameter arg2 of Appendable.append.
+            appendable.append(str, off, off + len);
+                                            ^
+  found   : int
+  required: @LTEqLengthOf("str") int
+5 errors

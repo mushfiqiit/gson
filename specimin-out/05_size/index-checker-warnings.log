@@ -1,0 +1,10 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/05_size/com/google/gson/internal/LinkedTreeMap.java:11: error: [override.return] Incompatible return type.
+    public int size() {
+           ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in LinkedTreeMap<K extends Object, V extends Object>
+    int size(LinkedTreeMap<K extends Object, V extends Object> this)
+  cannot override method in AbstractMap<K extends Object, V extends Object>
+    @NonNegative int size(AbstractMap<K extends Object, V extends Object> this)
+1 error

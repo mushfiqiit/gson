@@ -1,0 +1,11 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/13_peekNumber/com/google/gson/stream/JsonReader.java:63: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            char c = buffer[p + i];
+                              ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/13_peekNumber/com/google/gson/stream/JsonReader.java:63: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            char c = buffer[p + i];
+                              ^
+  found   : int
+  required: @IndexFor("buffer") or @LTLengthOf("buffer") -- an integer less than buffer's length
+2 errors

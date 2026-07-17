@@ -1,0 +1,21 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/31_skipTo/com/google/gson/stream/JsonReader.java:28: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            if (buffer[pos] == '\n') {
+                       ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/31_skipTo/com/google/gson/stream/JsonReader.java:28: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            if (buffer[pos] == '\n') {
+                       ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/31_skipTo/com/google/gson/stream/JsonReader.java:34: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+                if (buffer[pos + c] != toFind.charAt(c)) {
+                               ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/31_skipTo/com/google/gson/stream/JsonReader.java:34: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+                if (buffer[pos + c] != toFind.charAt(c)) {
+                               ^
+  found   : @LTLengthOf(value="toFind", offset="-this.pos") int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+4 errors

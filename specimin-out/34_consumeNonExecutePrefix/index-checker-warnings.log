@@ -1,0 +1,51 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                                   ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                                   ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                                                        ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                                                        ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                                                                             ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                                                                             ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                                                                                                   ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/34_consumeNonExecutePrefix/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        if (buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n') {
+                                                                                                   ^
+  found   : int
+  required: @IndexFor("buf") or @LTLengthOf("buf") -- an integer less than buf's length
+10 errors

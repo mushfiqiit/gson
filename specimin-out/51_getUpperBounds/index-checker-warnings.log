@@ -1,0 +1,10 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/51_getUpperBounds/com/google/gson/internal/GsonTypes.java:12: error: [override.return] Incompatible return type.
+        public Type[] getUpperBounds() {
+                   ^
+  found   : Type []
+  required: Type @ArrayLenRange(from=1) []
+  Consequence: method in WildcardTypeImpl
+    Type [] getUpperBounds(WildcardTypeImpl this)
+  cannot override method in WildcardType
+    Type @ArrayLenRange(from=1) [] getUpperBounds(WildcardType this)
+1 error

@@ -1,0 +1,39 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java:87: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+                target[index] = fieldValue;
+                       ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java:87: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+                target[index] = fieldValue;
+                       ^
+  found   : int
+  required: @IndexFor("target") or @LTLengthOf("target") -- an integer less than target's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/71_createBoundField/com/google/gson/JsonIOException.java:11: error: constructor JsonParseException in class JsonParseException cannot be applied to given types;
+        super(msg, cause);
+        ^
+  required: String
+  found:    String,Throwable
+  reason: actual and formal argument lists differ in length
+3 errors
+7 warnings

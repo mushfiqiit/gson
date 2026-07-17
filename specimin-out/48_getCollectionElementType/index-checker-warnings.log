@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/48_getCollectionElementType/com/google/gson/internal/GsonTypes.java:16: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+            return ((ParameterizedType) collectionType).getActualTypeArguments()[0];
+                                                                                 ^
+  found   : Type []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+1 error

@@ -1,0 +1,11 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/81_nextName/com/google/gson/internal/bind/JsonTreeReader.java:28: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        pathNames[stackSize - 1] = skipName ? "<skipped>" : result;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/81_nextName/com/google/gson/internal/bind/JsonTreeReader.java:28: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        pathNames[stackSize - 1] = skipName ? "<skipped>" : result;
+                            ^
+  found   : int
+  required: @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames") -- an integer less than this.pathNames's length
+2 errors

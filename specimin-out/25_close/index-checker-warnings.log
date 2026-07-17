@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/25_close/com/google/gson/stream/JsonReader.java:21: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+        stack[0] = JsonScope.CLOSED;
+              ^
+  found   : int []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+1 error

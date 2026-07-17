@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/50_toString/com/google/gson/internal/GsonTypes.java:35: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+            stringBuilder.append(typeToString(rawType)).append("<").append(typeToString(typeArguments[0]));
+                                                                                                      ^
+  found   : Type []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+1 error

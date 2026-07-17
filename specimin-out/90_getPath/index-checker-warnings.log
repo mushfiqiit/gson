@@ -1,0 +1,43 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/90_getPath/com/google/gson/internal/bind/JsonTreeReader.java:21: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+            if (stack[i] instanceof JsonArray) {
+                      ^
+  index type found: @IntRange(from=-2147483648, to=2147483646) int
+  array type found: Object []
+  required        : index of type @IndexFor("this.stack") or @LTLengthOf("this.stack"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/90_getPath/com/google/gson/internal/bind/JsonTreeReader.java:22: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+                if (++i < stackSize && stack[i] instanceof Iterator) {
+                                             ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: Object []
+  required        : index of type @IndexFor("this.stack") or @LTLengthOf("this.stack"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/90_getPath/com/google/gson/internal/bind/JsonTreeReader.java:23: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+                    int pathIndex = pathIndices[i];
+                                                ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: int []
+  required        : index of type @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/90_getPath/com/google/gson/internal/bind/JsonTreeReader.java:29: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+            } else if (stack[i] instanceof JsonObject) {
+                             ^
+  index type found: @IntRange(from=-2147483648, to=2147483646) int
+  array type found: Object []
+  required        : index of type @IndexFor("this.stack") or @LTLengthOf("this.stack"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/90_getPath/com/google/gson/internal/bind/JsonTreeReader.java:30: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+                if (++i < stackSize && stack[i] instanceof Iterator) {
+                                             ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: Object []
+  required        : index of type @IndexFor("this.stack") or @LTLengthOf("this.stack"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/90_getPath/com/google/gson/internal/bind/JsonTreeReader.java:32: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+                    if (pathNames[i] != null) {
+                                  ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: String []
+  required        : index of type @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/90_getPath/com/google/gson/internal/bind/JsonTreeReader.java:33: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+                        result.append(pathNames[i]);
+                                                ^
+  index type found: @IntRange(from=-2147483647, to=2147483646) int
+  array type found: String []
+  required        : index of type @IndexFor("this.pathNames") or @LTLengthOf("this.pathNames"), or array of type @MinLen(2147483647)
+7 errors

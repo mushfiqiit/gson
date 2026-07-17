@@ -1,0 +1,17 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/39_string/com/google/gson/stream/JsonWriter.java:33: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+                replacement = replacements[c];
+                                           ^
+  found   : char
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/39_string/com/google/gson/stream/JsonWriter.java:33: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+                replacement = replacements[c];
+                                           ^
+  index type found: @IntRange(from=-2147483648, to=127) char
+  array type found: String []
+  required        : index of type @IndexFor("replacements") or @LTLengthOf("replacements"), or array of type @MinLen(128)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/39_string/com/google/gson/stream/JsonWriter.java:45: error: [argument] incompatible argument for parameter len of Writer.write.
+                out.write(value, last, i - last);
+                                         ^
+  found   : @LTLengthOf(value={"value", "value"}, offset={"0", "last"}) int
+  required: @LTLengthOf(value="value", offset="last - 1") int
+3 errors

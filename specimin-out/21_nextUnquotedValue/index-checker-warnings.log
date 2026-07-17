@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/21_nextUnquotedValue/com/google/gson/stream/JsonReader.java:71: error: cannot find symbol
+    private void checkLenient() throws MalformedJsonException {
+                                       ^
+  symbol:   class MalformedJsonException
+  location: class JsonReader
+1 error

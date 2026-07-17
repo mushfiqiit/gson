@@ -1,0 +1,15 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/52_get/com/google/gson/internal/NonNullElementWrapperList.java:11: error: [argument] incompatible argument for parameter index of ArrayList.get.
+        return delegate.get(index);
+                            ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/52_get/com/google/gson/internal/NonNullElementWrapperList.java:14: error: [override.return] Incompatible return type.
+    public int size() {
+           ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in NonNullElementWrapperList<E extends Object>
+    int size(NonNullElementWrapperList<E extends Object> this)
+  cannot override method in AbstractCollection<E extends Object>
+    @NonNegative int size(AbstractCollection<E extends Object> this)
+2 errors

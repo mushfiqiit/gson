@@ -1,0 +1,11 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/49_resolveTypeVariable/com/google/gson/internal/GsonTypes.java:21: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            return ((ParameterizedType) declaredBy).getActualTypeArguments()[index];
+                                                                             ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/49_resolveTypeVariable/com/google/gson/internal/GsonTypes.java:21: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            return ((ParameterizedType) declaredBy).getActualTypeArguments()[index];
+                                                                             ^
+  found   : int
+  required: @IndexFor("(ParameterizedType)declaredBy.getActualTypeArguments()") or @LTLengthOf("(ParameterizedType)declaredBy.getActualTypeArguments()") -- an integer less than (ParameterizedType)declaredBy.getActualTypeArguments()'s length
+2 errors

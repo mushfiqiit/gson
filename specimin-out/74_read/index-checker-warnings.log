@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/74_read/com/google/gson/internal/bind/ArrayTypeAdapter.java:32: error: [argument] incompatible argument for parameter arg1 of Array.set.
+                Array.set(array, i, list.get(i));
+                                 ^
+  found   : int
+  required: @LTLengthOf("array") int
+1 error

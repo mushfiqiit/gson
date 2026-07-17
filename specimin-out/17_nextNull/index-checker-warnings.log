@@ -1,0 +1,11 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/17_nextNull/com/google/gson/stream/JsonReader.java:29: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            pathIndices[stackSize - 1]++;
+                                  ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/17_nextNull/com/google/gson/stream/JsonReader.java:29: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            pathIndices[stackSize - 1]++;
+                                  ^
+  found   : int
+  required: @IndexFor("this.pathIndices") or @LTLengthOf("this.pathIndices") -- an integer less than this.pathIndices's length
+2 errors

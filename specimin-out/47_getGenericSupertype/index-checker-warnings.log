@@ -1,0 +1,11 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/47_getGenericSupertype/com/google/gson/internal/GsonTypes.java:15: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+                    return rawType.getGenericInterfaces()[i];
+                                                          ^
+  found   : @LTLengthOf(value={"interfaces", "rawType.getInterfaces()"}, offset={"0", "0"}) int
+  required: @IndexFor("rawType.getGenericInterfaces()") or @LTLengthOf("rawType.getGenericInterfaces()") -- an integer less than rawType.getGenericInterfaces()'s length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/47_getGenericSupertype/com/google/gson/internal/GsonTypes.java:17: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+                    return getGenericSupertype(rawType.getGenericInterfaces()[i], interfaces[i], supertype);
+                                                                              ^
+  found   : @LTLengthOf(value={"interfaces", "rawType.getInterfaces()"}, offset={"0", "0"}) int
+  required: @IndexFor("rawType.getGenericInterfaces()") or @LTLengthOf("rawType.getGenericInterfaces()") -- an integer less than rawType.getGenericInterfaces()'s length
+2 errors

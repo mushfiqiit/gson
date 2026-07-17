@@ -1,0 +1,11 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/78_peek/com/google/gson/internal/bind/JsonTreeReader.java:27: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            boolean isObject = stack[stackSize - 2] instanceof JsonObject;
+                                               ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/78_peek/com/google/gson/internal/bind/JsonTreeReader.java:27: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            boolean isObject = stack[stackSize - 2] instanceof JsonObject;
+                                               ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+2 errors

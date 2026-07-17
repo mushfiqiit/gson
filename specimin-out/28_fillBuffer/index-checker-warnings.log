@@ -1,0 +1,36 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/28_fillBuffer/com/google/gson/stream/JsonReader.java:29: error: [argument] incompatible argument for parameter arg1 of System.arraycopy.
+            System.arraycopy(buffer, pos, buffer, 0, limit);
+                                     ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/28_fillBuffer/com/google/gson/stream/JsonReader.java:29: error: [argument] incompatible argument for parameter arg4 of System.arraycopy.
+            System.arraycopy(buffer, pos, buffer, 0, limit);
+                                                     ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/28_fillBuffer/com/google/gson/stream/JsonReader.java:29: error: [argument] incompatible argument for parameter arg4 of System.arraycopy.
+            System.arraycopy(buffer, pos, buffer, 0, limit);
+                                                     ^
+  found   : int
+  required: @LTLengthOf(value={"buffer", "buffer"}, offset={"this.pos - 1", "0 - 1"}) int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/28_fillBuffer/com/google/gson/stream/JsonReader.java:35: error: [argument] incompatible argument for parameter arg1 of Reader.read.
+        while ((total = in.read(buffer, limit, buffer.length - limit)) != -1) {
+                                        ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/28_fillBuffer/com/google/gson/stream/JsonReader.java:35: error: [argument] incompatible argument for parameter arg1 of Reader.read.
+        while ((total = in.read(buffer, limit, buffer.length - limit)) != -1) {
+                                        ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/28_fillBuffer/com/google/gson/stream/JsonReader.java:35: error: [argument] incompatible argument for parameter arg2 of Reader.read.
+        while ((total = in.read(buffer, limit, buffer.length - limit)) != -1) {
+                                                             ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/28_fillBuffer/com/google/gson/stream/JsonReader.java:37: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+            if (lineNumber == 0 && lineStart == 0 && limit > 0 && buffer[0] == '\ufeff') {
+                                                                         ^
+  found   : char []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+7 errors

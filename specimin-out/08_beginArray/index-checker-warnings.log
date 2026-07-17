@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/08_beginArray/com/google/gson/stream/JsonReader.java:40: error: cannot find symbol
+    private void push(int newTop) throws MalformedJsonException {
+                                         ^
+  symbol:   class MalformedJsonException
+  location: class JsonReader
+1 error

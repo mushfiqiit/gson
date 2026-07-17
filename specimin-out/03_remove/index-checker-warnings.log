@@ -1,0 +1,28 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/03_remove/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement remove(int index) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/03_remove/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement remove(int index) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/03_remove/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement remove(int index) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/03_remove/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement remove(int index) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/03_remove/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement remove(int index) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/03_remove/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement remove(int index) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/03_remove/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement remove(int index) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/03_remove/com/google/gson/JsonArray.java:13: error: [argument] incompatible argument for parameter index of ArrayList.remove.
+        return elements.remove(index);
+                               ^
+  found   : int
+  required: @NonNegative int
+1 error
+7 warnings

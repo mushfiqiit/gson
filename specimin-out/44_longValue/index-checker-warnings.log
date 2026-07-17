@@ -1,0 +1,37 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/44_longValue/com/google/gson/internal/LazilyParsedNumber.java:14: error: [override.return] Incompatible return type.
+    public int intValue() {
+           ^
+  found   : int
+  required: @PolyValue int
+  Consequence: method in LazilyParsedNumber
+    int intValue(LazilyParsedNumber this)
+  cannot override method in Number
+    @PolyValue int intValue(@PolyValue Number this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/44_longValue/com/google/gson/internal/LazilyParsedNumber.java:18: error: [override.return] Incompatible return type.
+    public long longValue() {
+           ^
+  found   : long
+  required: @PolyValue long
+  Consequence: method in LazilyParsedNumber
+    long longValue(LazilyParsedNumber this)
+  cannot override method in Number
+    @PolyValue long longValue(@PolyValue Number this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/44_longValue/com/google/gson/internal/LazilyParsedNumber.java:26: error: [override.return] Incompatible return type.
+    public float floatValue() {
+           ^
+  found   : float
+  required: @PolyValue float
+  Consequence: method in LazilyParsedNumber
+    float floatValue(LazilyParsedNumber this)
+  cannot override method in Number
+    @PolyValue float floatValue(@PolyValue Number this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/44_longValue/com/google/gson/internal/LazilyParsedNumber.java:30: error: [override.return] Incompatible return type.
+    public double doubleValue() {
+           ^
+  found   : double
+  required: @PolyValue double
+  Consequence: method in LazilyParsedNumber
+    double doubleValue(LazilyParsedNumber this)
+  cannot override method in Number
+    @PolyValue double doubleValue(@PolyValue Number this)
+4 errors

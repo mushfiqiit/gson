@@ -1,0 +1,19 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/62_length/com/google/gson/internal/Streams.java:27: error: [override.return] Incompatible return type.
+            public int length() {
+                   ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in CurrentWrite
+    int length(CurrentWrite this)
+  cannot override method in CharSequence
+    @NonNegative int length(CharSequence this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/62_length/com/google/gson/internal/Streams.java:27: error: [override.return] Incompatible return type.
+            public int length() {
+                   ^
+  found   : int
+  required: @LTEqLengthOf("this") int
+  Consequence: method in CurrentWrite
+    int length(CurrentWrite this)
+  cannot override method in CharSequence
+    @LTEqLengthOf("this") int length(CharSequence this)
+2 errors

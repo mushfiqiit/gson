@@ -1,0 +1,75 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:50: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        int peekStack = stack[stackSize - 1];
+                                        ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:50: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        int peekStack = stack[stackSize - 1];
+                                        ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:52: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            stack[stackSize - 1] = JsonScope.NONEMPTY_ARRAY;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:52: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            stack[stackSize - 1] = JsonScope.NONEMPTY_ARRAY;
+                            ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:67: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            stack[stackSize - 1] = JsonScope.DANGLING_NAME;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:67: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            stack[stackSize - 1] = JsonScope.DANGLING_NAME;
+                            ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:101: warning: [cast.unsafe] cast from "@LowerBoundUnknown int" to "@NonNegative char" cannot be statically verified
+                    if (isLiteral((char) c)) {
+                                  ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:109: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            stack[stackSize - 1] = JsonScope.NONEMPTY_OBJECT;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:109: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            stack[stackSize - 1] = JsonScope.NONEMPTY_OBJECT;
+                            ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:116: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+                    if ((pos < limit || fillBuffer(1)) && buffer[pos] == '>') {
+                                                                 ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:116: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+                    if ((pos < limit || fillBuffer(1)) && buffer[pos] == '>') {
+                                                                 ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:127: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+            stack[stackSize - 1] = JsonScope.NONEMPTY_DOCUMENT;
+                            ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:127: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+            stack[stackSize - 1] = JsonScope.NONEMPTY_DOCUMENT;
+                            ^
+  found   : int
+  required: @IndexFor("this.stack") or @LTLengthOf("this.stack") -- an integer less than this.stack's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:181: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        if (!isLiteral(buffer[pos])) {
+                              ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/11_doPeek/com/google/gson/stream/JsonReader.java:181: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        if (!isLiteral(buffer[pos])) {
+                              ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+14 errors
+1 warning

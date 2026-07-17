@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/19_nextLong/com/google/gson/stream/JsonReader.java:112: error: cannot find symbol
+    private void validateAscii(String s) throws MalformedJsonException {
+                                                ^
+  symbol:   class MalformedJsonException
+  location: class JsonReader
+1 error

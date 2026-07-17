@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/68_checkOffset/com/google/gson/internal/bind/util/ISO8601Utils.java:7: error: [argument] incompatible argument for parameter index of String.charAt.
+        return (offset < value.length()) && (value.charAt(offset) == expected);
+                                                          ^
+  found   : int
+  required: @NonNegative int
+1 error

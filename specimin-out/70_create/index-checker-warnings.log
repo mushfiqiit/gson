@@ -1,0 +1,11 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/70_create/com/google/gson/internal/bind/MapTypeAdapterFactory.java:24: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 0 could be larger than the array's bound
+        Type keyType = keyAndValueTypes[0];
+                                        ^
+  found   : Type []
+  required: @MinLen(1) -- an array guaranteed to have at least 1 elements
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/70_create/com/google/gson/internal/bind/MapTypeAdapterFactory.java:25: error: [array.access.unsafe.high.constant] Potentially unsafe array access: the constant index 1 could be larger than the array's bound
+        Type valueType = keyAndValueTypes[1];
+                                          ^
+  found   : Type []
+  required: @MinLen(2) -- an array guaranteed to have at least 2 elements
+2 errors

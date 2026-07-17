@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/42_typeEquals/com/google/gson/reflect/TypeToken.java:14: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+                if (!matches(fromArgs[i], toArgs[i], typeVarMap)) {
+                                                 ^
+  found   : @LTLengthOf(value={"from.getActualTypeArguments()", "fromArgs"}, offset={"0", "0"}) int
+  required: @IndexFor("toArgs") or @LTLengthOf("toArgs") -- an integer less than toArgs's length
+1 error

@@ -1,0 +1,28 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/02_set/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement set(int index, JsonElement element) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/02_set/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement set(int index, JsonElement element) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/02_set/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement set(int index, JsonElement element) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/02_set/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement set(int index, JsonElement element) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/02_set/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement set(int index, JsonElement element) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/02_set/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement set(int index, JsonElement element) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/02_set/com/google/gson/JsonArray.java:12: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonElement set(int index, JsonElement element) {
+                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/02_set/com/google/gson/JsonArray.java:13: error: [argument] incompatible argument for parameter index of ArrayList.set.
+        return elements.set(index, element == null ? JsonNull.INSTANCE : element);
+                            ^
+  found   : int
+  required: @NonNegative int
+1 error
+7 warnings

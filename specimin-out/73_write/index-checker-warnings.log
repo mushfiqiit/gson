@@ -1,0 +1,113 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter beginObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter beginObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter beginObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter beginObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter beginObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter beginObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:9: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter beginObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:14: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter endObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:14: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter endObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:14: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter endObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:14: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter endObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:14: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter endObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:14: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter endObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:14: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter endObject() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:19: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:19: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:19: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:19: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:19: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:19: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:19: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter name(String name) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:24: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter value(long value) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:24: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter value(long value) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:24: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter value(long value) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:24: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter value(long value) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:24: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter value(long value) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:24: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter value(long value) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:24: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter value(long value) throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:29: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter nullValue() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:29: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter nullValue() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:29: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter nullValue() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:29: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter nullValue() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:29: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter nullValue() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:29: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter nullValue() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/stream/JsonWriter.java:29: warning: [type.anno.before.modifier] write type annotation @CanIgnoreReturnValue immediately before type, after modifiers [public]
+    public JsonWriter nullValue() throws IOException {
+                      ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/73_write/com/google/gson/internal/bind/TypeAdapters.java:25: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+                out.value(values[i]);
+                                 ^
+  index type found: @IntRange(from=0, to=2147483646) int
+  array type found: long []
+  required        : index of type @IndexFor("values") or @LTLengthOf("values"), or array of type @MinLen(2147483647)
+1 error
+35 warnings

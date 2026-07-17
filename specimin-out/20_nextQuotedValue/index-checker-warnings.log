@@ -1,0 +1,92 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:28: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+                int c = buffer[p++];
+                                ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:28: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+                int c = buffer[p++];
+                                ^
+  index type found: @IntRange(from=-2147483648, to=2147483646) int
+  array type found: char []
+  required        : index of type @IndexFor("buffer") or @LTLengthOf("buffer"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:35: error: [argument] incompatible argument for parameter offset of String constructor.
+                        return new String(buffer, start, len);
+                                                  ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:35: error: [argument] incompatible argument for parameter offset of String constructor.
+                        return new String(buffer, start, len);
+                                                  ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:35: error: [argument] incompatible argument for parameter count of String constructor.
+                        return new String(buffer, start, len);
+                                                         ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:35: error: [argument] incompatible argument for parameter count of String constructor.
+                        return new String(buffer, start, len);
+                                                         ^
+  found   : int
+  required: @LTLengthOf(value="buffer", offset="start - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:37: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+                        builder.append(buffer, start, len);
+                                               ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:37: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+                        builder.append(buffer, start, len);
+                                               ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:37: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+                        builder.append(buffer, start, len);
+                                                      ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:37: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+                        builder.append(buffer, start, len);
+                                                      ^
+  found   : int
+  required: @LTLengthOf(value="buffer", offset="start - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:47: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+                    builder.append(buffer, start, len);
+                                           ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:47: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+                    builder.append(buffer, start, len);
+                                           ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:47: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+                    builder.append(buffer, start, len);
+                                                  ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:47: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+                    builder.append(buffer, start, len);
+                                                  ^
+  found   : int
+  required: @LTLengthOf(value="buffer", offset="start - 1") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:61: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+            builder.append(buffer, start, p - start);
+                                   ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:61: error: [argument] incompatible argument for parameter offset of StringBuilder.append.
+            builder.append(buffer, start, p - start);
+                                   ^
+  found   : int
+  required: @LTEqLengthOf("buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:61: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+            builder.append(buffer, start, p - start);
+                                            ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/20_nextQuotedValue/com/google/gson/stream/JsonReader.java:61: error: [argument] incompatible argument for parameter len of StringBuilder.append.
+            builder.append(buffer, start, p - start);
+                                            ^
+  found   : int
+  required: @LTLengthOf(value="buffer", offset="start - 1") int
+18 errors

@@ -1,0 +1,41 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/33_readEscapeCharacter/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+        char escaped = buffer[pos++];
+                                 ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/33_readEscapeCharacter/com/google/gson/stream/JsonReader.java:33: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+        char escaped = buffer[pos++];
+                                 ^
+  found   : int
+  required: @IndexFor("this.buffer") or @LTLengthOf("this.buffer") -- an integer less than this.buffer's length
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/33_readEscapeCharacter/com/google/gson/stream/JsonReader.java:41: error: [array.access.unsafe.low] Potentially unsafe array access: the index could be negative.
+                    char c = buffer[i];
+                                    ^
+  found   : int
+  required: an integer >= 0 (@NonNegative or @Positive)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/33_readEscapeCharacter/com/google/gson/stream/JsonReader.java:41: error: [array.access.unsafe.high.range] Potentially unsafe array access: the index could be larger than the array's bound
+                    char c = buffer[i];
+                                    ^
+  index type found: @IntRange(from=-2147483648, to=2147483646) int
+  array type found: char []
+  required        : index of type @IndexFor("this.buffer") or @LTLengthOf("this.buffer"), or array of type @MinLen(2147483647)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/33_readEscapeCharacter/com/google/gson/stream/JsonReader.java:50: error: [argument] incompatible argument for parameter offset of String constructor.
+                        throw syntaxError("Malformed Unicode escape \\u" + new String(buffer, pos, 4));
+                                                                                              ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/33_readEscapeCharacter/com/google/gson/stream/JsonReader.java:50: error: [argument] incompatible argument for parameter offset of String constructor.
+                        throw syntaxError("Malformed Unicode escape \\u" + new String(buffer, pos, 4));
+                                                                                              ^
+  found   : int
+  required: @LTEqLengthOf("this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/33_readEscapeCharacter/com/google/gson/stream/JsonReader.java:50: error: [argument] incompatible argument for parameter count of String constructor.
+                        throw syntaxError("Malformed Unicode escape \\u" + new String(buffer, pos, 4));
+                                                                                                   ^
+  found   : @UpperBoundLiteral(4) int
+  required: @LTLengthOf(offset="this.pos - 1", value="this.buffer") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/33_readEscapeCharacter/com/google/gson/stream/JsonReader.java:54: warning: [cast.unsafe] cast from "@LowerBoundUnknown int" to "@NonNegative char" cannot be statically verified
+                return (char) result;
+                       ^
+7 errors
+1 warning

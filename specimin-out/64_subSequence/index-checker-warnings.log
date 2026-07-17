@@ -1,0 +1,39 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/64_subSequence/com/google/gson/internal/Streams.java:27: error: [override.return] Incompatible return type.
+            public int length() {
+                   ^
+  found   : int
+  required: @NonNegative int
+  Consequence: method in CurrentWrite
+    int length(CurrentWrite this)
+  cannot override method in CharSequence
+    @NonNegative int length(CharSequence this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/64_subSequence/com/google/gson/internal/Streams.java:27: error: [override.return] Incompatible return type.
+            public int length() {
+                   ^
+  found   : int
+  required: @LTEqLengthOf("this") int
+  Consequence: method in CurrentWrite
+    int length(CurrentWrite this)
+  cannot override method in CharSequence
+    @LTEqLengthOf("this") int length(CharSequence this)
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/64_subSequence/com/google/gson/internal/Streams.java:36: error: [argument] incompatible argument for parameter offset of String constructor.
+                return new String(chars, start, end - start);
+                                         ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/64_subSequence/com/google/gson/internal/Streams.java:36: error: [argument] incompatible argument for parameter offset of String constructor.
+                return new String(chars, start, end - start);
+                                         ^
+  found   : int
+  required: @LTEqLengthOf("this.chars") int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/64_subSequence/com/google/gson/internal/Streams.java:36: error: [argument] incompatible argument for parameter count of String constructor.
+                return new String(chars, start, end - start);
+                                                    ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/64_subSequence/com/google/gson/internal/Streams.java:36: error: [argument] incompatible argument for parameter count of String constructor.
+                return new String(chars, start, end - start);
+                                                    ^
+  found   : int
+  required: @LTLengthOf(offset="start - 1", value="this.chars") int
+6 errors

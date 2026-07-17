@@ -1,0 +1,16 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/67_parse/com/google/gson/internal/bind/util/ISO8601Utils.java:79: error: [argument] incompatible argument for parameter index of String.charAt.
+            char timezoneIndicator = date.charAt(offset);
+                                                 ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/67_parse/com/google/gson/internal/bind/util/ISO8601Utils.java:84: error: [argument] incompatible argument for parameter beginIndex of String.substring.
+                String timezoneOffset = date.substring(offset);
+                                                       ^
+  found   : int
+  required: @NonNegative int
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/67_parse/com/google/gson/internal/bind/util/ISO8601Utils.java:112: error: [argument] incompatible argument for parameter index of ParsePosition.setIndex.
+            pos.setIndex(offset);
+                         ^
+  found   : int
+  required: @NonNegative int
+3 errors

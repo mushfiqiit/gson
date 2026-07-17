@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/specimin-out/72_read/com/google/gson/internal/bind/TypeAdapters.java:28: error: [array.access.unsafe.high] Potentially unsafe array access: the index could be larger than the array's bound
+                    values[index] = in.nextLong();
+                           ^
+  found   : int
+  required: @IndexFor("values") or @LTLengthOf("values") -- an integer less than values's length
+1 error
