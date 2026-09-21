@@ -1,0 +1,1 @@
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:[233,69] [NullAway] passing @Nullable parameter 'null' where @NonNull is required

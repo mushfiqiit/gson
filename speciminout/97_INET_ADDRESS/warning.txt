@@ -1,0 +1,1 @@
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[794,35] [NullAway] passing @Nullable parameter 'value == null ? null : value.getHostAddress()' where @NonNull is required

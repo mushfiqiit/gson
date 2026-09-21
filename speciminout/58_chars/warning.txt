@@ -1,0 +1,1 @@
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:[136,22] [NullAway] @NonNull field Streams$AppendableWriter$CurrentWrite.chars not initialized

@@ -1,0 +1,1 @@
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:[231,10] [NullAway] initializer method does not guarantee @NonNull field deferredName (line 222) is initialized along all control-flow paths (remember to check for exceptions or early returns).

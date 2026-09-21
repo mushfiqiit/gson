@@ -1,0 +1,1 @@
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:[127,29] [NullAway] passing @Nullable parameter 'value == null ? null : constantToName.get(value)' where @NonNull is required
