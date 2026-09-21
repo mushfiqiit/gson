@@ -1,0 +1,13 @@
+Slice: 25_JsonWriter
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:[231,10] [NullAway] initializer method does not guarantee @NonNull field deferredName (line 222) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+
+nullaway-warnings.txt: 5 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/25_JsonWriter/com/google/gson/stream/JsonWriter.java:42: warning: [NullAway] initializer method does not guarantee @NonNull fields stack (line 22), formattingStyle (line 26), formattedColon (line 28), formattedComma (line 30), strictness (line 34), deferredName (line 38) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/25_JsonWriter/com/google/gson/stream/JsonWriter.java:14: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/25_JsonWriter/com/google/gson/stream/JsonWriter.java:16: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/25_JsonWriter/com/google/gson/stream/JsonWriter.java:18: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/25_JsonWriter/com/google/gson/FormattingStyle.java:5: warning: [NullAway] assigning @Nullable expression to @NonNull field
+
+No finding in this slice matches the original warning's file name + message.
+VERDICT: NOT REPRODUCED

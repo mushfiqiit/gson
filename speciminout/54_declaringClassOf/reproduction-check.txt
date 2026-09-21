@@ -1,0 +1,12 @@
+Slice: 54_declaringClassOf
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:[487,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+
+nullaway-warnings.txt: 1 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/54_declaringClassOf/com/google/gson/internal/GsonTypes.java:10: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/54_declaringClassOf/com/google/gson/internal/GsonTypes.java:10: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  file name matches : GsonTypes.java == GsonTypes.java
+  message matches   : yes (exact)
+  line differs      : 487 -> 10
+VERDICT: REPRODUCED

@@ -1,0 +1,15 @@
+Slice: 50_Node
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[478,5] [NullAway] initializer method does not guarantee @NonNull fields left (line 461), right (line 462), value (line 467) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+
+nullaway-warnings.txt: 1 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/50_Node/com/google/gson/internal/LinkedTreeMap.java:34: warning: [NullAway] initializer method does not guarantee @NonNull fields left (line 18), right (line 20), value (line 30) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/50_Node/com/google/gson/internal/LinkedTreeMap.java:34: warning: [NullAway] initializer method does not guarantee @NonNull fields left (line 18), right (line 20), value (line 30) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  file name matches : LinkedTreeMap.java == LinkedTreeMap.java
+  message matches   : yes, after normalizing embedded "(line N)" references
+    original message   : initializer method does not guarantee @NonNull fields left (line 461), right (line 462), value (line 467) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    slice message       : initializer method does not guarantee @NonNull fields left (line 18), right (line 20), value (line 30) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    normalized (both)   : initializer method does not guarantee @NonNull fields left (line #), right (line #), value (line #) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  line differs      : 478 -> 34
+VERDICT: REPRODUCED

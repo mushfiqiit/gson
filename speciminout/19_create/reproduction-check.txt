@@ -1,0 +1,13 @@
+Slice: 19_create
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:[81,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+
+nullaway-warnings.txt: 2 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:12: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:23: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:23: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  file name matches : JsonAdapterAnnotationTypeAdapterFactory.java == JsonAdapterAnnotationTypeAdapterFactory.java
+  message matches   : yes (exact)
+  line differs      : 81 -> 23
+VERDICT: REPRODUCED

@@ -1,0 +1,12 @@
+Slice: 02_DEFAULT_DATE_PATTERN
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/GsonBuilder.java:[103,31] [NullAway] assigning @Nullable expression to @NonNull field
+
+nullaway-warnings.txt: 1 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/02_DEFAULT_DATE_PATTERN/com/google/gson/GsonBuilder.java:5: warning: [NullAway] assigning @Nullable expression to @NonNull field
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/02_DEFAULT_DATE_PATTERN/com/google/gson/GsonBuilder.java:5: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  file name matches : GsonBuilder.java == GsonBuilder.java
+  message matches   : yes (exact)
+  line differs      : 103 -> 5
+VERDICT: REPRODUCED

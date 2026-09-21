@@ -1,0 +1,25 @@
+Summary: 100 slice folder(s) checked
+  Reproduced     : 85
+  Not reproduced : 14
+  Skipped        : 1
+
+Not reproduced:
+  - 12_newSpecialCollectionConstructor
+  - 13_newDefaultConstructor
+  - 14_newDefaultConstructor
+  - 15_newDefaultConstructor
+  - 17_newCollectionConstructor
+  - 18_newMapConstructor
+  - 20_getTypeAdapter
+  - 21_getTypeAdapter
+  - 25_JsonWriter
+  - 28_JsonReader
+  - 29_nextString
+  - 30_nextDouble
+  - 31_nextLong
+  - 61_FACTORY
+
+Skipped:
+  - 55_ParameterizedTypeImpl
+
+Per-slice details written to each folder's reproduction-check.txt

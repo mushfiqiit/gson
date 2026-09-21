@@ -1,0 +1,7 @@
+Slice: 21_getTypeAdapter
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:[142,43] [NullAway] passing @Nullable parameter 'deserializer' where @NonNull is required
+
+nullaway-warnings.txt: 0 finding(s)
+
+VERDICT: NOT REPRODUCED -- no NullAway warnings found in this slice

@@ -1,0 +1,15 @@
+Slice: 69_read
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:[122,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+
+nullaway-warnings.txt: 4 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/69_read/com/google/gson/internal/bind/EnumTypeAdapter.java:11: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/69_read/com/google/gson/internal/bind/EnumTypeAdapter.java:13: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/69_read/com/google/gson/internal/bind/EnumTypeAdapter.java:18: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/69_read/com/google/gson/internal/bind/EnumTypeAdapter.java:22: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/69_read/com/google/gson/internal/bind/EnumTypeAdapter.java:18: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  file name matches : EnumTypeAdapter.java == EnumTypeAdapter.java
+  message matches   : yes (exact)
+  line differs      : 122 -> 18
+VERDICT: REPRODUCED

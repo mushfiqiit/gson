@@ -1,0 +1,13 @@
+Slice: 96_INET_ADDRESS
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[774,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+
+nullaway-warnings.txt: 2 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/96_INET_ADDRESS/com/google/gson/internal/bind/TypeAdapters.java:22: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/96_INET_ADDRESS/com/google/gson/internal/bind/TypeAdapters.java:41: warning: [NullAway] passing @Nullable parameter 'value == null ? null : value.getHostAddress()' where @NonNull is required
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/96_INET_ADDRESS/com/google/gson/internal/bind/TypeAdapters.java:22: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  file name matches : TypeAdapters.java == TypeAdapters.java
+  message matches   : yes (exact)
+  line differs      : 774 -> 22
+VERDICT: REPRODUCED

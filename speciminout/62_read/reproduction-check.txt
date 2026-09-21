@@ -1,0 +1,14 @@
+Slice: 62_read
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java:[69,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+
+nullaway-warnings.txt: 3 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/62_read/com/google/gson/internal/bind/ArrayTypeAdapter.java:12: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/62_read/com/google/gson/internal/bind/ArrayTypeAdapter.java:14: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/62_read/com/google/gson/internal/bind/ArrayTypeAdapter.java:19: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/62_read/com/google/gson/internal/bind/ArrayTypeAdapter.java:19: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  file name matches : ArrayTypeAdapter.java == ArrayTypeAdapter.java
+  message matches   : yes (exact)
+  line differs      : 69 -> 19
+VERDICT: REPRODUCED

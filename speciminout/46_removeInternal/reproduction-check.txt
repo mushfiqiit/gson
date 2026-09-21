@@ -1,0 +1,21 @@
+Slice: 46_removeInternal
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[284,18] [NullAway] assigning @Nullable expression to @NonNull field
+
+nullaway-warnings.txt: 10 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:31: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:39: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:46: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:49: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:51: warning: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:73: warning: [NullAway] @NonNull field LinkedTreeMap$Node.parent not initialized
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:75: warning: [NullAway] @NonNull field LinkedTreeMap$Node.left not initialized
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:77: warning: [NullAway] @NonNull field LinkedTreeMap$Node.right not initialized
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:79: warning: [NullAway] @NonNull field LinkedTreeMap$Node.next not initialized
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:81: warning: [NullAway] @NonNull field LinkedTreeMap$Node.prev not initialized
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/46_removeInternal/com/google/gson/internal/LinkedTreeMap.java:31: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  file name matches : LinkedTreeMap.java == LinkedTreeMap.java
+  message matches   : yes (exact)
+  line differs      : 284 -> 31
+VERDICT: REPRODUCED

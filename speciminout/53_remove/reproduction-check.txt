@@ -1,0 +1,13 @@
+Slice: 53_remove
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[585,20] [NullAway] assigning @Nullable expression to @NonNull field
+
+nullaway-warnings.txt: 2 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:38: warning: [NullAway] @NonNull field LinkedTreeMap$LinkedTreeMapIterator.lastReturned not initialized
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:52: warning: [NullAway] assigning @Nullable expression to @NonNull field
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:52: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  file name matches : LinkedTreeMap.java == LinkedTreeMap.java
+  message matches   : yes (exact)
+  line differs      : 585 -> 52
+VERDICT: REPRODUCED

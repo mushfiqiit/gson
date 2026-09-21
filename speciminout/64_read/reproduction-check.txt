@@ -1,0 +1,14 @@
+Slice: 64_read
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:[78,9] [NullAway] returning @Nullable expression from method with @NonNull return type
+
+nullaway-warnings.txt: 3 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/64_read/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:15: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/64_read/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:17: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/64_read/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:22: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/64_read/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:22: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  file name matches : CollectionTypeAdapterFactory.java == CollectionTypeAdapterFactory.java
+  message matches   : yes (exact)
+  line differs      : 78 -> 22
+VERDICT: REPRODUCED

@@ -1,0 +1,14 @@
+Slice: 27_nullValue
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:[672,22] [NullAway] assigning @Nullable expression to @NonNull field
+
+nullaway-warnings.txt: 3 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/27_nullValue/com/google/gson/stream/JsonWriter.java:13: warning: [NullAway] @NonNull field deferredName not initialized
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/27_nullValue/com/google/gson/stream/JsonWriter.java:11: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/27_nullValue/com/google/gson/stream/JsonWriter.java:27: warning: [NullAway] assigning @Nullable expression to @NonNull field
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/27_nullValue/com/google/gson/stream/JsonWriter.java:11: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  file name matches : JsonWriter.java == JsonWriter.java
+  message matches   : yes (exact)
+  line differs      : 672 -> 11
+VERDICT: REPRODUCED

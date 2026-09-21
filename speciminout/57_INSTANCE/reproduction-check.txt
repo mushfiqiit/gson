@@ -1,0 +1,12 @@
+Slice: 57_INSTANCE
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/JsonReaderInternalAccess.java:[27,51] [NullAway] @NonNull static field INSTANCE not initialized
+
+nullaway-warnings.txt: 1 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/57_INSTANCE/com/google/gson/internal/JsonReaderInternalAccess.java:6: warning: [NullAway] @NonNull static field INSTANCE not initialized
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/57_INSTANCE/com/google/gson/internal/JsonReaderInternalAccess.java:6: warning: [NullAway] @NonNull static field INSTANCE not initialized
+  file name matches : JsonReaderInternalAccess.java == JsonReaderInternalAccess.java
+  message matches   : yes (exact)
+  line differs      : 27 -> 6
+VERDICT: REPRODUCED

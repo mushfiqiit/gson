@@ -1,0 +1,7 @@
+Slice: 61_FACTORY
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java:[42,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+
+nullaway-warnings.txt: 0 finding(s)
+
+VERDICT: NOT REPRODUCED -- no NullAway warnings found in this slice

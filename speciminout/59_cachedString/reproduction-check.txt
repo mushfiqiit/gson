@@ -1,0 +1,12 @@
+Slice: 59_cachedString
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:[137,22] [NullAway] @NonNull field Streams$AppendableWriter$CurrentWrite.cachedString not initialized
+
+nullaway-warnings.txt: 1 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:25: warning: [NullAway] @NonNull field Streams$AppendableWriter$CurrentWrite.cachedString not initialized
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:25: warning: [NullAway] @NonNull field Streams$AppendableWriter$CurrentWrite.cachedString not initialized
+  file name matches : Streams.java == Streams.java
+  message matches   : yes (exact)
+  line differs      : 137 -> 25
+VERDICT: REPRODUCED

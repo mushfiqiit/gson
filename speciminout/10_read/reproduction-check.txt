@@ -1,0 +1,12 @@
+Slice: 10_read
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/TypeAdapter.java:[313,9] [NullAway] returning @Nullable expression from method with @NonNull return type
+
+nullaway-warnings.txt: 1 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/10_read/com/google/gson/TypeAdapter.java:16: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/10_read/com/google/gson/TypeAdapter.java:16: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  file name matches : TypeAdapter.java == TypeAdapter.java
+  message matches   : yes (exact)
+  line differs      : 313 -> 16
+VERDICT: REPRODUCED

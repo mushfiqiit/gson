@@ -1,0 +1,14 @@
+Slice: 90_URL
+Original warning (warning.txt):
+  [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[711,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+
+nullaway-warnings.txt: 3 finding(s)
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/90_URL/com/google/gson/internal/bind/TypeAdapters.java:20: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/90_URL/com/google/gson/internal/bind/TypeAdapters.java:24: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/90_URL/com/google/gson/internal/bind/TypeAdapters.java:35: warning: [NullAway] passing @Nullable parameter 'value == null ? null : value.toExternalForm()' where @NonNull is required
+
+Matched finding: /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/90_URL/com/google/gson/internal/bind/TypeAdapters.java:20: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+  file name matches : TypeAdapters.java == TypeAdapters.java
+  message matches   : yes (exact)
+  line differs      : 711 -> 20
+VERDICT: REPRODUCED
