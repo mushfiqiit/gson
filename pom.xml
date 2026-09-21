@@ -48,6 +48,12 @@
     <!-- These properties are to be overwritten by the Maven modules -->
     <!-- Whether this module is an integration test module -->
     <gson.isTestModule>false</gson.isTestModule>
+
+    <!-- Extra Error Prone checks appended to the -Xplugin:ErrorProne arg below.
+      Empty by default so the normal build is unaffected; the `nullaway`
+      profile overrides this to opt NullAway into the build. -->
+    <nullaway.checks></nullaway.checks>
+    <nullaway.version>0.10.10</nullaway.version>
   </properties>
 
   <!-- These attributes specify that the URLs should be inherited by the modules as is, to avoid constructing
@@ -285,6 +291,7 @@
                 -Xep:UseEnumSwitch:WARN
                 -Xep:WildcardImport:WARN <!-- required by style guide -->
                 -Xep:YodaCondition
+                ${nullaway.checks}
               </arg>
               <!-- Enable all warnings, except for ones which cause issues when building with newer JDKs, see also
                 https://docs.oracle.com/en/java/javase/11/tools/javac.html -->
@@ -578,6 +585,33 @@
                 <compilerArg>-Xlint:all,-options</compilerArg>
               </compilerArgs>
               <annotationProcessorPaths combine.self="override" />
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- Opt NullAway into the build as an extra Error Prone check, for the
+      Specimin evaluation pipeline (src/main/SpeciminPerformanceEvaluation in
+      the specimin checkout). Not part of the normal build. -->
+    <profile>
+      <id>nullaway</id>
+      <properties>
+        <nullaway.checks>-Xep:NullAway:WARN -XepOpt:NullAway:AnnotatedPackages=com.google.gson</nullaway.checks>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+              <annotationProcessorPaths>
+                <path>
+                  <groupId>com.uber.nullaway</groupId>
+                  <artifactId>nullaway</artifactId>
+                  <version>${nullaway.version}</version>
+                </path>
+              </annotationProcessorPaths>
             </configuration>
           </plugin>
         </plugins>
