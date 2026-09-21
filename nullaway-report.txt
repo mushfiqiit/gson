@@ -26,9 +26,6 @@
 [INFO] --- compiler:3.15.0:compile (default-compile) @ gson ---
 [INFO] Recompiling the module because of changed source code.
 [INFO] Compiling 86 source files with javac [debug deprecation release 8] to target/classes
-[INFO] -------------------------------------------------------------
-[WARNING] COMPILATION WARNING : 
-[INFO] -------------------------------------------------------------
 [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/GsonBuilder.java:[96,35] [NullAway] assigning @Nullable expression to @NonNull field
     (see http://t.uber.com/nullaway )
 [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/GsonBuilder.java:[103,31] [NullAway] assigning @Nullable expression to @NonNull field
@@ -37,27 +34,201 @@
     (see http://t.uber.com/nullaway )
 [WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/GsonBuilder.java:[700,22] [NullAway] assigning @Nullable expression to @NonNull field
     (see http://t.uber.com/nullaway )
-[INFO] 4 warnings 
-[INFO] -------------------------------------------------------------
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] warnings found and -Werror specified
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/Gson.java:[911,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/Gson.java:[1122,9] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/Gson.java:[1214,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/Gson.java:[1240,28] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/reflect/TypeToken.java:[443,68] [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/TypeAdapter.java:[313,9] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:[88,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:[214,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:[221,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:[228,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:[233,69] [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:[312,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:[336,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java:[358,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:[81,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:[142,31] [NullAway] passing @Nullable parameter 'serializer' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:[142,43] [NullAway] passing @Nullable parameter 'deserializer' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Excluder.java:[118,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Excluder.java:[126,39] [NullAway] @NonNull field Excluder$1.delegate not initialized
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Excluder.java:[132,11] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:[231,10] [NullAway] initializer method does not guarantee @NonNull field deferredName (line 222) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:[516,20] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonWriter.java:[672,22] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:[322,10] [NullAway] initializer method does not guarantee @NonNull field peekedString (line 293) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:[1013,22] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:[1125,18] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:[1194,18] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java:[1467,18] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[83,10] [NullAway] initializer method does not guarantee @NonNull fields root (line 51), entrySet (line 438), keySet (line 439) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[63,10] [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[72,10] [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[97,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[122,10] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[134,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[175,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[206,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[208,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[223,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[264,19] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[273,20] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[281,17] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[284,18] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[286,29] [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[305,17] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[471,5] [NullAway] initializer method does not guarantee @NonNull fields parent (line 460), left (line 461), right (line 462), value (line 467) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[478,5] [NullAway] initializer method does not guarantee @NonNull fields left (line 461), right (line 462), value (line 467) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[472,11] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[554,16] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java:[585,20] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:[487,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:[526,22] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/GsonTypes.java:[646,25] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/JsonReaderInternalAccess.java:[27,51] [NullAway] @NonNull static field INSTANCE not initialized
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:[136,22] [NullAway] @NonNull field Streams$AppendableWriter$CurrentWrite.chars not initialized
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:[137,22] [NullAway] @NonNull field Streams$AppendableWriter$CurrentWrite.cachedString not initialized
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/Streams.java:[141,27] [NullAway] assigning @Nullable expression to @NonNull field
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java:[42,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java:[69,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:[47,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:[78,9] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:[69,11] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:[159,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:[42,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:[117,7] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:[122,5] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/EnumTypeAdapter.java:[127,29] [NullAway] passing @Nullable parameter 'value == null ? null : constantToName.get(value)' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[155,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[178,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[198,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[233,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[269,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[417,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[442,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[468,9] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[501,9] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[541,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[559,35] [NullAway] passing @Nullable parameter 'value == null ? null : String.valueOf(value)' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[573,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[594,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[620,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[649,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[671,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[678,35] [NullAway] passing @Nullable parameter 'value == null ? null : value.toString()' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[691,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[698,35] [NullAway] passing @Nullable parameter 'value == null ? null : value.toString()' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[711,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[715,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[727,35] [NullAway] passing @Nullable parameter 'value == null ? null : value.toExternalForm()' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[739,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[743,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[755,35] [NullAway] passing @Nullable parameter 'value == null ? null : value.toString()' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[774,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[794,35] [NullAway] passing @Nullable parameter 'value == null ? null : value.getHostAddress()' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[807,13] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[820,35] [NullAway] passing @Nullable parameter 'value == null ? null : value.toString()' where @NonNull is required
+    (see http://t.uber.com/nullaway )
+[WARNING] /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java:[866,9] [NullAway] returning @Nullable expression from method with @NonNull return type
+    (see http://t.uber.com/nullaway )
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.423 s
-[INFO] Finished at: 2026-09-20T23:59:38-04:00
+[INFO] Total time:  14.677 s
+[INFO] Finished at: 2026-09-21T00:08:27-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:compile (default-compile) on project gson: Compilation failure
-[ERROR] warnings found and -Werror specified
-[ERROR] 
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
