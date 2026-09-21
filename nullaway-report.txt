@@ -1,0 +1,32 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules
+[INFO] Installing Central Publishing features
+[WARNING] The requested profile "nullaway" could not be activated because it does not exist.
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 2.14.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ gson ---
+[INFO] Deleting /Users/mushfiqurrahmanchowdhury/Documents/gson/gson/target
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-versions) @ gson ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.796 s
+[INFO] Finished at: 2026-09-20T22:31:21-04:00
+[INFO] ------------------------------------------------------------------------
+[WARNING] The requested profile "nullaway" could not be activated because it does not exist.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:3.6.3:enforce (enforce-versions) on project gson: 
+[ERROR] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion failed with message:
+[ERROR] Detected JDK /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home is version 11.0.31 which is not in the allowed range [17,26).
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
