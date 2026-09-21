@@ -605,6 +605,12 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
+              <!-- pluginManagement sets failOnWarning=true (-Werror) for the normal
+                build, which exists to keep contributors from ignoring lint. Here it
+                instead turns every NullAway WARN finding into a hard compile failure,
+                which defeats the point of severity=WARN: report findings, don't block
+                the build on them. Override it back to false for this profile only. -->
+              <failOnWarning>false</failOnWarning>
               <!-- combine.children="append" is required here: without it, Maven's
                 default Xpp3Dom merge pairs this profile's single <path> with
                 pluginManagement's single <path> POSITIONALLY and lets this one's
