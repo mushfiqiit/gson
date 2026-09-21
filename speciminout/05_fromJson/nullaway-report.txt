@@ -14,5 +14,5 @@ Daemon will be stopped at the end of the build
   Did you mean '@DoNotCall("Always throws java.lang.Error") public <T> T fromJson(Reader json, TypeToken<T> typeOfT)'?
 2 warnings
 
-BUILD SUCCESSFUL in 5s
+BUILD SUCCESSFUL in 6s
 2 actionable tasks: 2 executed

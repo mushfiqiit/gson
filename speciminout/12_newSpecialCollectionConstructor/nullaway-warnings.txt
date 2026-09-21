@@ -1,0 +1,1 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/12_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:44: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

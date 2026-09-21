@@ -1,6 +1,6 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
-> Task :clean UP-TO-DATE
+> Task :clean
 
 > Task :compileJava
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/reflect/TypeToken.java:5: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
@@ -33,5 +33,5 @@ Daemon will be stopped at the end of the build
   Did you mean '@DoNotCall("Always throws java.lang.Error") TypeAdapter<?> getTypeAdapter('?
 6 warnings
 
-BUILD SUCCESSFUL in 5s
-2 actionable tasks: 1 executed, 1 up-to-date
+BUILD SUCCESSFUL in 6s
+2 actionable tasks: 2 executed

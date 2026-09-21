@@ -1,6 +1,6 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
-> Task :clean UP-TO-DATE
+> Task :clean
 
 > Task :compileJava FAILED
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/30_nextDouble/com/google/gson/stream/JsonReader.java:60: error: duplicate case label
@@ -31,4 +31,4 @@ Execution failed for task ':compileJava'.
 > Run with --scan to get full insights.
 
 BUILD FAILED in 4s
-2 actionable tasks: 1 executed, 1 up-to-date
+2 actionable tasks: 2 executed

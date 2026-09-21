@@ -1,27 +1,33 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
-> Task :clean UP-TO-DATE
+> Task :clean
 
-> Task :compileJava FAILED
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/12_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:14: error: incompatible types: ObjectConstructor is not a functional interface
-      return () -> {
-             ^
-    no abstract method found in interface ObjectConstructor
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/12_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:29: error: incompatible types: ObjectConstructor is not a functional interface
-      return () -> {
-             ^
-    no abstract method found in interface ObjectConstructor
-2 errors
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/12_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:11: warning: [UnusedMethod] Method 'newSpecialCollectionConstructor' is never used.
+  private static <T> ObjectConstructor<T> newSpecialCollectionConstructor(
+                                          ^
+    (see https://errorprone.info/bugpattern/UnusedMethod)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/12_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:15: warning: [PatternMatchingInstanceof] This code can be simplified to use a pattern-matching instanceof.
+        if (type instanceof ParameterizedType) {
+                 ^
+    (see https://errorprone.info/bugpattern/PatternMatchingInstanceof)
+  Did you mean 'if (type instanceof ParameterizedType parameterizedType) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/12_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:30: warning: [PatternMatchingInstanceof] This code can be simplified to use a pattern-matching instanceof.
+        if (type instanceof ParameterizedType) {
+                 ^
+    (see https://errorprone.info/bugpattern/PatternMatchingInstanceof)
+  Did you mean 'if (type instanceof ParameterizedType parameterizedType) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/12_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:32: warning: [PatternMatchingInstanceof] This code can be simplified to use a pattern-matching instanceof.
+          if (elementType instanceof Class) {
+                          ^
+    (see https://errorprone.info/bugpattern/PatternMatchingInstanceof)
+  Did you mean 'if (elementType instanceof Class<?> c) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/12_newSpecialCollectionConstructor/com/google/gson/internal/ConstructorConstructor.java:44: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;
+    ^
+    (see http://t.uber.com/nullaway )
+5 warnings
 
-FAILURE: Build failed with an exception.
-
-* What went wrong:
-Execution failed for task ':compileJava'.
-> Compilation failed; see the compiler error output for details.
-
-* Try:
-> Run with --info option to get more log output.
-> Run with --scan to get full insights.
-
-BUILD FAILED in 5s
-2 actionable tasks: 1 executed, 1 up-to-date
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 2 executed

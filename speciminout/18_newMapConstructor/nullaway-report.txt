@@ -1,8 +1,8 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
-> Task :clean UP-TO-DATE
+> Task :clean
 
-> Task :compileJava FAILED
+> Task :compileJava
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/18_newMapConstructor/com/google/gson/internal/ConstructorConstructor.java:13: error: incompatible types: ObjectConstructor is not a functional interface
       return LinkedHashMap::new;
              ^
@@ -21,6 +21,8 @@ Daemon will be stopped at the end of the build
     no abstract method found in interface ObjectConstructor
 4 errors
 
+> Task :compileJava FAILED
+
 FAILURE: Build failed with an exception.
 
 * What went wrong:
@@ -31,5 +33,5 @@ Execution failed for task ':compileJava'.
 > Run with --info option to get more log output.
 > Run with --scan to get full insights.
 
-BUILD FAILED in 4s
-2 actionable tasks: 1 executed, 1 up-to-date
+BUILD FAILED in 6s
+2 actionable tasks: 2 executed

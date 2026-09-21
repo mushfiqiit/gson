@@ -1,16 +1,16 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
-> Task :clean UP-TO-DATE
+> Task :clean
 
 > Task :compileJava
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/58_chars/com/google/gson/internal/Streams.java:8: warning: [UnusedNestedClass] This nested class is unused, and can be removed.
-  private static final class AppendableWriter extends Writer {
-                       ^
-    (see https://errorprone.info/bugpattern/UnusedNestedClass)
-  Did you mean to remove this line?
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/58_chars/com/google/gson/internal/Streams.java:23: warning: [UnusedNestedClass] This nested class is unused, and can be removed.
     private static class CurrentWrite implements CharSequence {
                    ^
+    (see https://errorprone.info/bugpattern/UnusedNestedClass)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/58_chars/com/google/gson/internal/Streams.java:8: warning: [UnusedNestedClass] This nested class is unused, and can be removed.
+  private static final class AppendableWriter extends Writer {
+                       ^
     (see https://errorprone.info/bugpattern/UnusedNestedClass)
   Did you mean to remove this line?
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/58_chars/com/google/gson/internal/Streams.java:25: warning: [UnusedVariable] The field 'chars' is never read.
@@ -55,4 +55,4 @@ Daemon will be stopped at the end of the build
 10 warnings
 
 BUILD SUCCESSFUL in 5s
-2 actionable tasks: 1 executed, 1 up-to-date
+2 actionable tasks: 2 executed

@@ -1,10 +1,30 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
-> Task :clean UP-TO-DATE
+> Task :clean
 
 > Task :compileJava
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:53: warning: [UnusedVariable] The field 'NUMBER_CHAR_DIGIT' is never read.
-  private static final int NUMBER_CHAR_DIGIT = 0;
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:23: warning: [UnusedVariable] The field 'PEEKED_TRUE' is never read.
+  private static final int PEEKED_TRUE = 0;
+                           ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:89: warning: [UnusedVariable] The field 'peekedLong' is never read.
+  private long peekedLong;
+               ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:67: warning: [UnusedVariable] The field 'strictness' is never read.
+  private Strictness strictness;
+                     ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:101: warning: [UnusedVariable] The field 'pathIndices' is never read.
+  private int[] pathIndices;
+                ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:57: warning: [UnusedVariable] The field 'NUMBER_CHAR_FRACTION_DIGIT' is never read.
+  private static final int NUMBER_CHAR_FRACTION_DIGIT = 0;
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
@@ -13,28 +33,53 @@ Daemon will be stopped at the end of the build
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:103: warning: [UnusedVariable] The field 'promotedName' is never read.
-  private boolean promotedName;
-                  ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:49: warning: [UnusedVariable] The field 'NUMBER_CHAR_NONE' is never read.
+  private static final int NUMBER_CHAR_NONE = 0;
+                           ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:41: warning: [UnusedVariable] The field 'PEEKED_UNQUOTED_NAME' is never read.
-  private static final int PEEKED_UNQUOTED_NAME = 0;
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:59: warning: [UnusedVariable] The field 'NUMBER_CHAR_EXP_E' is never read.
+  private static final int NUMBER_CHAR_EXP_E = 0;
                            ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:99: warning: [UnusedVariable] The field 'pathNames' is never read.
+  private String[] pathNames;
+                   ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:27: warning: [UnusedVariable] The field 'PEEKED_NULL' is never read.
+  private static final int PEEKED_NULL = 0;
+                           ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:85: warning: [UnusedVariable] The field 'lineStart' is never read.
+  private int lineStart;
+              ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:97: warning: [UnusedVariable] The field 'stackSize' is never read.
+  private int stackSize;
+              ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:21: warning: [UnusedVariable] The field 'PEEKED_END_ARRAY' is never read.
+  private static final int PEEKED_END_ARRAY = 0;
+                           ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:81: warning: [UnusedVariable] The field 'bufferStart' is never read.
+  private long bufferStart;
+               ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:93: warning: [UnusedVariable] The field 'peekedString' is never read.
+  private String peekedString;
+                 ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:15: warning: [UnusedVariable] The field 'PEEKED_BEGIN_OBJECT' is never read.
   private static final int PEEKED_BEGIN_OBJECT = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:37: warning: [UnusedVariable] The field 'PEEKED_SINGLE_QUOTED_NAME' is never read.
-  private static final int PEEKED_SINGLE_QUOTED_NAME = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:43: warning: [UnusedVariable] The field 'PEEKED_LONG' is never read.
-  private static final int PEEKED_LONG = 0;
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
@@ -43,14 +88,14 @@ Daemon will be stopped at the end of the build
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:63: warning: [UnusedVariable] The field 'NUMBER_CHAR_EXP_DIGIT' is never read.
-  private static final int NUMBER_CHAR_EXP_DIGIT = 0;
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:51: warning: [UnusedVariable] The field 'NUMBER_CHAR_SIGN' is never read.
+  private static final int NUMBER_CHAR_SIGN = 0;
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:57: warning: [UnusedVariable] The field 'NUMBER_CHAR_FRACTION_DIGIT' is never read.
-  private static final int NUMBER_CHAR_FRACTION_DIGIT = 0;
-                           ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:71: warning: [UnusedVariable] The field 'nestingLimit' is never read.
+  private int nestingLimit;
+              ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:91: warning: [UnusedVariable] The field 'peekedNumberLength' is never read.
@@ -63,26 +108,6 @@ Daemon will be stopped at the end of the build
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:49: warning: [UnusedVariable] The field 'NUMBER_CHAR_NONE' is never read.
-  private static final int NUMBER_CHAR_NONE = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:79: warning: [UnusedVariable] The field 'limit' is never read.
-  private int limit;
-              ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:19: warning: [UnusedVariable] The field 'PEEKED_BEGIN_ARRAY' is never read.
-  private static final int PEEKED_BEGIN_ARRAY = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:81: warning: [UnusedVariable] The field 'bufferStart' is never read.
-  private long bufferStart;
-               ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:33: warning: [UnusedVariable] The field 'PEEKED_UNQUOTED' is never read.
   private static final int PEEKED_UNQUOTED = 0;
                            ^
@@ -90,56 +115,6 @@ Daemon will be stopped at the end of the build
   Did you mean to remove this line?
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:17: warning: [UnusedVariable] The field 'PEEKED_END_OBJECT' is never read.
   private static final int PEEKED_END_OBJECT = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:89: warning: [UnusedVariable] The field 'peekedLong' is never read.
-  private long peekedLong;
-               ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:97: warning: [UnusedVariable] The field 'stackSize' is never read.
-  private int stackSize;
-              ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:39: warning: [UnusedVariable] The field 'PEEKED_DOUBLE_QUOTED_NAME' is never read.
-  private static final int PEEKED_DOUBLE_QUOTED_NAME = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:23: warning: [UnusedVariable] The field 'PEEKED_TRUE' is never read.
-  private static final int PEEKED_TRUE = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:99: warning: [UnusedVariable] The field 'pathNames' is never read.
-  private String[] pathNames;
-                   ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:51: warning: [UnusedVariable] The field 'NUMBER_CHAR_SIGN' is never read.
-  private static final int NUMBER_CHAR_SIGN = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:21: warning: [UnusedVariable] The field 'PEEKED_END_ARRAY' is never read.
-  private static final int PEEKED_END_ARRAY = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:59: warning: [UnusedVariable] The field 'NUMBER_CHAR_EXP_E' is never read.
-  private static final int NUMBER_CHAR_EXP_E = 0;
-                           ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:101: warning: [UnusedVariable] The field 'pathIndices' is never read.
-  private int[] pathIndices;
-                ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:45: warning: [UnusedVariable] The field 'PEEKED_NUMBER' is never read.
-  private static final int PEEKED_NUMBER = 0;
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
@@ -153,14 +128,24 @@ Daemon will be stopped at the end of the build
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:55: warning: [UnusedVariable] The field 'NUMBER_CHAR_DECIMAL' is never read.
-  private static final int NUMBER_CHAR_DECIMAL = 0;
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:43: warning: [UnusedVariable] The field 'PEEKED_LONG' is never read.
+  private static final int PEEKED_LONG = 0;
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:27: warning: [UnusedVariable] The field 'PEEKED_NULL' is never read.
-  private static final int PEEKED_NULL = 0;
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:45: warning: [UnusedVariable] The field 'PEEKED_NUMBER' is never read.
+  private static final int PEEKED_NUMBER = 0;
                            ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:79: warning: [UnusedVariable] The field 'limit' is never read.
+  private int limit;
+              ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:77: warning: [UnusedVariable] The field 'pos' is never read.
+  private int pos;
+              ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:95: warning: [UnusedVariable] The field 'stack' is never read.
@@ -168,8 +153,28 @@ Daemon will be stopped at the end of the build
                 ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:61: warning: [UnusedVariable] The field 'NUMBER_CHAR_EXP_SIGN' is never read.
-  private static final int NUMBER_CHAR_EXP_SIGN = 0;
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:75: warning: [UnusedVariable] The field 'buffer' is never read.
+  private final char[] buffer = null;
+                       ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:63: warning: [UnusedVariable] The field 'NUMBER_CHAR_EXP_DIGIT' is never read.
+  private static final int NUMBER_CHAR_EXP_DIGIT = 0;
+                           ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:35: warning: [UnusedVariable] The field 'PEEKED_BUFFERED' is never read.
+  private static final int PEEKED_BUFFERED = 0;
+                           ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:55: warning: [UnusedVariable] The field 'NUMBER_CHAR_DECIMAL' is never read.
+  private static final int NUMBER_CHAR_DECIMAL = 0;
+                           ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:19: warning: [UnusedVariable] The field 'PEEKED_BEGIN_ARRAY' is never read.
+  private static final int PEEKED_BEGIN_ARRAY = 0;
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
@@ -178,24 +183,24 @@ Daemon will be stopped at the end of the build
               ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:85: warning: [UnusedVariable] The field 'lineStart' is never read.
-  private int lineStart;
-              ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:61: warning: [UnusedVariable] The field 'NUMBER_CHAR_EXP_SIGN' is never read.
+  private static final int NUMBER_CHAR_EXP_SIGN = 0;
+                           ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:93: warning: [UnusedVariable] The field 'peekedString' is never read.
-  private String peekedString;
-                 ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:103: warning: [UnusedVariable] The field 'promotedName' is never read.
+  private boolean promotedName;
+                  ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:71: warning: [UnusedVariable] The field 'nestingLimit' is never read.
-  private int nestingLimit;
-              ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:41: warning: [UnusedVariable] The field 'PEEKED_UNQUOTED_NAME' is never read.
+  private static final int PEEKED_UNQUOTED_NAME = 0;
+                           ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:75: warning: [UnusedVariable] The field 'buffer' is never read.
-  private final char[] buffer = null;
-                       ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:37: warning: [UnusedVariable] The field 'PEEKED_SINGLE_QUOTED_NAME' is never read.
+  private static final int PEEKED_SINGLE_QUOTED_NAME = 0;
+                           ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:11: warning: [UnusedVariable] The field 'MIN_INCOMPLETE_INTEGER' is never read.
@@ -203,8 +208,8 @@ Daemon will be stopped at the end of the build
                             ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:35: warning: [UnusedVariable] The field 'PEEKED_BUFFERED' is never read.
-  private static final int PEEKED_BUFFERED = 0;
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:39: warning: [UnusedVariable] The field 'PEEKED_DOUBLE_QUOTED_NAME' is never read.
+  private static final int PEEKED_DOUBLE_QUOTED_NAME = 0;
                            ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
@@ -213,14 +218,9 @@ Daemon will be stopped at the end of the build
                        ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line or to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:67: warning: [UnusedVariable] The field 'strictness' is never read.
-  private Strictness strictness;
-                     ^
-    (see https://errorprone.info/bugpattern/UnusedVariable)
-  Did you mean to remove this line?
-/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:77: warning: [UnusedVariable] The field 'pos' is never read.
-  private int pos;
-              ^
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:53: warning: [UnusedVariable] The field 'NUMBER_CHAR_DIGIT' is never read.
+  private static final int NUMBER_CHAR_DIGIT = 0;
+                           ^
     (see https://errorprone.info/bugpattern/UnusedVariable)
   Did you mean to remove this line?
 /Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:105: warning: [NullAway] initializer method does not guarantee @NonNull fields strictness (line 67), peekedString (line 93), stack (line 95), pathNames (line 99), pathIndices (line 101) are initialized along all control-flow paths (remember to check for exceptions or early returns).
@@ -239,4 +239,4 @@ Daemon will be stopped at the end of the build
 47 warnings
 
 BUILD SUCCESSFUL in 5s
-2 actionable tasks: 1 executed, 1 up-to-date
+2 actionable tasks: 2 executed
