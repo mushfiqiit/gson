@@ -1,0 +1,73 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:31: warning: [UnusedVariable] The field 'entrySet' is never read.
+  private EntrySet entrySet;
+                   ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:15: warning: [UnusedVariable] The field 'allowNullValues' is never read.
+  private final boolean allowNullValues;
+                        ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:13: warning: [UnusedVariable] The field 'comparator' is never read.
+  private final Comparator<? super K> comparator;
+                                      ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:33: warning: [UnusedVariable] The field 'keySet' is never read.
+  private KeySet keySet;
+                 ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:25: warning: [NullAway] initializer method does not guarantee @NonNull fields root (line 17), entrySet (line 31), keySet (line 33) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public LinkedTreeMap(Comparator<? super K> comparator, boolean allowNullValues) {
+         ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:35: warning: [MissingOverride] entrySet implements method in AbstractMap; expected @Override
+  public Set<Entry<K, V>> entrySet() {
+                          ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public Set<Entry<K, V>> entrySet() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:45: warning: [MissingOverride] getKey implements method in Entry; expected @Override
+    public K getKey() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public K getKey() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:49: warning: [MissingOverride] getValue implements method in Entry; expected @Override
+    public V getValue() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V getValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:53: warning: [MissingOverride] setValue implements method in Entry; expected @Override
+    public V setValue(V value) {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V setValue(V value) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:60: warning: [MissingOverride] size implements method in AbstractCollection; expected @Override
+    public int size() {
+               ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public int size() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:64: warning: [MissingOverride] iterator implements method in AbstractCollection; expected @Override
+    public Iterator<Entry<K, V>> iterator() {
+                                 ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public Iterator<Entry<K, V>> iterator() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:71: warning: [MissingOverride] size implements method in AbstractCollection; expected @Override
+    public int size() {
+               ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public int size() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/33_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:75: warning: [MissingOverride] iterator implements method in AbstractCollection; expected @Override
+    public Iterator<K> iterator() {
+                       ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public Iterator<K> iterator() {'?
+13 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

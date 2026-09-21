@@ -1,0 +1,4 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/69_read/com/google/gson/internal/bind/EnumTypeAdapter.java:11: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/69_read/com/google/gson/internal/bind/EnumTypeAdapter.java:13: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/69_read/com/google/gson/internal/bind/EnumTypeAdapter.java:18: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/69_read/com/google/gson/internal/bind/EnumTypeAdapter.java:22: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

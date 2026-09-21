@@ -1,0 +1,35 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/68_read/com/google/gson/stream/JsonReader.java:20: warning: [MissingOverride] close implements method in Closeable; expected @Override
+  public void close() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/68_read/com/google/gson/internal/bind/EnumTypeAdapter.java:11: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  private final Map<String, T> nameToConstant = null;
+                               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/68_read/com/google/gson/internal/bind/EnumTypeAdapter.java:13: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  private final Map<String, T> stringToConstant = null;
+                               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/68_read/com/google/gson/internal/bind/EnumTypeAdapter.java:15: warning: [MissingOverride] read implements method in TypeAdapter; expected @Override
+  public T read(JsonReader in) throws IOException {
+           ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public T read(JsonReader in) throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/68_read/com/google/gson/internal/bind/EnumTypeAdapter.java:18: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+      return null;
+      ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/68_read/com/google/gson/internal/bind/EnumTypeAdapter.java:22: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return (constant == null) ? stringToConstant.get(key) : constant;
+    ^
+    (see http://t.uber.com/nullaway )
+6 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

@@ -1,2 +1,55 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
+> Task :clean
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/stream/JsonReader.java:9: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public final void setStrictness(Strictness strictness) {
+                    ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public final void setStrictness(Strictness strictness) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/stream/JsonReader.java:13: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public final Strictness getStrictness() {
+                          ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public final Strictness getStrictness() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/stream/JsonReader.java:21: warning: [MissingOverride] close implements method in Closeable; expected @Override
+  public void close() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/reflect/TypeToken.java:5: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public final Class<? super T> getRawType() {
+                                ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public final Class<? super T> getRawType() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/internal/GsonBuildConfig.java:3: warning: [NullAway] @NonNull static field VERSION not initialized
+    public static com.google.gson.internal.ComGoogleGsonInternalGsonBuildConfigVERSIONSyntheticType VERSION;
+                                                                                                    ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/internal/Primitives.java:6: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public static <T> Class<T> wrap(Class<T> type) {
+                             ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") @SuppressWarnings({"unchecked", "MissingBraces"})'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/JsonIOException.java:7: warning: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    super(null);
+          ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/Gson.java:13: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  final Strictness strictness = null;
+                   ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/Gson.java:15: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public <T> TypeAdapter<T> getAdapter(TypeToken<T> type) {
+                            ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public <T> TypeAdapter<T> getAdapter(TypeToken<T> type) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/Gson.java:47: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+10 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 2 executed

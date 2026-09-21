@@ -1,0 +1,4 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/32_nextInt/com/google/gson/stream/JsonReader.java:32: warning: [NullAway] @NonNull field peekedString not initialized
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/32_nextInt/com/google/gson/stream/JsonReader.java:36: warning: [NullAway] @NonNull field pathIndices not initialized
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/32_nextInt/com/google/gson/stream/JsonReader.java:22: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/32_nextInt/com/google/gson/stream/JsonReader.java:107: warning: [NullAway] assigning @Nullable expression to @NonNull field

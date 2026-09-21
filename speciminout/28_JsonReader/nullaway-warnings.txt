@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:105: warning: [NullAway] initializer method does not guarantee @NonNull fields strictness (line 67), peekedString (line 93), stack (line 95), pathNames (line 99), pathIndices (line 101) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/28_JsonReader/com/google/gson/stream/JsonReader.java:75: warning: [NullAway] assigning @Nullable expression to @NonNull field

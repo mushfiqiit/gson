@@ -1,0 +1,1 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/67_FACTORY/com/google/gson/internal/bind/EnumTypeAdapter.java:16: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

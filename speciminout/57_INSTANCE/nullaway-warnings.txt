@@ -1,0 +1,1 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/57_INSTANCE/com/google/gson/internal/JsonReaderInternalAccess.java:6: warning: [NullAway] @NonNull static field INSTANCE not initialized

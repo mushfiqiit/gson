@@ -1,0 +1,31 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava FAILED
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/20_getTypeAdapter/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:69: error: constructor TreeTypeAdapter in class TreeTypeAdapter<T> cannot be applied to given types;
+          new TreeTypeAdapter(serializer, deserializer, gson, type, skipPast, nullSafe);
+          ^
+  required: no arguments
+  found:    JsonSerializer<CAP#1>,JsonDeserializer<CAP#2>,Gson,TypeToken<CAP#3>,TypeAdapterFactory,boolean
+  reason: actual and formal argument lists differ in length
+  where T is a type-variable:
+    T extends Object declared in class TreeTypeAdapter
+  where CAP#1,CAP#2,CAP#3 are fresh type-variables:
+    CAP#1 extends Object from capture of ?
+    CAP#2 extends Object from capture of ?
+    CAP#3 extends Object from capture of ?
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 4s
+2 actionable tasks: 1 executed, 1 up-to-date

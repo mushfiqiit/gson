@@ -1,0 +1,5 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/48_replaceInParent/com/google/gson/internal/LinkedTreeMap.java:10: warning: [NullAway] @NonNull field root not initialized
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/48_replaceInParent/com/google/gson/internal/LinkedTreeMap.java:15: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/48_replaceInParent/com/google/gson/internal/LinkedTreeMap.java:37: warning: [NullAway] @NonNull field LinkedTreeMap$Node.parent not initialized
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/48_replaceInParent/com/google/gson/internal/LinkedTreeMap.java:39: warning: [NullAway] @NonNull field LinkedTreeMap$Node.left not initialized
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/48_replaceInParent/com/google/gson/internal/LinkedTreeMap.java:41: warning: [NullAway] @NonNull field LinkedTreeMap$Node.right not initialized

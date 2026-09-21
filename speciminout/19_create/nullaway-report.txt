@@ -1,0 +1,37 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/reflect/TypeToken.java:5: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public final Class<? super T> getRawType() {
+                                ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public final Class<? super T> getRawType() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:14: warning: [UnusedVariable] The parameter 'rawType' is never read.
+  private static JsonAdapter getAnnotation(Class<?> rawType) {
+                                                    ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'private static JsonAdapter getAnnotation() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:12: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  private final ConstructorConstructor constructorConstructor = null;
+                                       ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:19: warning: [MissingOverride] create implements method in TypeAdapterFactory; expected @Override
+  public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> targetType) {
+                            ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override @SuppressWarnings("unchecked")'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:23: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+      return null;
+      ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:29: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  TypeAdapter<?> getTypeAdapter(
+                 ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") TypeAdapter<?> getTypeAdapter('?
+6 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

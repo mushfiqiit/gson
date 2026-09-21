@@ -1,19 +1,22 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 > Task :clean
-> Task :compileJava FAILED
 
-FAILURE: Build failed with an exception.
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/03_setDateFormat/com/google/gson/GsonBuilder.java:19: warning: [UnusedVariable] The parameter 'style' is never read.
+  private static int checkDateFormatStyle(int style) {
+                                              ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'this.dateStyle = checkDateFormatStyle();'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/03_setDateFormat/com/google/gson/GsonBuilder.java:7: warning: [NullAway] @NonNull field datePattern not initialized
+  String datePattern;
+         ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/03_setDateFormat/com/google/gson/GsonBuilder.java:15: warning: [NullAway] assigning @Nullable expression to @NonNull field
+    this.datePattern = null;
+                     ^
+    (see http://t.uber.com/nullaway )
+3 warnings
 
-* What went wrong:
-Execution failed for task ':compileJava'.
-> -XDaddTypeAnnotationsToSymbol=true is required by Error Prone on JDK 21
-
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
-
-BUILD FAILED in 4s
+BUILD SUCCESSFUL in 5s
 2 actionable tasks: 2 executed

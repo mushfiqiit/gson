@@ -1,0 +1,28 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/67_FACTORY/com/google/gson/reflect/TypeToken.java:5: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public final Class<? super T> getRawType() {
+                                ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public final Class<? super T> getRawType() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/67_FACTORY/com/google/gson/internal/bind/EnumTypeAdapter.java:27: warning: [UnusedVariable] The parameter 'classOfT' is never read.
+  private EnumTypeAdapter(Class<T> classOfT) {
+                                   ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'private EnumTypeAdapter() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/67_FACTORY/com/google/gson/internal/bind/EnumTypeAdapter.java:13: warning: [MissingOverride] create implements method in TypeAdapterFactory; expected @Override
+        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
+                                  ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/67_FACTORY/com/google/gson/internal/bind/EnumTypeAdapter.java:16: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+4 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

@@ -1,0 +1,58 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:8: warning: [UnusedNestedClass] This nested class is unused, and can be removed.
+  private static final class AppendableWriter extends Writer {
+                       ^
+    (see https://errorprone.info/bugpattern/UnusedNestedClass)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:23: warning: [UnusedNestedClass] This nested class is unused, and can be removed.
+    private static class CurrentWrite implements CharSequence {
+                   ^
+    (see https://errorprone.info/bugpattern/UnusedNestedClass)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:25: warning: [UnusedVariable] The field 'cachedString' is never read.
+      private String cachedString;
+                     ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:11: warning: [MissingOverride] write implements method in Writer; expected @Override
+    public void write(char[] chars, int offset, int length) throws IOException {
+                ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override @SuppressWarnings("UngroupedOverloads")'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:15: warning: [MissingOverride] flush implements method in Writer; expected @Override
+    public void flush() throws IOException {
+                ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void flush() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:19: warning: [MissingOverride] close implements method in Writer; expected @Override
+    public void close() throws IOException {
+                ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:25: warning: [NullAway] @NonNull field Streams$AppendableWriter$CurrentWrite.cachedString not initialized
+      private String cachedString;
+                     ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:27: warning: [MissingOverride] length implements method in CharSequence; expected @Override
+      public int length() {
+                 ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public int length() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:31: warning: [MissingOverride] charAt implements method in CharSequence; expected @Override
+      public char charAt(int i) {
+                  ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public char charAt(int i) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:35: warning: [MissingOverride] subSequence implements method in CharSequence; expected @Override
+      public CharSequence subSequence(int start, int end) {
+                          ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public CharSequence subSequence(int start, int end) {'?
+10 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

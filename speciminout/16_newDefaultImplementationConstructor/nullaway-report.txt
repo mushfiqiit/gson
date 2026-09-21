@@ -1,0 +1,28 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/16_newDefaultImplementationConstructor/com/google/gson/internal/ConstructorConstructor.java:8: warning: [UnusedMethod] Method 'newDefaultImplementationConstructor' is never used.
+  private static <T> ObjectConstructor<T> newDefaultImplementationConstructor(
+                                          ^
+    (see https://errorprone.info/bugpattern/UnusedMethod)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/16_newDefaultImplementationConstructor/com/google/gson/internal/ConstructorConstructor.java:24: warning: [UnusedVariable] The parameter 'rawType' is never read.
+      Class<?> rawType) {
+               ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'ObjectConstructor<T> constructor = (ObjectConstructor<T>) newCollectionConstructor();'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/16_newDefaultImplementationConstructor/com/google/gson/internal/ConstructorConstructor.java:28: warning: [UnusedVariable] The parameter 'rawType' is never read.
+  private static ObjectConstructor<? extends Map<?, Object>> newMapConstructor(Class<?> rawType) {
+                                                                                        ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'ObjectConstructor<T> constructor = (ObjectConstructor<T>) newMapConstructor();'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/16_newDefaultImplementationConstructor/com/google/gson/internal/ConstructorConstructor.java:20: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;
+    ^
+    (see http://t.uber.com/nullaway )
+4 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

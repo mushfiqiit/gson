@@ -1,0 +1,63 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/stream/JsonReader.java:20: warning: [MissingOverride] close implements method in Closeable; expected @Override
+  public void close() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/stream/JsonWriter.java:15: warning: [MissingOverride] flush implements method in Flushable; expected @Override
+  public void flush() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void flush() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/stream/JsonWriter.java:19: warning: [MissingOverride] close implements method in Closeable; expected @Override
+  public void close() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/internal/LazilyParsedNumber.java:10: warning: [MissingOverride] intValue implements method in Number; expected @Override
+  public int intValue() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public int intValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/internal/LazilyParsedNumber.java:14: warning: [MissingOverride] longValue implements method in Number; expected @Override
+  public long longValue() {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public long longValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/internal/LazilyParsedNumber.java:18: warning: [MissingOverride] floatValue implements method in Number; expected @Override
+  public float floatValue() {
+               ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public float floatValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/internal/LazilyParsedNumber.java:22: warning: [MissingOverride] doubleValue implements method in Number; expected @Override
+  public double doubleValue() {
+                ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public double doubleValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/internal/LazilyParsedNumber.java:26: warning: [MissingOverride] compareTo implements method in Comparable; expected @Override
+  public int compareTo(LazilyParsedNumber other) {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public int compareTo(LazilyParsedNumber other) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/internal/bind/TypeAdapters.java:15: warning: [MissingOverride] read implements method in TypeAdapter; expected @Override
+        public LazilyParsedNumber read(JsonReader in) throws IOException {
+                                  ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public LazilyParsedNumber read(JsonReader in) throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/internal/bind/TypeAdapters.java:18: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/85_LAZILY_PARSED_NUMBER/com/google/gson/internal/bind/TypeAdapters.java:23: warning: [MissingOverride] write implements method in TypeAdapter; expected @Override
+        public void write(JsonWriter out, LazilyParsedNumber value) throws IOException {
+                    ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void write(JsonWriter out, LazilyParsedNumber value) throws IOException {'?
+11 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

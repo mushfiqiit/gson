@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/03_setDateFormat/com/google/gson/GsonBuilder.java:7: warning: [NullAway] @NonNull field datePattern not initialized
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/03_setDateFormat/com/google/gson/GsonBuilder.java:15: warning: [NullAway] assigning @Nullable expression to @NonNull field

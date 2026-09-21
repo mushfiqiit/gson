@@ -1,0 +1,47 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/reflect/TypeToken.java:5: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public final Class<? super T> getRawType() {
+                                ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public final Class<? super T> getRawType() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:34: warning: [UnusedVariable] The parameter 'timeStyle' is never read.
+  private DefaultDateTypeAdapter(DateType<T> dateType, int dateStyle, int timeStyle) {
+                                                                          ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'private DefaultDateTypeAdapter(DateType<T> dateType, int dateStyle) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:34: warning: [UnusedVariable] The parameter 'dateStyle' is never read.
+  private DefaultDateTypeAdapter(DateType<T> dateType, int dateStyle, int timeStyle) {
+                                                           ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'private DefaultDateTypeAdapter(DateType<T> dateType, int timeStyle) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:34: warning: [UnusedVariable] The parameter 'dateType' is never read.
+  private DefaultDateTypeAdapter(DateType<T> dateType, int dateStyle, int timeStyle) {
+                                             ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'private DefaultDateTypeAdapter(int dateStyle, int timeStyle) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:16: warning: [MissingOverride] create implements method in TypeAdapterFactory; expected @Override
+        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
+                                  ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override @SuppressWarnings("unchecked")'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:17: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+          return typeToken.getRawType() == Date.class
+          ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:24: warning: [MissingOverride] toString overrides method in Object; expected @Override
+        public String toString() {
+                      ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public String toString() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:31: warning: [NullAway] assigning @Nullable expression to @NonNull field
+    public static final DateType<Date> DATE = null;
+                                       ^
+    (see http://t.uber.com/nullaway )
+8 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

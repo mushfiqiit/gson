@@ -1,0 +1,1 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/05_fromJson/com/google/gson/Gson.java:11: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

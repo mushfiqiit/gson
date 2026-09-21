@@ -1,0 +1,3 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/64_read/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:15: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/64_read/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:17: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/64_read/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:22: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

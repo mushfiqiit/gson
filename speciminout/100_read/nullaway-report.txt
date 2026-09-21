@@ -1,0 +1,27 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/100_read/com/google/gson/stream/JsonReader.java:32: warning: [MissingOverride] close implements method in Closeable; expected @Override
+  public void close() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/100_read/com/google/gson/internal/bind/TypeAdapters.java:13: warning: [NullAway] assigning @Nullable expression to @NonNull field
+    private final List<String> fields = null;
+                               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/100_read/com/google/gson/internal/bind/TypeAdapters.java:17: warning: [MissingOverride] read implements method in TypeAdapter; expected @Override
+    public T read(JsonReader in) throws IOException {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public T read(JsonReader in) throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/100_read/com/google/gson/internal/bind/TypeAdapters.java:20: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+4 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 2 executed

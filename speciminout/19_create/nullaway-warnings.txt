@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:12: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/19_create/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java:23: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

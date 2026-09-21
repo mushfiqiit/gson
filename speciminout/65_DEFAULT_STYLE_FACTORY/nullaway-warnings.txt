@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:17: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/65_DEFAULT_STYLE_FACTORY/com/google/gson/internal/bind/DefaultDateTypeAdapter.java:31: warning: [NullAway] assigning @Nullable expression to @NonNull field

@@ -1,0 +1,32 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/70_write/com/google/gson/stream/JsonWriter.java:15: warning: [MissingOverride] flush implements method in Flushable; expected @Override
+  public void flush() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void flush() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/70_write/com/google/gson/stream/JsonWriter.java:19: warning: [MissingOverride] close implements method in Closeable; expected @Override
+  public void close() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/70_write/com/google/gson/internal/bind/EnumTypeAdapter.java:10: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  private final Map<T, String> constantToName = null;
+                               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/70_write/com/google/gson/internal/bind/EnumTypeAdapter.java:12: warning: [MissingOverride] write implements method in TypeAdapter; expected @Override
+  public void write(JsonWriter out, T value) throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void write(JsonWriter out, T value) throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/70_write/com/google/gson/internal/bind/EnumTypeAdapter.java:13: warning: [NullAway] passing @Nullable parameter 'value == null ? null : constantToName.get(value)' where @NonNull is required
+    out.value(value == null ? null : constantToName.get(value));
+                            ^
+    (see http://t.uber.com/nullaway )
+5 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

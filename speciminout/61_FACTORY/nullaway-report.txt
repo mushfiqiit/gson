@@ -1,0 +1,30 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava FAILED
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/61_FACTORY/com/google/gson/internal/bind/ArrayTypeAdapter.java:26: error: constructor ArrayTypeAdapter in class ArrayTypeAdapter<E> cannot be applied to given types;
+              new ArrayTypeAdapter(gson, componentTypeAdapter, GsonTypes.getRawType(componentType));
+              ^
+  required: no arguments
+  found:    Gson,TypeAdapter<CAP#1>,Class<CAP#2>
+  reason: actual and formal argument lists differ in length
+  where E is a type-variable:
+    E extends Object declared in class ArrayTypeAdapter
+  where CAP#1,CAP#2 are fresh type-variables:
+    CAP#1 extends Object from capture of ?
+    CAP#2 extends Object from capture of ?
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

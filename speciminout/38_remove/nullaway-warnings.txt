@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/38_remove/com/google/gson/internal/LinkedTreeMap.java:12: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/38_remove/com/google/gson/internal/LinkedTreeMap.java:25: warning: [NullAway] @NonNull field LinkedTreeMap$Node.value not initialized

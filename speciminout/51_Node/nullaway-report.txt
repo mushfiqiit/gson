@@ -1,0 +1,37 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/51_Node/com/google/gson/internal/LinkedTreeMap.java:10: warning: [MissingOverride] entrySet implements method in AbstractMap; expected @Override
+  public Set<Entry<K, V>> entrySet() {
+                          ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public Set<Entry<K, V>> entrySet() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/51_Node/com/google/gson/internal/LinkedTreeMap.java:34: warning: [NullAway] initializer method does not guarantee @NonNull fields parent (line 16), left (line 18), right (line 20), value (line 30) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    Node(boolean allowNullValue) {
+    ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/51_Node/com/google/gson/internal/LinkedTreeMap.java:35: warning: [NullAway] assigning @Nullable expression to @NonNull field
+      key = null;
+          ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/51_Node/com/google/gson/internal/LinkedTreeMap.java:40: warning: [MissingOverride] getKey implements method in Entry; expected @Override
+    public K getKey() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public K getKey() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/51_Node/com/google/gson/internal/LinkedTreeMap.java:44: warning: [MissingOverride] getValue implements method in Entry; expected @Override
+    public V getValue() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V getValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/51_Node/com/google/gson/internal/LinkedTreeMap.java:48: warning: [MissingOverride] setValue implements method in Entry; expected @Override
+    public V setValue(V value) {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V setValue(V value) {'?
+6 warnings
+
+BUILD SUCCESSFUL in 1m 11s
+2 actionable tasks: 1 executed, 1 up-to-date

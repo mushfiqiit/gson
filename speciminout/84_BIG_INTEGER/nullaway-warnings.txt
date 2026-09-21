@@ -1,0 +1,1 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/84_BIG_INTEGER/com/google/gson/internal/bind/TypeAdapters.java:20: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

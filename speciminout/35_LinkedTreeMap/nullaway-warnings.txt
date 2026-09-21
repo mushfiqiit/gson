@@ -1,0 +1,4 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/35_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:29: warning: [NullAway] initializer method does not guarantee @NonNull fields root (line 17), entrySet (line 33), keySet (line 35) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/35_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:13: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/35_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:23: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/35_LinkedTreeMap/com/google/gson/internal/LinkedTreeMap.java:26: warning: [NullAway] passing @Nullable parameter 'null' where @NonNull is required

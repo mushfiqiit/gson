@@ -1,0 +1,62 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/reflect/TypeToken.java:7: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public final Class<? super T> getRawType() {
+                                ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public final Class<? super T> getRawType() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/reflect/TypeToken.java:11: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public final Type getType() {
+                    ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public final Type getType() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/reflect/TypeToken.java:15: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public static TypeToken<?> get(Type type) {
+                             ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public static TypeToken<?> get(Type type) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/internal/GsonTypes.java:7: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public static Type getCollectionElementType(Type context, Class<?> contextRawType) {
+                     ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public static Type getCollectionElementType(Type context, Class<?> contextRawType) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/internal/ConstructorConstructor.java:7: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public <T> ObjectConstructor<T> get(TypeToken<T> typeToken, boolean allowUnsafe) {
+                                  ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public <T> ObjectConstructor<T> get(TypeToken<T> typeToken, boolean allowUnsafe) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/Gson.java:7: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public <T> TypeAdapter<T> getAdapter(TypeToken<T> type) {
+                            ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public <T> TypeAdapter<T> getAdapter(TypeToken<T> type) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:37: warning: [UnusedVariable] The parameter 'constructor' is never read.
+        TypeAdapter<E> elementTypeAdapter, ObjectConstructor<? extends Collection<E>> constructor) {
+                                                                                      ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'TypeAdapter<E> elementTypeAdapter) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:37: warning: [UnusedVariable] The parameter 'elementTypeAdapter' is never read.
+        TypeAdapter<E> elementTypeAdapter, ObjectConstructor<? extends Collection<E>> constructor) {
+                       ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'ObjectConstructor<? extends Collection<E>> constructor) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:15: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  private final ConstructorConstructor constructorConstructor = null;
+                                       ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:17: warning: [MissingOverride] create implements method in TypeAdapterFactory; expected @Override
+  public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
+                            ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/63_create/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java:21: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+      return null;
+      ^
+    (see http://t.uber.com/nullaway )
+11 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

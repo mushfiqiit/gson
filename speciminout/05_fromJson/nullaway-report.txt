@@ -1,19 +1,18 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 > Task :clean
-> Task :compileJava FAILED
 
-FAILURE: Build failed with an exception.
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/05_fromJson/com/google/gson/Gson.java:11: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+      return null;
+      ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/05_fromJson/com/google/gson/Gson.java:17: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public <T> T fromJson(Reader json, TypeToken<T> typeOfT)
+               ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public <T> T fromJson(Reader json, TypeToken<T> typeOfT)'?
+2 warnings
 
-* What went wrong:
-Execution failed for task ':compileJava'.
-> -XDaddTypeAnnotationsToSymbol=true is required by Error Prone on JDK 21
-
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
-
-BUILD FAILED in 4s
+BUILD SUCCESSFUL in 5s
 2 actionable tasks: 2 executed

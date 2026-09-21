@@ -1,0 +1,1 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/59_cachedString/com/google/gson/internal/Streams.java:25: warning: [NullAway] @NonNull field Streams$AppendableWriter$CurrentWrite.cachedString not initialized

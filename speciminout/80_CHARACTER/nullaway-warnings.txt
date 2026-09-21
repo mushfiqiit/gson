@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/80_CHARACTER/com/google/gson/internal/bind/TypeAdapters.java:18: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/80_CHARACTER/com/google/gson/internal/bind/TypeAdapters.java:35: warning: [NullAway] passing @Nullable parameter 'value == null ? null : String.valueOf(value)' where @NonNull is required

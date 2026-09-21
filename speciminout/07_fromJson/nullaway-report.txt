@@ -1,1 +1,27 @@
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/07_fromJson/com/google/gson/stream/JsonReader.java:13: warning: [MissingOverride] close implements method in Closeable; expected @Override
+  public void close() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/07_fromJson/com/google/gson/internal/bind/JsonTreeReader.java:9: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  private static final Reader UNREADABLE_READER = null;
+                              ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/07_fromJson/com/google/gson/Gson.java:9: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public <T> T fromJson(JsonReader reader, TypeToken<T> typeOfT)
+               ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public <T> T fromJson(JsonReader reader, TypeToken<T> typeOfT)'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/07_fromJson/com/google/gson/Gson.java:16: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+      return null;
+      ^
+    (see http://t.uber.com/nullaway )
+4 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

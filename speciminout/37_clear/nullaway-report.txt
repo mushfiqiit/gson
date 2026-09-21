@@ -1,0 +1,54 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:10: warning: [NullAway] @NonNull field root not initialized
+  Node<K, V> root;
+             ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:16: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  final Node<K, V> header = null;
+                   ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:18: warning: [MissingOverride] clear overrides method in AbstractMap; expected @Override
+  public void clear() {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void clear() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:19: warning: [NullAway] assigning @Nullable expression to @NonNull field
+    root = null;
+         ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:26: warning: [MissingOverride] entrySet implements method in AbstractMap; expected @Override
+  public Set<Entry<K, V>> entrySet() {
+                          ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public Set<Entry<K, V>> entrySet() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:32: warning: [NullAway] @NonNull field LinkedTreeMap$Node.next not initialized
+    Node<K, V> next;
+               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:34: warning: [NullAway] @NonNull field LinkedTreeMap$Node.prev not initialized
+    Node<K, V> prev;
+               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:36: warning: [MissingOverride] getKey implements method in Entry; expected @Override
+    public K getKey() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public K getKey() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:40: warning: [MissingOverride] getValue implements method in Entry; expected @Override
+    public V getValue() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V getValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/37_clear/com/google/gson/internal/LinkedTreeMap.java:44: warning: [MissingOverride] setValue implements method in Entry; expected @Override
+    public V setValue(V value) {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V setValue(V value) {'?
+10 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

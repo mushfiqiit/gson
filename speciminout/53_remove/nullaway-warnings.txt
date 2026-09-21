@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:38: warning: [NullAway] @NonNull field LinkedTreeMap$LinkedTreeMapIterator.lastReturned not initialized
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:52: warning: [NullAway] assigning @Nullable expression to @NonNull field

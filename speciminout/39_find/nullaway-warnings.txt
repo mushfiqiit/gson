@@ -1,0 +1,6 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:15: warning: [NullAway] @NonNull field root not initialized
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:11: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:21: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:46: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:88: warning: [NullAway] initializer method does not guarantee @NonNull fields left (line 80), right (line 82), prev (line 84) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:86: warning: [NullAway] assigning @Nullable expression to @NonNull field

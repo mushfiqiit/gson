@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/51_Node/com/google/gson/internal/LinkedTreeMap.java:34: warning: [NullAway] initializer method does not guarantee @NonNull fields parent (line 16), left (line 18), right (line 20), value (line 30) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/51_Node/com/google/gson/internal/LinkedTreeMap.java:35: warning: [NullAway] assigning @Nullable expression to @NonNull field

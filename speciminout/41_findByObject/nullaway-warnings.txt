@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/41_findByObject/com/google/gson/internal/LinkedTreeMap.java:17: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/41_findByObject/com/google/gson/internal/LinkedTreeMap.java:19: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

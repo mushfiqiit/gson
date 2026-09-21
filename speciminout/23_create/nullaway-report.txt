@@ -1,0 +1,66 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/stream/JsonReader.java:8: warning: [MissingOverride] close implements method in Closeable; expected @Override
+  public void close() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/stream/JsonWriter.java:15: warning: [MissingOverride] flush implements method in Flushable; expected @Override
+  public void flush() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void flush() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/stream/JsonWriter.java:19: warning: [MissingOverride] close implements method in Closeable; expected @Override
+  public void close() throws IOException {
+              ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void close() throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/reflect/TypeToken.java:5: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public final Class<? super T> getRawType() {
+                                ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public final Class<? super T> getRawType() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/internal/Excluder.java:13: warning: [MissingOverride] create implements method in TypeAdapterFactory; expected @Override
+  public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+                            ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/internal/Excluder.java:18: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+      return null;
+      ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/internal/Excluder.java:22: warning: [NullAway] @NonNull field Excluder$1.delegate not initialized
+      private volatile TypeAdapter<T> delegate;
+                                      ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/internal/Excluder.java:24: warning: [MissingOverride] read implements method in TypeAdapter; expected @Override
+      public T read(JsonReader in) throws IOException {
+               ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public T read(JsonReader in) throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/internal/Excluder.java:27: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+          return null;
+          ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/internal/Excluder.java:32: warning: [MissingOverride] write implements method in TypeAdapter; expected @Override
+      public void write(JsonWriter out, T value) throws IOException {
+                  ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public void write(JsonWriter out, T value) throws IOException {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/internal/Excluder.java:50: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public boolean excludeClass(Class<?> clazz, boolean serialize) {
+                 ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public boolean excludeClass(Class<?> clazz, boolean serialize) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/23_create/com/google/gson/Gson.java:7: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  public <T> TypeAdapter<T> getDelegateAdapter(TypeAdapterFactory skipPast, TypeToken<T> type) {
+                            ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public <T> TypeAdapter<T> getDelegateAdapter(TypeAdapterFactory skipPast, TypeToken<T> type) {'?
+12 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

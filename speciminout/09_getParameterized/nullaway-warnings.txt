@@ -1,0 +1,1 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/09_getParameterized/com/google/gson/reflect/TypeToken.java:64: warning: [NullAway] passing @Nullable parameter 'null' where @NonNull is required

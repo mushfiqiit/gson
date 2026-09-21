@@ -1,0 +1,52 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/42_findByEntry/com/google/gson/internal/LinkedTreeMap.java:21: warning: [UnusedVariable] The parameter 'a' is never read.
+  private static boolean equal(Object a, Object b) {
+                                      ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'boolean valuesEqual = mine != null && equal(entry.getValue());'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/42_findByEntry/com/google/gson/internal/LinkedTreeMap.java:21: warning: [UnusedVariable] The parameter 'b' is never read.
+  private static boolean equal(Object a, Object b) {
+                                                ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'boolean valuesEqual = mine != null && equal(mine.value);'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/42_findByEntry/com/google/gson/internal/LinkedTreeMap.java:11: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  Node<K, V> findByObject(Object key) {
+             ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") @SuppressWarnings("unchecked")'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/42_findByEntry/com/google/gson/internal/LinkedTreeMap.java:18: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return valuesEqual ? mine : null;
+    ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/42_findByEntry/com/google/gson/internal/LinkedTreeMap.java:25: warning: [MissingOverride] entrySet implements method in AbstractMap; expected @Override
+  public Set<Entry<K, V>> entrySet() {
+                          ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public Set<Entry<K, V>> entrySet() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/42_findByEntry/com/google/gson/internal/LinkedTreeMap.java:31: warning: [NullAway] @NonNull field LinkedTreeMap$Node.value not initialized
+    V value;
+      ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/42_findByEntry/com/google/gson/internal/LinkedTreeMap.java:33: warning: [MissingOverride] getKey implements method in Entry; expected @Override
+    public K getKey() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public K getKey() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/42_findByEntry/com/google/gson/internal/LinkedTreeMap.java:37: warning: [MissingOverride] getValue implements method in Entry; expected @Override
+    public V getValue() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V getValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/42_findByEntry/com/google/gson/internal/LinkedTreeMap.java:41: warning: [MissingOverride] setValue implements method in Entry; expected @Override
+    public V setValue(V value) {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V setValue(V value) {'?
+9 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

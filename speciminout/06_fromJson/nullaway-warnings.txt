@@ -1,0 +1,4 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/internal/GsonBuildConfig.java:3: warning: [NullAway] @NonNull static field VERSION not initialized
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/JsonIOException.java:7: warning: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/Gson.java:13: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/06_fromJson/com/google/gson/Gson.java:47: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

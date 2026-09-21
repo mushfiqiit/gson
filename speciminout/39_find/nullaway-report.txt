@@ -1,0 +1,63 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:70: warning: [UnusedVariable] The parameter 'unbalanced' is never read.
+  private void rebalance(Node<K, V> unbalanced, boolean insert) {
+                                    ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'rebalance(true);'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:70: warning: [UnusedVariable] The parameter 'insert' is never read.
+  private void rebalance(Node<K, V> unbalanced, boolean insert) {
+                                                        ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'rebalance(nearest);'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:15: warning: [NullAway] @NonNull field root not initialized
+  Node<K, V> root;
+             ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:11: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  private final Comparator<? super K> comparator = null;
+                                      ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:21: warning: [NullAway] assigning @Nullable expression to @NonNull field
+  final Node<K, V> header = null;
+                   ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:46: warning: [NullAway] returning @Nullable expression from method with @NonNull return type
+      return null;
+      ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:74: warning: [MissingOverride] entrySet implements method in AbstractMap; expected @Override
+  public Set<Entry<K, V>> entrySet() {
+                          ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public Set<Entry<K, V>> entrySet() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:88: warning: [NullAway] initializer method does not guarantee @NonNull fields left (line 80), right (line 82), prev (line 84) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    Node(boolean allowNullValue, Node<K, V> parent, K key, Node<K, V> next, Node<K, V> prev) {
+    ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:86: warning: [NullAway] assigning @Nullable expression to @NonNull field
+    final K key = null;
+            ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:92: warning: [MissingOverride] getKey implements method in Entry; expected @Override
+    public K getKey() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public K getKey() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:96: warning: [MissingOverride] getValue implements method in Entry; expected @Override
+    public V getValue() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V getValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/39_find/com/google/gson/internal/LinkedTreeMap.java:100: warning: [MissingOverride] setValue implements method in Entry; expected @Override
+    public V setValue(V value) {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V setValue(V value) {'?
+12 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

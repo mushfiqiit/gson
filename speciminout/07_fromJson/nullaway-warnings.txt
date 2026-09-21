@@ -1,0 +1,2 @@
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/07_fromJson/com/google/gson/internal/bind/JsonTreeReader.java:9: warning: [NullAway] assigning @Nullable expression to @NonNull field
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/07_fromJson/com/google/gson/Gson.java:16: warning: [NullAway] returning @Nullable expression from method with @NonNull return type

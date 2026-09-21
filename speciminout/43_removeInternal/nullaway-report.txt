@@ -1,0 +1,99 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:59: warning: [UnusedVariable] The parameter 'node' is never read.
+  private void replaceInParent(Node<K, V> node, Node<K, V> replacement) {
+                                          ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'replaceInParent(adjacent);'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:63: warning: [UnusedVariable] The parameter 'insert' is never read.
+  private void rebalance(Node<K, V> unbalanced, boolean insert) {
+                                                        ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'rebalance(originalParent);'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:63: warning: [UnusedVariable] The parameter 'unbalanced' is never read.
+  private void rebalance(Node<K, V> unbalanced, boolean insert) {
+                                    ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'rebalance(false);'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:59: warning: [UnusedVariable] The parameter 'replacement' is never read.
+  private void replaceInParent(Node<K, V> node, Node<K, V> replacement) {
+                                                           ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean 'replaceInParent(node);'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:31: warning: [NullAway] assigning @Nullable expression to @NonNull field
+        node.left = null;
+                  ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:39: warning: [NullAway] assigning @Nullable expression to @NonNull field
+        node.right = null;
+                   ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:46: warning: [NullAway] assigning @Nullable expression to @NonNull field
+      node.left = null;
+                ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:49: warning: [NullAway] assigning @Nullable expression to @NonNull field
+      node.right = null;
+                 ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:51: warning: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+      replaceInParent(node, null);
+                            ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:67: warning: [MissingOverride] entrySet implements method in AbstractMap; expected @Override
+  public Set<Entry<K, V>> entrySet() {
+                          ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public Set<Entry<K, V>> entrySet() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:73: warning: [NullAway] @NonNull field LinkedTreeMap$Node.parent not initialized
+    Node<K, V> parent;
+               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:75: warning: [NullAway] @NonNull field LinkedTreeMap$Node.left not initialized
+    Node<K, V> left;
+               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:77: warning: [NullAway] @NonNull field LinkedTreeMap$Node.right not initialized
+    Node<K, V> right;
+               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:79: warning: [NullAway] @NonNull field LinkedTreeMap$Node.next not initialized
+    Node<K, V> next;
+               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:81: warning: [NullAway] @NonNull field LinkedTreeMap$Node.prev not initialized
+    Node<K, V> prev;
+               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:85: warning: [MissingOverride] getKey implements method in Entry; expected @Override
+    public K getKey() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public K getKey() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:89: warning: [MissingOverride] getValue implements method in Entry; expected @Override
+    public V getValue() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V getValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:93: warning: [MissingOverride] setValue implements method in Entry; expected @Override
+    public V setValue(V value) {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V setValue(V value) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:97: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+    public Node<K, V> first() {
+                      ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public Node<K, V> first() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/43_removeInternal/com/google/gson/internal/LinkedTreeMap.java:101: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+    public Node<K, V> last() {
+                      ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") public Node<K, V> last() {'?
+20 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date

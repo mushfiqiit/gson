@@ -1,0 +1,62 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+
+> Task :compileJava
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:36: warning: [UnusedNestedClass] This nested class is unused, and can be removed.
+  private abstract class LinkedTreeMapIterator<T> implements Iterator<T> {
+                   ^
+    (see https://errorprone.info/bugpattern/UnusedNestedClass)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:40: warning: [UnusedVariable] The field 'expectedModCount' is never read.
+    int expectedModCount;
+        ^
+    (see https://errorprone.info/bugpattern/UnusedVariable)
+  Did you mean to remove this line?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:13: warning: [DoNotCallSuggester] Methods that always throw an exception should be annotated with @DoNotCall to prevent calls at compilation time vs. at runtime (note that adding @DoNotCall will break any existing callers of this API).
+  void removeInternal(Node<K, V> node, boolean unlink) {
+       ^
+    (see https://errorprone.info/bugpattern/DoNotCallSuggester)
+  Did you mean '@DoNotCall("Always throws java.lang.Error") void removeInternal(Node<K, V> node, boolean unlink) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:17: warning: [MissingOverride] entrySet implements method in AbstractMap; expected @Override
+  public Set<Entry<K, V>> entrySet() {
+                          ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public Set<Entry<K, V>> entrySet() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:23: warning: [MissingOverride] getKey implements method in Entry; expected @Override
+    public K getKey() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public K getKey() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:27: warning: [MissingOverride] getValue implements method in Entry; expected @Override
+    public V getValue() {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V getValue() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:31: warning: [MissingOverride] setValue implements method in Entry; expected @Override
+    public V setValue(V value) {
+             ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public V setValue(V value) {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:38: warning: [NullAway] @NonNull field LinkedTreeMap$LinkedTreeMapIterator.lastReturned not initialized
+    Node<K, V> lastReturned;
+               ^
+    (see http://t.uber.com/nullaway )
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:43: warning: [MissingOverride] hasNext implements method in Iterator; expected @Override
+    public final boolean hasNext() {
+                         ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override @SuppressWarnings("ReferenceEquality")'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:47: warning: [MissingOverride] remove implements method in Iterator; expected @Override
+    public final void remove() {
+                      ^
+    (see https://errorprone.info/bugpattern/MissingOverride)
+  Did you mean '@Override public final void remove() {'?
+/Users/mushfiqurrahmanchowdhury/Documents/gson/speciminout/53_remove/com/google/gson/internal/LinkedTreeMap.java:52: warning: [NullAway] assigning @Nullable expression to @NonNull field
+      lastReturned = null;
+                   ^
+    (see http://t.uber.com/nullaway )
+11 warnings
+
+BUILD SUCCESSFUL in 5s
+2 actionable tasks: 1 executed, 1 up-to-date
